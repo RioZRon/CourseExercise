@@ -1,6 +1,7 @@
 body{
     background-color: white;
     font-family: "San Francisco","Open Sans", "Lato", "Helvetica Neue","Hiragino Sans GB", "Hiragino Sans GB W3", serif;
+    font-weight: 200;
     color: #424242;
     font-size: 14px;
     line-height: 1.8;
@@ -40,7 +41,6 @@ body{
     line-height: 0;
 }
 .navigation{
-    display: block !important;
     height: auto !important;
     padding-bottom: 0;
     overflow: visible !important;
@@ -83,7 +83,6 @@ body{
 
 .floatLeft{
     float: left;
-    display: block !important;
     height: auto !important;
     padding-bottom: 0;
     overflow: visible !important;
@@ -232,7 +231,7 @@ a{
 .supportName{
     display: inline-block;
     font-size: 0.875rem;
-    width: 30%;
+    width: 40%;
 }
 .hospitalName{
     display: inline-block;
@@ -243,7 +242,7 @@ a{
 .SourceForkLink{
     display: inline-block;
     font-size: 0.875rem;
-    width: 30%;
+    width: 35%;
 }
 
 .buttonlink{
@@ -259,10 +258,17 @@ h1,h2,h3,h4,h5,h6{
     font-weight: 300;
     margin: 0;
     color: #204056;
-    position: relative;
+    /*position: relative;*/
 }
 
 section, header, footer, div, nav {
     box-sizing: border-box;
     display: block;
+}
+
+.margin-bottom{
+    margin-bottom: 5px;
+}
+.color-red{
+    color: #d02318;
 }
