@@ -40,48 +40,56 @@
             <div class="EnterContent">
                 <div class="EnterContent-group">
                     <label class="EnterContent-lable" for="name">姓名</label>
-                    <input type="text" class="EnterContent-input" id="name">
+                    <input type="text" class="EnterContent-input shortwidth" id="name">
                 </div>
                 <div class="EnterContent-group">
                     <label class="EnterContent-lable" for="name">年龄</label>
-                    <input type="text" class="EnterContent-input" id="age">
+                    <input type="text" class="EnterContent-input shortwidth" id="age">
                 </div>
                 <div class="EnterContent-group">
                     <label class="EnterContent-lable" for="name">电话</label>
-                    <input type="text" class="EnterContent-input" id="phoneNumber">
-                </div>
-                <div class="EnterContent-group">
-                    <label class="EnterContent-lable" for="name">身份证号</label>
-                    <input type="text" class="EnterContent-input" id="identityCard">
-                </div>
-                <div class="EnterContent-group">
-                    <label class="EnterContent-lable" for="name">常住住址</label>
-                    <input type="text" class="EnterContent-input" id="address">
+                    <input type="text" class="EnterContent-input shortwidth" id="phoneNumber">
                 </div>
                 <div class="EnterContent-group">
                     <label class="EnterContent-lable" for="name">联系人</label>
-                <input type="text" class="EnterContent-input" id="access">
+                    <input type="text" class="EnterContent-input shortwidth" id="access">
                 </div>
                 <div class="EnterContent-group">
                     <label class="EnterContent-lable" for="name">联系人电话</label>
-                    <input type="text" class="EnterContent-input" id="accessPhoneNumber">
+                    <input type="text" class="EnterContent-input shortwidth" id="accessPhoneNumber">
+                </div>
+                <div class="EnterContent-group">
+                    <label class="EnterContent-lable" for="name">身份证号</label>
+                    <input type="text" class="EnterContent-input longwidth" id="identityCard">
+                </div>
+                <div class="EnterContent-group">
+                    <label class="EnterContent-lable" for="name">常住住址</label>
+                    <input type="text" class="EnterContent-input longwidth" id="address">
+
                 </div>
 
                 <hr style=" margin-right: 12%; margin-top: 80px; margin-bottom: 80px">
                 <div class="EnterContent-group">
                     <label class="EnterContent-lable" for="name">初查</label>
-                    <input type="text" class="EnterContent-input" id="firstVisit">
+                    <input type="text" class="EnterContent-input longwidth" id="firstVisit">
                 </div>
                 <div class="EnterContent-group">
                     <label class="EnterContent-lable" for="name">建议分科</label>
-                    <input type="text" class="EnterContent-input" id="advice">
+                    <input type="text" class="EnterContent-input longwidth" id="advice">
                 </div>
                 <!--Todo 自动生成费用-->
                 <div class="EnterContent-group">
                     <label class="EnterContent-lable" for="name">挂号时间</label>
-                    <input type="date" class="EnterContent-input" id="registrationTime">
+                    <input type="datetime-local" class="EnterContent-input longwidth" id="registrationDate" value="2018-01-02T13:53">
                     <script>
-                        document.getElementById('registrationTime').valueAsDate= new Date();
+                        var date = new Date();
+                        function turn(num){
+                            return ((new Array(3)).join('0') + num).slice(-2);
+                        }
+                        alert(turn(date.getMonth()+1));
+                        var datetime = date.getFullYear() +"-"+ turn(date.getMonth()+1)+"-"+ turn(date.getDate())+"T"+ turn(date.getHours()) +":"+ turn(date.getMinutes());
+                        alert(datetime);
+                        document.getElementById('registrationDate').value= datetime;
                     </script>
                 </div>
                 <input type="submit" value="缴费确认" class="mainformsubmit" >
