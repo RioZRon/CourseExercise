@@ -24,6 +24,18 @@ body{
     margin: 0 auto;
 }
 
+fieldset{
+    /*position: relative;*/
+    /*background-color: white;*/
+    /*max-width: 80%;*/
+    /*margin-left: 20%;*/
+    word-wrap:break-word;
+    word-break: break-all;
+    width: 80%;
+    margin: 10px auto;
+    margin-bottom: 100px;
+}
+
 .remainForFloatingWin{
     /*空出悬浮窗位置*/
     position: relative;
@@ -271,4 +283,81 @@ section, header, footer, div, nav {
 }
 .color-red{
     color: #d02318;
+}
+
+.selectPage{
+    text-shadow: 1px 1px 1px #b4a99e ;
+}
+
+
+.SearchContent{
+    padding-bottom: 35px;
+    width: 100%;
+}
+
+.centerSub{
+    display: block;
+    margin: 0 auto;
+    /*text-align: left;*/
+    /*text-align:center IE可以用*/
+    text-align:-webkit-center
+}
+
+.maintitle{
+    font-size: 50px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.inputbod{
+    margin-bottom: 10px;
+    background-color: #fff;
+    height: 44px;
+    width: 40%;
+    vertical-align: top;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.mainlable{
+    font-size: 20px;
+    padding-right: 30%;
+    text-align: left;
+    font-weight: 300;
+    text-shadow: 0 0 0px #45484a;
+}
+
+.maininput{
+    margin-top: 6px;
+    height: 70%;
+    width: 90%;
+    font-size: 20px;
+    font-weight: 200;
+    border-style: none;
+    outline:none;
+}
+
+.mainsubmit{
+    margin-top: 45px;
+    margin-left: 55%;
+    font-size: 25px;
+    font-weight: 300;
+    border-style: none;
+    outline:none;
+    cursor: pointer;
+}
+
+.mainformsubmit{
+    margin-top: 60px;
+    margin-bottom: 30px;
+    margin-left: 75%;
+    font-size: 25px;
+    font-weight: 300;
+    border-left: 1px solid #282822;
+    border-top: none;
+    border-bottom:none;
+    border-right:  1px solid #282822;
+    outline:none;
+    cursor: pointer;
 }

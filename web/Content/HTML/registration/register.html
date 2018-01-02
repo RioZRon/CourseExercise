@@ -2,15 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>首页</title>
+    <title>register</title>
     <link rel="shortcut icon" type="image/x-icon" href="../../../WEB-INF/res/pic/icon/标签页图标.ico">
     <link type="text/css" rel="stylesheet" href="../../CSS/frame.css">
     <link type="text/css" rel="stylesheet" href="../../CSS/content.css">
-    <script src="main.js"></script>
-
 </head>
 <body>
-<div class="frameWidth" id="a11">
+<main class="frameWidth">
     <!--headder-->
     <header class="remainForFloatingWin">
         <nav class="floatingWin">
@@ -23,68 +21,76 @@
                     </div>
                     <div class="navigation">
                         <span class="floatingWin-bar">
-                            <a style="color: #5d594d;" href="/about" class="selectPage">主页</a>
-                            <a style="color: #5d594d;" href="/episodes">预约挂号</a>
-                            <a style="color: #5d594d;" href="/search">登录</a>
+                            <a style="color: #5d594d;" href="/about" class="selectPage">挂号</a>
+                            <a style="color: #5d594d;" href="/episodes">收费</a>
+                            <a style="color: #5d594d;" href="/search">登出</a>
                         </span>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
+
     <!--main-->
-    <main class="mainContent">
-        <section class="indexFrontPic">
-            <!--todo 2017-12-30 18:05:00 做一个链接到功能介绍页面-->
-            <a href="" class="indexFrontLinkFunc"  onmousemove="turnblue()" onmouseout="turnback()" >
-                <img id="linkpic" class="frontPic" src="../../../WEB-INF/res/pic/PNG/creature-1.png">
-                <div class="frontLinkContent">
-                    <span class="h-c-eyebrow color-red">系统介绍</span>
-                    <h2 class="frontLinkContent-title">红十医院管理系统为你量身打造的12个特性</h2>
-                    <p class="frontLinkContent-summary">从人事管理到科室管理,从前台挂号医师门诊到手术台医药部,从医师到会计各个模块相互独立又相互关联</p>
-                    <span class="frontLinkContent-detailLink">
-                        <span class="nowrap"id="detail">
-                            Detail
-                            <img class="arrawright" src="../../../WEB-INF/res/pic/PNG/detailB.png" alt="more" id="detailArr">
-                        </span>
-                    </span>
+    <div>
+        <h1 class="maintitle">病人挂号栏</h1>
+        <fieldset>
+            <legend>挂号</legend>
+            <form action="">
+            <div class="EnterContent">
+                <div class="EnterContent-group">
+                    <label class="EnterContent-lable" for="name">姓名</label>
+                    <input type="text" class="EnterContent-input" id="name">
                 </div>
-            </a>
-        </section>
-        <!--todo 做剩下的链接 主页最好只存在链接-->
-        <div class="rowPageLinks">
-            <section class="horizontalGrid">
-                <div class="horizontalGrid-col">
-                    <h2 class="horizontalGrid-headline">院内热点</h2>
+                <div class="EnterContent-group">
+                    <label class="EnterContent-lable" for="name">年龄</label>
+                    <input type="text" class="EnterContent-input" id="age">
+                </div>
+                <div class="EnterContent-group">
+                    <label class="EnterContent-lable" for="name">电话</label>
+                    <input type="text" class="EnterContent-input" id="phoneNumber">
+                </div>
+                <div class="EnterContent-group">
+                    <label class="EnterContent-lable" for="name">身份证号</label>
+                    <input type="text" class="EnterContent-input" id="identityCard">
+                </div>
+                <div class="EnterContent-group">
+                    <label class="EnterContent-lable" for="name">常住住址</label>
+                    <input type="text" class="EnterContent-input" id="address">
+                </div>
+                <div class="EnterContent-group">
+                    <label class="EnterContent-lable" for="name">联系人</label>
+                <input type="text" class="EnterContent-input" id="access">
+                </div>
+                <div class="EnterContent-group">
+                    <label class="EnterContent-lable" for="name">联系人电话</label>
+                    <input type="text" class="EnterContent-input" id="accessPhoneNumber">
                 </div>
 
-                <div class="displayFlex">
-                    <a href="" class="eachGrid">
-                        <div class="displayColumnFlex">
-                            <p class="h-c-eyebrow margin-bottom">医院概览</p>
-                            <h4 class="GridContent">2017年已然过去,面向2018,我们带着崭新的面貌以及更友好的笑容去面对病人</h4>
-                            <img src="../../../WEB-INF/res/pic/PNG/医院概览.png" alt="医院概览" class="GridContentPic">
-                        </div>
-                    </a>
-                    <a href="" class="eachGrid">
-                        <div class="displayColumnFlex">
-                            <p class="h-c-eyebrow margin-bottom">专家介绍</p>
-                            <h4 class="GridContent">知识与实践经验丰富,且勤恳务实,为人正直,能用饱满的热情面对工作是我们最基本的标尺</h4>
-                            <img src="../../../WEB-INF/res/pic/PNG/doctor.jpg" alt="医院概览" class="GridContentPic">
-                        </div>
-                    </a>
-                    <a href="" class="eachGrid">
-                        <div class="displayColumnFlex">
-                            <p class="h-c-eyebrow margin-bottom">出诊资讯</p>
-                            <h4 class="GridContent">未来一个月各个医生的出诊安排</h4>
-                            <p> &nbsp;&nbsp;&nbsp;&nbsp;进入后通过搜索得到一个医师或某一科室所有医生的出诊安排,以此对自己的就诊计划进行合理安排</p>
-                        </div>
-                    </a>
+                <hr style=" margin-right: 12%; margin-top: 80px; margin-bottom: 80px">
+                <div class="EnterContent-group">
+                    <label class="EnterContent-lable" for="name">初查</label>
+                    <input type="text" class="EnterContent-input" id="firstVisit">
                 </div>
-            </section>
-        </div>
-        <div style="height: 200px"></div>
-    </main>
+                <div class="EnterContent-group">
+                    <label class="EnterContent-lable" for="name">建议分科</label>
+                    <input type="text" class="EnterContent-input" id="advice">
+                </div>
+                <!--Todo 自动生成费用-->
+                <div class="EnterContent-group">
+                    <label class="EnterContent-lable" for="name">挂号时间</label>
+                    <input type="date" class="EnterContent-input" id="registrationTime">
+                    <script>
+                        document.getElementById('registrationTime').valueAsDate= new Date();
+                    </script>
+                </div>
+                <input type="submit" value="缴费确认" class="mainformsubmit" >
+            </div>
+                </form>
+
+        </fieldset>
+
+    </div>
 
 
     <!--底部-->
@@ -130,9 +136,9 @@
                 <div class="firstRow">
                     <div class="firstRow-inner">
                         <div class="footerHyperlinkListHead">界面接口</div>
-                        <a class="footerHyperlinkListLink" href="/about">主页</a>
-                        <a class="footerHyperlinkListLink" href="/Episodes">预约挂号</a>
-                        <a class="footerHyperlinkListLink" href="/Contact">登录</a>
+                        <a class="footerHyperlinkListLink" href="/about">挂号</a>
+                        <a class="footerHyperlinkListLink" href="/Episodes">收费</a>
+                        <a class="footerHyperlinkListLink" href="/Contact">登出</a>
                     </div>
                 </div>
             </div>
@@ -162,6 +168,6 @@
             </div>
         </footer>
     </div>
-</div>
+</main>
 </body>
 </html>
