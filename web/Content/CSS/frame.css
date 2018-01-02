@@ -330,14 +330,25 @@ section, header, footer, div, nav {
 
 .maininput{
     margin-top: 6px;
+    padding-left: 5%;
     height: 70%;
-    width: 90%;
+    width: 95%;
     font-size: 20px;
     font-weight: 200;
     border-style: none;
     outline:none;
 }
-
+.maintextarea{
+    margin-top: 6px;
+    padding-left: 5%;
+    width: 95%;
+    font-size: 18px;
+    font-weight: 200;
+    border-style: none;
+    /*outline:none;*/
+    resize:none;
+    /*去掉右下角边框*/
+}
 .mainsubmit{
     margin-top: 45px;
     margin-left: 55%;
@@ -360,4 +371,13 @@ section, header, footer, div, nav {
     border-right:  1px solid #282822;
     outline:none;
     cursor: pointer;
+}
+
+
+.flex-first{
+    padding-top: 50px;
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 50%;
 }

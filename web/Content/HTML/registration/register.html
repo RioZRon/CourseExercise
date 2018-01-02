@@ -44,11 +44,11 @@
                 </div>
                 <div class="EnterContent-group">
                     <label class="EnterContent-lable" for="name">年龄</label>
-                    <input type="text" class="EnterContent-input shortwidth" id="age">
+                    <input type="number" class="EnterContent-input shortwidth" id="age">
                 </div>
                 <div class="EnterContent-group">
                     <label class="EnterContent-lable" for="name">电话</label>
-                    <input type="text" class="EnterContent-input shortwidth" id="phoneNumber">
+                    <input type="number" class="EnterContent-input shortwidth" id="phoneNumber">
                 </div>
                 <div class="EnterContent-group">
                     <label class="EnterContent-lable" for="name">联系人</label>
@@ -77,6 +77,10 @@
                     <label class="EnterContent-lable" for="name">建议分科</label>
                     <input type="text" class="EnterContent-input longwidth" id="advice">
                 </div>
+                <div class="EnterContent-group">
+                    <label class="EnterContent-lable" for="name">特殊情况备注</label>
+                    <input type="text" class="EnterContent-input longwidth" id="remark">
+                </div>
                 <!--Todo 自动生成费用-->
                 <div class="EnterContent-group">
                     <label class="EnterContent-lable" for="name">挂号时间</label>
@@ -86,12 +90,13 @@
                         function turn(num){
                             return ((new Array(3)).join('0') + num).slice(-2);
                         }
-                        alert(turn(date.getMonth()+1));
+//                        alert(turn(date.getMonth()+1));
                         var datetime = date.getFullYear() +"-"+ turn(date.getMonth()+1)+"-"+ turn(date.getDate())+"T"+ turn(date.getHours()) +":"+ turn(date.getMinutes());
-                        alert(datetime);
+//                        alert(datetime);
                         document.getElementById('registrationDate').value= datetime;
                     </script>
                 </div>
+
                 <input type="submit" value="缴费确认" class="mainformsubmit" >
             </div>
                 </form>
