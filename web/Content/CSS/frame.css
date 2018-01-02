@@ -297,7 +297,7 @@ section, header, footer, div, nav {
 
 .centerSub{
     display: block;
-    margin: 0 auto;
+    margin: 30px auto;
     /*text-align: left;*/
     /*text-align:center IE可以用*/
     text-align:-webkit-center
@@ -306,7 +306,8 @@ section, header, footer, div, nav {
 .maintitle{
     font-size: 50px;
     margin-bottom: 20px;
-    margin-top: 40px;
+    margin-top: 100px;
+
 }
 
 .inputbod{
