@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Oracle - @localhost" uuid="c6ca92ce-c2b8-42cf-b30c-1de52bade95b">
+      <secret-storage>master_key</secret-storage>
+      <user-name>C##TestMan</user-name>
+      <schema-pattern>*.C##TESTMAN *.PUBLIC *.SYS *.SYSTEM</schema-pattern>
+      <default-schemas>*.C##TESTMAN *.PUBLIC</default-schemas>
+    </data-source>
+  </component>
+</project>

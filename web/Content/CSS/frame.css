@@ -40,6 +40,7 @@ fieldset{
     /*空出悬浮窗位置*/
     position: relative;
     height: 4rem;
+    z-index: 2;
 }
 
 
@@ -304,12 +305,14 @@ section, header, footer, div, nav {
 }
 
 .maintitle{
-    font-size: 50px;
+    font-size: 60px;
     margin-bottom: 20px;
-    margin-top: 100px;
+    margin-top: 80px;
 
 }
-
+.maincontent{
+    font-size: 20px;
+}
 .inputbod{
     margin-bottom: 10px;
     background-color: #fff;
@@ -333,11 +336,24 @@ section, header, footer, div, nav {
     margin-top: 6px;
     padding-left: 5%;
     height: 70%;
-    width: 95%;
+    width: 93%;
     font-size: 20px;
     font-weight: 200;
     border-style: none;
     outline:none;
+}
+
+.maininput-left{
+    margin-top: 6px;
+    padding-left: 5%;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 200;
+    border-style: none;
+    outline:none;
+    position: absolute;
+    z-index: 3;
+    left: 0px
 }
 .maintextarea{
     margin-top: 6px;
@@ -381,4 +397,28 @@ section, header, footer, div, nav {
     display: flex;
     flex-flow: column wrap;
     max-width: 50%;
+}
+
+.fieldset-title{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.fieldset-lable{
+    font-size: 26px;
+    width: 20%;
+    padding-left: 5%;
+    text-align: left;
+    font-weight: 300;
+}
+
+.fieldset-content{
+    font-size: 18px;
+    padding-left: 10%;
+    text-align: left;
+    font-weight: 300;
+}
+
+.showPassword{
+    width: 40px;
 }
