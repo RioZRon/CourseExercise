@@ -1,0 +1,424 @@
+body{
+    background-color: white;
+    font-family: "San Francisco","Open Sans", "Lato", "Helvetica Neue","Hiragino Sans GB", "Hiragino Sans GB W3", serif;
+    font-weight: 200;
+    color: #424242;
+    font-size: 14px;
+    line-height: 1.8;
+    display: block;
+    box-sizing: border-box;
+    word-wrap:break-word;
+}
+::selection{
+    background-color: #5d594d;
+    color: #bbbbbb;
+}
+
+
+
+.frameWidth{
+    position: relative;
+    background-color: white;
+    /*这次不固定宽度了 用字数来约束宽度*/
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+fieldset{
+    /*position: relative;*/
+    /*background-color: white;*/
+    /*max-width: 80%;*/
+    /*margin-left: 20%;*/
+    word-wrap:break-word;
+    word-break: break-all;
+    width: 80%;
+    margin: 10px auto;
+    margin-bottom: 100px;
+}
+
+.remainForFloatingWin{
+    /*空出悬浮窗位置*/
+    position: relative;
+    height: 4rem;
+    z-index: 2;
+}
+
+
+.floatingWin.brandSpan{
+    margin-left: 1rem;
+    height: 100%;
+}
+
+.floatingWin-brand{
+    height: 100%;
+    line-height: 0;
+}
+.navigation{
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+    float: right;
+    margin-right: 3rem;
+    margin-top: 1rem;
+}
+
+.floatingWin-bar{
+    /*line-height: 1;*/
+    text-transform: uppercase;
+    /*font-size:25px;*/
+    word-spacing: 20px;
+    font-size: 20px;
+    font-weight: 400;
+
+}
+
+.floatingWin{
+    margin-bottom: 0;
+    letter-spacing: 0.04em;
+    background-color: #fff;
+    color: #152b39;
+    position: fixed;
+    height: 4rem;
+    left: 0;
+    right: 0;
+    top: 0;
+    transform: translateZ(0);
+    box-shadow: 0px 2px 1px #d4d5d6;
+}
+
+.container-fluid {
+    padding-left: 2rem;
+    padding-top: 0.75rem;
+    margin-right: 0;
+    margin-left: 0;
+    overflow: auto;
+}
+
+.floatLeft{
+    float: left;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+}
+
+.sitewrap{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+a{
+    text-decoration:none;
+}
+
+.framefooterArea{
+    background-color: #d4d5d6;
+    box-sizing: border-box;
+    display: block;
+    font-weight: 100;
+}
+
+.realFooterArea{
+    background: #fff;
+    border-top: 1px solid #e9eaea;
+}
+
+.footerHyperlinkList{
+    width: inherit;
+    padding-top: 1.5rem;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding-left: 1rem;
+    font-size: .875rem;
+    color: #3e3e40;
+    line-height: 1.75rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.firstRow{
+    flex-grow: 1.5;
+    box-sizing: border-box;
+    display: block;
+    vertical-align: baseline;
+
+}
+
+.firstRow-inner{
+    min-width: 10rem;
+    margin-bottom: 1rem;
+}
+
+.footerHyperlinkListHead{
+    margin-bottom: .8125rem;
+    font-size: 1rem;
+    color: #000;
+    display: block;
+}
+
+.footerHyperlinkListLink {
+    color: #3e3e40;
+    display: block;
+    margin-right: 1rem;
+}
+
+.SeccondRow{
+    flex-grow: 2;
+    width: 20rem;
+    margin-bottom: 1rem;
+    -webkit-box-flex: 2;
+}
+
+.classifyHead{
+    font-size: .875rem;
+    font-weight: 300;
+    line-height: 1.75rem;
+    color: #939598;
+    margin: 0;
+    text-transform: uppercase;
+    display: block;
+}
+.classifyDetail{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    height: 8rem;
+    flex-flow: column wrap;
+}
+
+
+.footernavFordetalFuc{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    padding: 0;
+    flex-basis: auto;
+}
+
+.footernavFordetalFuc-first{
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 13.4375rem;
+}
+
+.footernavFordetalFuc-head{
+    font-size: .875rem;
+    line-height: 1.75rem;
+    color: #939598;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.footernavFordetalFuc-seccond{
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 13.4375rem;
+
+}
+.SocialMediaLink{
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding-left: 1rem;
+    font-size: .875rem;
+    color: #3e3e40;
+    line-height: 1.75rem;
+}
+.socialmedialinkico{
+    height: 1.75rem;
+    margin-right: 1rem;
+}
+
+.support{
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding-left: 1rem;
+    font-size: .875rem;
+    color: #3e3e40;
+    line-height: 1.75rem;
+}
+
+.supportName{
+    display: inline-block;
+    font-size: 0.875rem;
+    width: 40%;
+}
+.hospitalName{
+    display: inline-block;
+    font-size: 0.875rem;
+    color: #f33b73;
+}
+
+.SourceForkLink{
+    display: inline-block;
+    font-size: 0.875rem;
+    width: 35%;
+}
+
+.buttonlink{
+    text-decoration:underline;
+    color: black;
+    margin-right: 6px;
+}
+
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Oxygen","Oxygen","Segoe UI","Helvetica Neue",sans-serif;
+    font-weight: 300;
+    margin: 0;
+    color: #204056;
+    /*position: relative;*/
+}
+
+section, header, footer, div, nav {
+    box-sizing: border-box;
+    display: block;
+}
+
+.margin-bottom{
+    margin-bottom: 5px;
+}
+.color-red{
+    color: #d02318;
+}
+
+.selectPage{
+    text-shadow: 1px 1px 1px #b4a99e ;
+}
+
+
+.SearchContent{
+    padding-bottom: 35px;
+    width: 100%;
+}
+
+.centerSub{
+    display: block;
+    margin: 30px auto;
+    /*text-align: left;*/
+    /*text-align:center IE可以用*/
+    text-align:-webkit-center
+}
+
+.maintitle{
+    font-size: 60px;
+    margin-bottom: 20px;
+    margin-top: 80px;
+
+}
+.maincontent{
+    font-size: 20px;
+}
+.inputbod{
+    margin-bottom: 10px;
+    background-color: #fff;
+    height: 44px;
+    width: 40%;
+    vertical-align: top;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.mainlable{
+    font-size: 20px;
+    padding-right: 30%;
+    text-align: left;
+    font-weight: 300;
+    text-shadow: 0 0 0px #45484a;
+}
+
+.maininput{
+    margin-top: 6px;
+    padding-left: 5%;
+    height: 70%;
+    width: 93%;
+    font-size: 20px;
+    font-weight: 200;
+    border-style: none;
+    outline:none;
+}
+
+.maininput-left{
+    margin-top: 6px;
+    padding-left: 5%;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 200;
+    border-style: none;
+    outline:none;
+    position: absolute;
+    z-index: 3;
+    left: 0px
+}
+.maintextarea{
+    margin-top: 6px;
+    padding-left: 5%;
+    width: 95%;
+    font-size: 18px;
+    font-weight: 200;
+    border-style: none;
+    /*outline:none;*/
+    resize:none;
+    /*去掉右下角边框*/
+}
+.mainsubmit{
+    margin-top: 45px;
+    margin-left: 55%;
+    font-size: 25px;
+    font-weight: 300;
+    border-style: none;
+    outline:none;
+    cursor: pointer;
+}
+
+.mainformsubmit{
+    margin-top: 60px;
+    margin-bottom: 30px;
+    margin-left: 75%;
+    font-size: 25px;
+    font-weight: 300;
+    border-left: 1px solid #282822;
+    border-top: none;
+    border-bottom:none;
+    border-right:  1px solid #282822;
+    outline:none;
+    cursor: pointer;
+}
+
+
+.flex-first{
+    padding-top: 50px;
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 50%;
+}
+
+.fieldset-title{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.fieldset-lable{
+    font-size: 26px;
+    width: 20%;
+    padding-left: 5%;
+    text-align: left;
+    font-weight: 300;
+}
+
+.fieldset-content{
+    font-size: 18px;
+    padding-left: 10%;
+    text-align: left;
+    font-weight: 300;
+}
+
+.showPassword{
+    width: 40px;
+}
