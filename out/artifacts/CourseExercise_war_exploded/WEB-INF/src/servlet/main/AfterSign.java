@@ -28,9 +28,9 @@ public class AfterSign extends HttpServlet {
         serviceIMP serviceIMP = new serviceIMP();
         A10 a10 = serviceIMP.SignIn(name, passwordMd5);
         req.getSession().setAttribute("a10", a10);
-        // TODO: 2018/1/3 判断身份角色跳转页面 
-
-
+        // TODO: 2018/1/3 判断身份角色跳转页面
+        if(a10.getA105() == 5)
+            req.getRequestDispatcher(req.getContextPath() + "/Content/HTML/HR/signup.jsp").forward(req,resp);
     }
 
     @Override

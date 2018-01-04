@@ -2,10 +2,15 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="Oracle - @localhost" uuid="c6ca92ce-c2b8-42cf-b30c-1de52bade95b">
-      <secret-storage>master_key</secret-storage>
+      <database-info product="Oracle" version="Oracle Database 12c Enterprise Edition Release 12.2.0.1.0 - 64bit Production" jdbc-version="4.0" driver-name="Oracle JDBC driver" driver-version="12.1.0.2.0">
+        <extra-name-characters>$#</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
       <user-name>C##TestMan</user-name>
-      <schema-pattern>*.C##TESTMAN *.PUBLIC *.SYS *.SYSTEM</schema-pattern>
-      <default-schemas>*.C##TESTMAN *.PUBLIC</default-schemas>
+      <introspection-schemas>*:C##TESTMAN,PUBLIC,SYS,SYSTEM</introspection-schemas>
+      <resolve-scope>*:C##TESTMAN,PUBLIC</resolve-scope>
+      <unqualified-resolve-schemas>*:C##TESTMAN,PUBLIC</unqualified-resolve-schemas>
     </data-source>
   </component>
 </project>

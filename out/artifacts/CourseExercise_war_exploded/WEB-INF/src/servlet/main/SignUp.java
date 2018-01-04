@@ -35,5 +35,6 @@ public class SignUp extends HttpServlet{
         A10 a10 = new A10(a102,a103,a104,a105);
         serviceIMP serviceIMP = new serviceIMP();
         serviceIMP.AddStaff(a10);
+        req.getRequestDispatcher(req.getContextPath() + "/Content/HTML/HR/signup.jsp").forward(req,resp);
     }
 }

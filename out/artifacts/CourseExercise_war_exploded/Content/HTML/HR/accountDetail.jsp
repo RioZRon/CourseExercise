@@ -1,4 +1,5 @@
 <%@ page import="java.sql.Date" %>
+<%@ page import="bean.main.A10" %>
 <%@ page contentType="text/html; charset=UTF-8" language="java" errorPage="" %>
 <%
     String path = request.getContextPath();
@@ -8,13 +9,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>搜索病人</title>
+    <title>用户详情</title>
     <link rel="shortcut icon" type="image/x-icon" href="<%=basePath%>/res/pic/icon/标签页图标.ico">
     <link type="text/css" rel="stylesheet" href="<%=basePath%>/Content/CSS/frame.css">
     <link type="text/css" rel="stylesheet" href="<%=basePath%>/Content/CSS/content.css">
+    <script src="hr.js"></script>
 </head>
 <body>
-<div class="frameWidth" id="a11">
+<main class="frameWidth">
+    <!--headder-->
     <header class="remainForFloatingWin">
         <nav class="floatingWin">
             <div class="sitewrap">
@@ -26,9 +29,9 @@
                     </div>
                     <div class="navigation">
                         <span class="floatingWin-bar">
-                           <a style="color: #5d594d;" href="/about">主页</a>
-                            <a style="color: #5d594d;" href="/episodes">添加账号</a>
-                            <a style="color: #5d594d;" href="/episodes" class="selectPage">修改账号</a>
+                              <a style="color: #5d594d;" href="/about">主页</a>
+                            <a style="color: #5d594d;" href="/episodes"class="selectPage">添加账号</a>
+                            <a style="color: #5d594d;" href="<%=basePath%>/Content/HTML/HR/accountSelect.html">修改账号</a>
                             <a style="color: #5d594d;" href="/search">登出</a>
                         </span>
                     </div>
@@ -36,49 +39,63 @@
             </div>
         </nav>
     </header>
-    <main class="SearchContent">
-        <div class="centerSub">
-            <h1 class="result-title">搜索账号</h1>
-            <form action="">
-                <label class="result-lable" for="name">姓名</label>
-                <input type="text" class="result-input" id="name">
-                <label class="result-lable" for="identityCard">账号</label>
-                <input type="text" class="result-input" id="identityCard">
-                <input type="submit" value="搜索" class="result-submit" >
+
+    <!--main-->
+    <div>
+        <h1 class="maintitle">账号修改</h1>
+        <%
+            A10 a10 =(A10)session.getAttribute("a10");
+        %>
+        <fieldset style="width: 50%;">
+            <legend>SignUp</legend>
+            <form action="/servlet/main/AccountUpdateServlet" style="padding-top: 50px" method="post">
+                <div class="inner EnterContent-group">
+                    <label class="inner EnterContent-lable" for="a102">姓名</label>
+                    <input type="text" class="inner EnterContent-input longwidth" style="padding-left: 15px" id="a102" name="a102" value="<%=a10.getA102()%>">
+                </div>
+                <div class="inner EnterContent-group">
+                    <label class="inner EnterContent-lable" for="a103">账号</label>
+                    <input type="text" class="inner EnterContent-input longwidth" style="padding-left: 15px" id="a103" name="a103" value="<%=a10.getA103()%>">
+                </div>
+                <div class="inner EnterContent-group">
+                    <label class="inner EnterContent-lable" for="a104">密码</label>
+                    <%--<img src="<%=basePath%>/res/pic/PNG/眼睛%20(2).png" alt="显示密码" class="showPassword" onclick="showhide_password()" id="showpassword">--%>
+                    <input type="text" class="inner EnterContent-input longwidth" style="padding-left: 15px; color: darkred;" id="a104" name="a104" value="不修改就保持用户原密码">
+                </div>
+                <div class="inner EnterContent-group">
+                    <label class="inner EnterContent-lable" for="a105">角色</label>
+                    <br>
+                    <select name="a105" id="a105" class="selectClass" >
+                        <option value="1">挂号</option>
+                        <option value="2">门诊</option>
+                        <option value="3">病房</option>
+                        <option value="4">手术</option>
+                        <option value="5">管理员</option>
+                    </select>
+                </div>
+                <input type="number" hidden id="flag" value="<%=a10.getA105()%>">
+                <script>
+                    var state = document.getElementById("flag").value;
+                    // alert(state);
+                    if(state = 1)
+                        document.getElementById("a105").options[1].selected = true;
+                    else if(state = 2)
+                        document.getElementById("a105").options[2].selected = true;
+                    else if(state = 3)
+                        document.getElementById("a105").options[3].selected = true;
+                    else if(state = 4)
+                        document.getElementById("a105").options[4].selected = true;
+                    else
+                        document.getElementById("a105").options[5].selected = true;
+                </script>
+                <input type="submit" value="保存" class="mainformsubmit" >
             </form>
+        </fieldset>
 
-            <hr style="margin: 80px 80px; opacity:0.5;">
+    </div>
 
-            <table style="margin-top: 50px" class="confermation-table" border="1px solid">
-                <tr>
-                    <th colspan="6" style="text-align: left; font-weight: 400; font-size:35px; padding-left: 20px">搜索结果</th>
-                </tr>
-                <tr>
-                    <th>人员编号</th>
-                    <th>姓名</th>
-                    <th>账号</th>
-                    <th>密码</th>
-                    <th>角色</th>
-                    <th width="7%">详情</th>
-                </tr>
-                <tr>
-                    <th><input type="number" class="maininput" id="id" name="id" value="0001" readonly></th>
-                    <th><input type="text" class="maininput" id="name" name="name" value="火云芝胞内胶囊" readonly></th>
-                    <th><input type="number" class="maininput" id="number" name="number" value="55" readonly></th>
-                    <th><a href="out.html"><img style="margin-left: 10%; margin-top: 10px" height="25px" src="<%=basePath%>/res/pic/PNG/药品/提交.png" alt="详细"></a></th>
-                </tr>
-                <tr>
-                    <th><input type="number" class="maininput" id="id" name="id" value="0001" readonly></th>
-                    <th><input type="text" class="maininput" id="name" name="name" value="火云芝胞内胶囊" readonly></th>
-                    <th><input type="number" class="maininput" id="alert" name="alert" value="20"readonly></th>
-                    <th><a href="out.html"><img style="margin-left: 10%; margin-top: 10px" height="25px" src="<%=basePath%>/res/pic/PNG/药品/提交.png" alt="详细"></a></th>
-                </tr>
-            </table>
 
-        </div>
-        <div style="height: 100px"></div>
-    </main>
-
+    <!--底部-->
     <div class="framefooterArea">
         <footer class="realFooterArea">
             <div class="footerHyperlinkList">
@@ -121,9 +138,9 @@
                 <div class="firstRow">
                     <div class="firstRow-inner">
                         <div class="footerHyperlinkListHead">界面接口</div>
-                        <a class="footerHyperlinkListLink" href="/about">主页</a>
-                        <a class="footerHyperlinkListLink" href="/Episodes">预约挂号</a>
-                        <a class="footerHyperlinkListLink" href="/Contact">登录</a>
+                        <a class="footerHyperlinkListLink" href="/about">挂号</a>
+                        <a class="footerHyperlinkListLink" href="/Episodes">收费</a>
+                        <a class="footerHyperlinkListLink" href="/Contact">登出</a>
                     </div>
                 </div>
             </div>
@@ -143,9 +160,9 @@
             </div>
             <div class="support">
                 <div class="SourceForkLink">
-                    <a class="buttonlink" href="https://github.com/RioZRon/CourseExercise">RioZRon</a>
+                    <a class="buttonlink" href="/https://github.com/RioZRon/CourseExercise">RioZRon</a>
                     <span>/</span>
-                    <a class="buttonlink" href="https://github.com/RioZRon/CourseExercise">Team</a>
+                    <a class="buttonlink" href="/https://github.com/RioZRon/CourseExercise">Team</a>
 
                 </div>
                 <div class="supportName">Made By D&T © 2017 Dec</div>
@@ -153,6 +170,6 @@
             </div>
         </footer>
     </div>
-</div>
+</main>
 </body>
 </html>

@@ -1,11 +1,17 @@
+<%@ page import="java.sql.Date" %>
+<%@ page contentType="text/html; charset=UTF-8" language="java" errorPage="" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>病人详情</title>
-    <link rel="shortcut icon" type="image/x-icon" href="../../../res/pic/icon/标签页图标.ico">
-    <link type="text/css" rel="stylesheet" href="../../CSS/frame.css">
-    <link type="text/css" rel="stylesheet" href="../../CSS/content.css">
+    <link rel="shortcut icon" type="image/x-icon" href="<%=basePath%>/res/pic/icon/标签页图标.ico">
+    <link type="text/css" rel="stylesheet" href="<%=basePath%>/Content/CSS/frame.css">
+    <link type="text/css" rel="stylesheet" href="<%=basePath%>/Content/CSS/content.css">
     <script src="hr.js"></script>
 </head>
 <body>
@@ -17,14 +23,14 @@
                 <div class="container-fluid">
                     <div class="floatLeft">
                         <a class="floatingWin-brand" href="frame.html" >
-                            <img alt="logo" style="height: 2.5rem" src="../../../res/pic/PNG/商标.png">
+                            <img alt="logo" style="height: 2.5rem" src="<%=basePath%>/res/pic/PNG/商标.png">
                         </a>
                     </div>
                     <div class="navigation">
                         <span class="floatingWin-bar">
                               <a style="color: #5d594d;" href="/about">主页</a>
                             <a style="color: #5d594d;" href="/episodes"class="selectPage">添加账号</a>
-                            <a style="color: #5d594d;" href="/episodes" >修改账号</a>
+                            <a style="color: #5d594d;" href="<%=basePath%>/Content/HTML/HR/accountSelect.html">修改账号</a>
                             <a style="color: #5d594d;" href="/search">登出</a>
                         </span>
                     </div>
@@ -39,32 +45,32 @@
         <fieldset style="width: 50%;">
             <legend>SignUp</legend>
             <form action="/servlet/main/SignUpServlet" style="padding-top: 50px" method="post">
-            <div class="inner EnterContent-group">
-                <label class="inner EnterContent-lable" for="a102">姓名</label>
-                <input type="text" class="inner EnterContent-input longwidth" style="padding-left: 15px" id="a102" name="a102" value="">
-            </div>
-            <div class="inner EnterContent-group">
-                <label class="inner EnterContent-lable" for="a103">账号</label>
-                <input type="text" class="inner EnterContent-input longwidth" style="padding-left: 15px" id="a103" name="a103" value="">
-            </div>
-            <div class="inner EnterContent-group">
-                <label class="inner EnterContent-lable" for="a104">密码</label>
-                <img src="../../../res/pic/PNG/眼睛%20(2).png" alt="显示密码" class="showPassword" onclick="showhide_password()" id="showpassword">
-                <input type="password" class="inner EnterContent-input longwidth" style="padding-left: 15px" id="a104" name="a104" value="">
-            </div>
-            <div class="inner EnterContent-group">
-                <label class="inner EnterContent-lable" for="a105">角色</label>
-                <br>
-                <select name="a105" id="a105" class="selectClass">
-                    <option value="1" selected>挂号</option>
-                    <option value="2">门诊</option>
-                    <option value="3">病房</option>
-                    <option value="4">手术</option>
-                    <option value="5">管理员</option>
-                </select>
-            </div>
+                <div class="inner EnterContent-group">
+                    <label class="inner EnterContent-lable" for="a102">姓名</label>
+                    <input type="text" class="inner EnterContent-input longwidth" style="padding-left: 15px" id="a102" name="a102" value="">
+                </div>
+                <div class="inner EnterContent-group">
+                    <label class="inner EnterContent-lable" for="a103">账号</label>
+                    <input type="text" class="inner EnterContent-input longwidth" style="padding-left: 15px" id="a103" name="a103" value="">
+                </div>
+                <div class="inner EnterContent-group">
+                    <label class="inner EnterContent-lable" for="a104">密码</label>
+                    <img src="<%=basePath%>/res/pic/PNG/眼睛%20(2).png" alt="显示密码" class="showPassword" onclick="showhide_password()" id="showpassword">
+                    <input type="password" class="inner EnterContent-input longwidth" style="padding-left: 15px" id="a104" name="a104" value="">
+                </div>
+                <div class="inner EnterContent-group">
+                    <label class="inner EnterContent-lable" for="a105">角色</label>
+                    <br>
+                    <select name="a105" id="a105" class="selectClass">
+                        <option value="1" selected>挂号</option>
+                        <option value="2">门诊</option>
+                        <option value="3">病房</option>
+                        <option value="4">手术</option>
+                        <option value="5">管理员</option>
+                    </select>
+                </div>
                 <input type="submit" value="保存" class="mainformsubmit" >
-                </form>
+            </form>
         </fieldset>
 
     </div>
@@ -121,16 +127,16 @@
             </div>
             <div class="SocialMediaLink">
                 <a href="https://github.com/RioZRon/CourseExercise">
-                    <img src="../../../res/pic/PNG/socialMedia/github-square.png" alt="github" class="socialmedialinkico">
+                    <img src="<%=basePath%>/res/pic/PNG/socialMedia/github-square.png" alt="github" class="socialmedialinkico">
                 </a>
                 <a href="https://github.com/RioZRon/CourseExercise">
-                    <img src="../../../res/pic/PNG/socialMedia/微信.png" alt="wechat" class="socialmedialinkico">
+                    <img src="<%=basePath%>/res/pic/PNG/socialMedia/微信.png" alt="wechat" class="socialmedialinkico">
                 </a>
                 <a href="https://github.com/RioZRon/CourseExercise">
-                    <img src="../../../res/pic/PNG/socialMedia/qq.png" alt="qq" class="socialmedialinkico" style="height: 1.6rem; margin-bottom: .08rem; margin-left: .2rem">
+                    <img src="<%=basePath%>/res/pic/PNG/socialMedia/qq.png" alt="qq" class="socialmedialinkico" style="height: 1.6rem; margin-bottom: .08rem; margin-left: .2rem">
                 </a>
                 <a href="Mailto:rioZron@outlook.com">
-                    <img src="../../../res/pic/PNG/socialMedia/POP_Gmail.png" alt="mail" class="socialmedialinkico" style="height:1.75em; margin-bottom: .125rem; margin-left: .5rem">
+                    <img src="<%=basePath%>/res/pic/PNG/socialMedia/POP_Gmail.png" alt="mail" class="socialmedialinkico" style="height:1.75em; margin-bottom: .125rem; margin-left: .5rem">
                 </a>
             </div>
             <div class="support">

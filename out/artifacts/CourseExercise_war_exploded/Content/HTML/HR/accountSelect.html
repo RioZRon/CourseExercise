@@ -35,14 +35,14 @@
     <main class="SearchContent">
         <div class="centerSub">
             <h1 class="maintitle">搜索账号</h1>
-            <form action="patientList.html">
-                <label class="mainlable" for="name">姓名</label>
+            <form action="/server/main/AccountSelectDealWitha102103Servlet" method="post">
+                <label class="mainlable" for="a102">姓名</label>
                 <div class="inputbod">
-                    <input type="text" class="maininput" id="name">
+                    <input type="text" class="maininput" id="a102" name="a102">
                 </div>
-                <label class="mainlable" for="identityCard">账号</label>
+                <label class="mainlable" for="a103">账号</label>
                 <div class="inputbod">
-                    <input type="text" class="maininput" id="identityCard">
+                    <input type="text" class="maininput" id="a103" name="a103">
                 </div>
                 <input type="submit" value="搜索" class="mainsubmit" >
             </form>
