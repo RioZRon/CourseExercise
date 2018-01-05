@@ -1,6 +1,7 @@
 package service;
 
 import bean.main.A10;
+import bean.register.A20;
 import dao.daoIMP;
 import tools.JDBCPool;
 import tools.JDBCPoolTools;
@@ -8,7 +9,7 @@ import tools.JDBCPoolTools;
 import java.sql.Connection;
 import java.util.ArrayList;
 
-public class serviceIMP implements serviceForMain, serviceForHr{
+public class serviceIMP implements serviceForMain, serviceForHr, serviceForRegistration{
     /**
      * @param name
      * @param pass
@@ -78,5 +79,41 @@ public class serviceIMP implements serviceForMain, serviceForHr{
         Connection connection = JDBCPoolTools.getConnection();
         daoIMP daoIMP = new daoIMP();
         daoIMP.UpdateA10(connection, a10);
+    }
+
+    /**
+     * @param a20
+     * @Description: 添加病人A20
+     */
+    @Override
+    public void addPatientBasicInformation(A20 a20) {
+        Connection connection = JDBCPoolTools.getConnection();
+        daoIMP daoIMP = new daoIMP();
+        daoIMP.A20insert(connection, a20);
+    }
+
+    /**
+     * @param name
+     * @param id
+     * @Description: 搜索病人
+     */
+    @Override
+    public ArrayList<A20> FindPatients(String name, String id) {
+        Connection connection = JDBCPoolTools.getConnection();
+        daoIMP daoIMP = new daoIMP();
+        ArrayList<A20> a20ArrayList = new ArrayList<>();
+        a20ArrayList = daoIMP.SelectA20Bya201a202inDark(connection,name,id);
+        return a20ArrayList;
+    }
+
+    /**
+     * @param id
+     * @Description: 搜索病人(精准)
+     */
+    @Override
+    public A20 FindPatient(int id) {
+        Connection connection = JDBCPoolTools.getConnection();
+        daoIMP daoIMP = new daoIMP();
+        return daoIMP.SelectA20Bya201(connection, id);
     }
 }

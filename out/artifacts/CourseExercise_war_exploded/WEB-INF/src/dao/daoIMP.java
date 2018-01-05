@@ -1,16 +1,15 @@
 package dao;
 
 import bean.main.A10;
+import bean.register.A20;
 import tools.JDBCPool;
 import tools.JDBCPoolTools;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
+import java.util.Date;
 
-public class daoIMP implements daoForMain, daoForHr {
+public class daoIMP implements daoForMain, daoForHr, daoForRegistration {
     /**
      * @param connection
      * @param name
@@ -35,7 +34,6 @@ public class daoIMP implements daoForMain, daoForHr {
                 int a105 = resultSet.getInt("a105");
 
                 A10 a10 = new A10(a101, a102, a103, a104, a105);
-//                System.out.println(a10.toString());
                 return a10;
             }
         } catch (SQLException e) {
@@ -120,7 +118,6 @@ public class daoIMP implements daoForMain, daoForHr {
     return a10ArrayList;
     }
 
-
     /**
      * @param connection
      * @param a101
@@ -197,5 +194,133 @@ public class daoIMP implements daoForMain, daoForHr {
         } finally {
             JDBCPoolTools.release(connection, preparedStatement, resultSet);
         }
+    }
+
+    /**
+     * @param connection
+     * @param a20
+     * @Description: 添加A20
+     */
+    @Override
+    public void A20insert(Connection connection, A20 a20) {
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            String sql = "insert into A20 values (A20_1.nextval, ?, ?, ?, ?,?,?,?,?,?,?,?)";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, a20.getA202());
+            preparedStatement.setInt(2, a20.getA203());
+            preparedStatement.setString(3, a20.getA204());
+            preparedStatement.setString(4, a20.getA205());
+            preparedStatement.setString(5, a20.getA206());
+            preparedStatement.setString(6, a20.getA207());
+            preparedStatement.setString(7, a20.getA208());
+            preparedStatement.setString(8, a20.getA209());
+            preparedStatement.setInt(9, a20.getA2010());
+            preparedStatement.setString(10, a20.getA2011());
+            Timestamp t = new Timestamp(a20.getA2012().getTime());
+            preparedStatement.setTimestamp(11, t);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCPoolTools.release(connection, preparedStatement, resultSet);
+        }
+    }
+
+    /**
+     * @param connection
+     * @param a202
+     * @param a201
+     * @Description: 根据a201a202搜索A20
+     */
+    @Override
+    public ArrayList<A20> SelectA20Bya201a202inDark(Connection connection, String a202, String a201) {
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+        ArrayList<A20> a20ArrayList = new ArrayList<>();
+        try{
+            if(a202 == null && a201 == null){
+                String sql = "SELECT * FROM A20";
+                preparedStatement = connection.prepareStatement(sql);
+            }else if(a202 == null){
+                String sql = "SELECT * FROM A20 WHERE A201 LIKE " +  "'%"+a201+"%'";
+                preparedStatement = connection.prepareStatement(sql);
+                System.out.println(sql);
+            }else if(a201 == null){
+                String sql = "SELECT * FROM A20 WHERE A202 like " + "'%"+a202+"%'";
+                preparedStatement = connection.prepareStatement(sql);
+                System.out.println(sql);
+            }else {
+                String sql = "SELECT * FROM A20 WHERE A202 LIKE "+"'%"+a202+"%'"+" AND A201 LIKE "+"'%"+a201+"%'";
+                preparedStatement = connection.prepareStatement(sql);
+                System.out.println(sql);
+            }
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int rsa201 = resultSet.getInt("A201");
+                String rsa202 = resultSet.getString("a202");
+                int rsa203 = resultSet.getInt("A203");
+                String rsa204 = resultSet.getString("A204");
+                String rsa205 = resultSet.getString("A205");
+                String rsa206 = resultSet.getString("A206");
+                String rsa207 = resultSet.getString("A207");
+                String rsa208 = resultSet.getString("A208");
+                String rsa209 = resultSet.getString("A209");
+                int rsa2010 = resultSet.getInt("A2010");
+                String rsa2011 = resultSet.getString("A2011");
+                Timestamp rsa2012ts = resultSet.getTimestamp("A2012");
+                Date rsa2012 = new Date(rsa2012ts.getTime());
+                A20 a20 = new A20(rsa201,rsa203,rsa2010,rsa202,rsa204,rsa205,rsa206,rsa207,rsa208,rsa209,rsa2011,rsa2012);
+                a20ArrayList.add(a20);
+            }
+            return a20ArrayList;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCPoolTools.release(connection, preparedStatement, resultSet);
+        }
+        return null;
+    }
+
+
+    /**
+     * @param connection
+     * @param a201
+     * @Description: 根据201搜索A20
+     */
+    @Override
+    public A20 SelectA20Bya201(Connection connection, int a201) {
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            String sql = "SELECT * FROM A20 WHERE A201 = ?";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, a201);
+            resultSet = preparedStatement.executeQuery();
+            if (resultSet.next())
+            {
+                int rsa201 = resultSet.getInt("A201");
+                String rsa202 = resultSet.getString("a202");
+                int rsa203 = resultSet.getInt("A203");
+                String rsa204 = resultSet.getString("A204");
+                String rsa205 = resultSet.getString("A205");
+                String rsa206 = resultSet.getString("A206");
+                String rsa207 = resultSet.getString("A207");
+                String rsa208 = resultSet.getString("A208");
+                String rsa209 = resultSet.getString("A209");
+                int rsa2010 = resultSet.getInt("A2010");
+                String rsa2011 = resultSet.getString("A2011");
+                Timestamp rsa2012ts = resultSet.getTimestamp("A2012");
+                Date rsa2012 = new Date(rsa2012ts.getTime());
+                A20 a20 = new A20(rsa201,rsa203,rsa2010,rsa202,rsa204,rsa205,rsa206,rsa207,rsa208,rsa209,rsa2011,rsa2012);
+                return  a20;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCPoolTools.release(connection, preparedStatement, resultSet);
+        }
+        return null;
     }
 }
