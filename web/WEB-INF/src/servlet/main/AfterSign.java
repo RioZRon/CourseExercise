@@ -31,6 +31,9 @@ public class AfterSign extends HttpServlet {
         // TODO: 2018/1/3 判断身份角色跳转页面
         if(a10.getA105() == 5)
             req.getRequestDispatcher(req.getContextPath() + "/Content/HTML/HR/signup.jsp").forward(req,resp);
+        else if(a10.getA105() == 2)
+            req.getRequestDispatcher(req.getContextPath() + " /servlet/outpatientDoctor/BeforPatientListServlet").forward(req,resp);
+
     }
 
     @Override
