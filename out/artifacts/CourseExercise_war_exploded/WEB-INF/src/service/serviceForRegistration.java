@@ -21,4 +21,9 @@ public interface serviceForRegistration {
      * @Description: 搜索病人(精准)
      **/
     A20 FindPatient (int id);
+
+    /**
+    * @Description: 修改病人(精准)
+    **/
+    void UpdatePatient(A20 a20);
 }

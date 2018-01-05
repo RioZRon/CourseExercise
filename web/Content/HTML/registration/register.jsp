@@ -43,7 +43,7 @@
         <h1 class="maintitle">病人挂号栏</h1>
         <fieldset>
             <legend>挂号</legend>
-            <form action="/servlet/main/AfterRegisterServlet" method="post">
+            <form action="/servlet/registration/AfterRegisterServlet" method="post">
                 <div class="EnterContent">
                     <div class="EnterContent-group">
                         <label class="EnterContent-lable" for="a202">姓名</label>

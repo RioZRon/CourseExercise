@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@WebServlet(name = "PatientSelectServlet", urlPatterns = "/server/main/PatientSelectServlet")
+@WebServlet(name = "PatientSelectServlet", urlPatterns = "/servlet/registration/PatientSelectServlet")
 public class PatientSelect extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

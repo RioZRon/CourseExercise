@@ -21,4 +21,9 @@ public interface daoForRegistration {
     * @Description: ¸ù¾Ý201ËÑË÷A20
     **/
     A20 SelectA20Bya201(Connection connection, int a201);
+
+    /**
+    * @Description: ÐÞ¸ÄA20
+    **/
+    void UpdateA20(Connection connection, A20 a20);
 }

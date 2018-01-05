@@ -116,4 +116,15 @@ public class serviceIMP implements serviceForMain, serviceForHr, serviceForRegis
         daoIMP daoIMP = new daoIMP();
         return daoIMP.SelectA20Bya201(connection, id);
     }
+
+    /**
+     * @param a20
+     * @Description: 修改病人(精准)
+     */
+    @Override
+    public void UpdatePatient(A20 a20) {
+        Connection connection = JDBCPoolTools.getConnection();
+        daoIMP daoIMP = new daoIMP();
+        daoIMP.UpdateA20(connection, a20);
+    }
 }

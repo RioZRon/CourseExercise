@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet(name = "PatientSelectDealWithNameIdServlet", urlPatterns = "/server/main/PatientSelectDealWithNameIdServlet")
+@WebServlet(name = "PatientSelectDealWithNameIdServlet", urlPatterns = "/servlet/registration/PatientSelectDealWithNameIdServlet")
 public class PatientSelectDealWithNameId extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -19,7 +19,7 @@ public class PatientSelectDealWithNameId extends HttpServlet {
         HttpSession session = req.getSession();
         session.setAttribute("name", name);
         session.setAttribute("id", id);
-        req.getRequestDispatcher(req.getContextPath()+"/server/main/PatientSelectServlet").forward(req, resp);
+        req.getRequestDispatcher(req.getContextPath()+"/servlet/registration/PatientSelectServlet").forward(req, resp);
     }
 
     @Override

@@ -43,7 +43,7 @@
     <main class="SearchContent" style="margin-bottom: 100px">
         <div class="centerSub">
             <h1 class="maintitle">缴费搜索</h1>
-            <form action="/server/main/PatientSelectDealWithNameIdServlet">
+            <form action="/servlet/registration/PatientSelectDealWithNameIdServlet">
                 <label class="mainlable" for="name">姓名</label>
                 <div class="inputbod">
                     <input type="text" class="maininput" id="name" name="name">

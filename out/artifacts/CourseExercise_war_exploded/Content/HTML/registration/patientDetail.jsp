@@ -1,4 +1,6 @@
 <%@ page import="java.sql.Date" %>
+<%@ page import="bean.register.A20" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 <%@ page contentType="text/html; charset=UTF-8" language="java" errorPage="" %>
 <%
     String path = request.getContextPath();
@@ -43,63 +45,58 @@
         <h1 class="maintitle">病人挂号栏</h1>
         <fieldset>
             <legend>挂号</legend>
-            <form action="/servlet/main/AfterRegisterServlet" method="post">
+            <%
+                A20 a20 = (A20)session.getAttribute("a20");
+                SimpleDateFormat simFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
+                String a2012str = simFormat.format(a20.getA2012());
+            %>
+            <form action="/servlet/registration/PatientUpdateServlet" method="post">
                 <div class="EnterContent">
                     <div class="EnterContent-group">
                         <label class="EnterContent-lable" for="a202">姓名</label>
-                        <input type="text" class="EnterContent-input shortwidth" id="a202" name="a202" value="${sessionScope.a20.getA202}">
+                        <input type="text" class="EnterContent-input shortwidth" id="a202" name="a202" value="<%=a20.getA202()%>">
                     </div>
                     <div class="EnterContent-group">
                         <label class="EnterContent-lable" for="a203">年龄</label>
-                        <input type="number" class="EnterContent-input shortwidth" id="a203" name="a203">
+                        <input type="number" class="EnterContent-input shortwidth" id="a203" name="a203" value="<%=a20.getA203()%>">
                     </div>
                     <div class="EnterContent-group">
                         <label class="EnterContent-lable" for="a204">电话</label>
-                        <input type="number" class="EnterContent-input shortwidth" id="a204" name="a204">
+                        <input type="number" class="EnterContent-input shortwidth" id="a204" name="a204" value="<%=a20.getA204()%>">
                     </div>
                     <div class="EnterContent-group">
                         <label class="EnterContent-lable" for="a205">联系人</label>
-                        <input type="text" class="EnterContent-input shortwidth" id="a205" name="a205">
+                        <input type="text" class="EnterContent-input shortwidth" id="a205" name="a205"  value="<%=a20.getA205()%>">
                     </div>
                     <div class="EnterContent-group">
                         <label class="EnterContent-lable" for="a206">联系人电话</label>
-                        <input type="number" class="EnterContent-input shortwidth" id="a206" name="a206">
+                        <input type="number" class="EnterContent-input shortwidth" id="a206" name="a206" value="<%=a20.getA206()%>">
                     </div>
                     <div class="EnterContent-group">
                         <label class="EnterContent-lable" for="a207">身份证号</label>
-                        <input type="text" class="EnterContent-input longwidth" id="a207" name="a207">
+                        <input type="text" class="EnterContent-input longwidth" id="a207" name="a207" value="<%=a20.getA207()%>">
                     </div>
                     <div class="EnterContent-group">
                         <label class="EnterContent-lable" for="a208">常住住址</label>
-                        <input type="text" class="EnterContent-input longwidth" id="a208" name="a208">
+                        <input type="text" class="EnterContent-input longwidth" id="a208" name="a208"  value="<%=a20.getA208()%>">
                     </div>
 
                     <hr style=" margin-right: 12%; margin-top: 80px; margin-bottom: 80px">
                     <div class="EnterContent-group">
                         <label class="EnterContent-lable" for="a209">初查</label>
-                        <input type="text" class="EnterContent-input longwidth" id="a209" name="a209">
+                        <input type="text" class="EnterContent-input longwidth" id="a209" name="a209" value="<%=a20.getA209()%>">
                     </div>
                     <div class="EnterContent-group">
                         <label class="EnterContent-lable" for="a2010">建议分科</label>
-                        <input type="text" class="EnterContent-input longwidth" id="a2010" name="a2010">
+                        <input type="text" class="EnterContent-input longwidth" id="a2010" name="a2010" value="<%=a20.getA2010()%>">
                     </div>
                     <div class="EnterContent-group">
                         <label class="EnterContent-lable" for="a2011">特殊情况备注</label>
-                        <input type="text" class="EnterContent-input longwidth" id="a2011" name="a2011">
+                        <input type="text" class="EnterContent-input longwidth" id="a2011" name="a2011" value="<%=a20.getA2011()%>">
                     </div>
                     <div class="EnterContent-group">
                         <label class="EnterContent-lable" for="a2012">挂号时间</label>
-                        <input type="datetime-local" class="EnterContent-input longwidth" id="a2012" name="a2012">
-                        <script>
-                            var date = new Date();
-                            function turn(num){
-                                return ((new Array(3)).join('0') + num).slice(-2);
-                            }
-                            //                        alert(turn(date.getMonth()+1));
-                            var datetime = date.getFullYear() +"-"+ turn(date.getMonth()+1)+"-"+ turn(date.getDate())+"T"+ turn(date.getHours()) +":"+ turn(date.getMinutes());
-                            //                        alert(datetime);
-                            document.getElementById('a2012').value= datetime;
-                        </script>
+                        <input type="datetime-local" class="EnterContent-input longwidth" id="a2012" name="a2012" value="<%=a2012str%>">
                     </div>
 
                     <input type="submit" value="缴费确认" class="mainformsubmit" >

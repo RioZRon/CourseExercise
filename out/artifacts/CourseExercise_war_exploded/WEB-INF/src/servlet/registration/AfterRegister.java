@@ -18,7 +18,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@WebServlet(name = "AfterRegisterServlet", urlPatterns = "/servlet/main/AfterRegisterServlet")
+@WebServlet(name = "AfterRegisterServlet", urlPatterns = "/servlet/registration/AfterRegisterServlet")
 public class AfterRegister extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

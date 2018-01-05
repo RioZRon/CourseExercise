@@ -44,7 +44,7 @@
     <main class="SearchContent">
         <div class="centerSub">
             <h1 class="result-title">搜索账号</h1>
-            <form action="/server/main/PatientSelectDealWithNameIdServlet" method="post">
+            <form action="/servlet/registration/PatientSelectDealWithNameIdServlet" method="post">
                 <label class="result-lable" for="name">姓名</label>
                 <input type="text" class="result-input" id="name" name="name" value="${sessionScope.name}">
                 <label class="result-lable" for="id">挂号换号</label>

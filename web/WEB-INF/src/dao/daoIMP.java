@@ -323,4 +323,38 @@ public class daoIMP implements daoForMain, daoForHr, daoForRegistration {
         }
         return null;
     }
+
+    /**
+     * @param connection
+     * @param a20
+     * @Description: ÐÞ¸ÄA20
+     */
+    @Override
+    public void UpdateA20(Connection connection, A20 a20) {
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            String sql = "UPDATE A20 SET A202 = ?, A203 = ?, A204 = ?, A205 = ? , A206 = ?, A207 = ?, A208 = ?, A209 = ?,  A2010 = ?,  A2011 = ?,  A2012 = ? WHERE A201 = ?";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, a20.getA202());
+            preparedStatement.setInt(2, a20.getA203());
+            preparedStatement.setString(3, a20.getA204());
+            preparedStatement.setString(4, a20.getA205());
+            preparedStatement.setString(5, a20.getA206());
+            preparedStatement.setString(6, a20.getA207());
+            preparedStatement.setString(7, a20.getA208());
+            preparedStatement.setString(8, a20.getA209());
+            preparedStatement.setInt(9, a20.getA2010());
+            preparedStatement.setString(10, a20.getA2011());
+            Timestamp t = new Timestamp(a20.getA2012().getTime());
+            preparedStatement.setTimestamp(11, t);
+            preparedStatement.setInt(12, a20.getA201());
+            System.out.println(sql);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCPoolTools.release(connection, preparedStatement, resultSet);
+        }
+    }
 }

@@ -1,6 +1,7 @@
 package servlet.registration;
 
 import bean.main.A10;
+import bean.register.A20;
 import service.serviceIMP;
 import tools.StringTools;
 
@@ -11,8 +12,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-@WebServlet(name = "AccountUpdateServlet", urlPatterns = "/servlet/main/AccountUpdateServlet")
+@WebServlet(name = "PatientUpdateServlet", urlPatterns = "/servlet/registration/PatientUpdateServlet")
 public class PatientUpdate extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -21,29 +25,41 @@ public class PatientUpdate extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //有可能是委托更改 也就可以不输入密码 判断如果密码为空 就不改变 其他的如果为空将用js判断能不能提交
-        String na102 = req.getParameter("a102");
-        String na103 = req.getParameter("a103");
-        String na104 = req.getParameter("a104");
-        int na105 = Integer.valueOf(req.getParameter("a105"));
-
-        HttpSession session = req.getSession();
-        A10 a10 = (A10)session.getAttribute("a10");
-        if (!na104.equals("不修改就保持用户原密码")) {
-            try{
-                na104 = StringTools.EncoderByMd5(na104);
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-            a10.setA104(na104);
+        String a202 = req.getParameter("a202");
+        int a203 = Integer.valueOf(req.getParameter("a203"));
+        String a204 = req.getParameter("a204");
+        String a205 = req.getParameter("a205");
+        String a206 = req.getParameter("a206");
+        String a207 = req.getParameter("a207");
+        String a208 = req.getParameter("a208");
+        String a209 = req.getParameter("a209");
+        int a2010 = Integer.valueOf(req.getParameter("a2010"));
+        String a2011 = req.getParameter("a2011");
+        //还是需要修改时间  这个挂号时间应该算作预约时间
+        String a2012str = req.getParameter("a2012");
+        Date a2012 = null;
+        try {
+            SimpleDateFormat simFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
+            a2012 = simFormat.parse(a2012str);
+        }catch (ParseException e){
+            e.getErrorOffset();
         }
-        a10.setA102(na102);
-        a10.setA103(na103);
-        a10.setA105(na105);
-//        System.out.println(a10.toString());
+        HttpSession session = req.getSession();
+        A20 a20 = (A20)session.getAttribute("a20");
+        a20.setA202(a202);
+        a20.setA203(a203);
+        a20.setA204(a204);
+        a20.setA205(a205);
+        a20.setA206(a206);
+        a20.setA207(a207);
+        a20.setA208(a208);
+        a20.setA209(a209);
+        a20.setA2010(a2010);
+        a20.setA2011(a2011);
+        a20.setA2012(a2012);
+        System.out.println(a20.toString());
         serviceIMP serviceIMP= new serviceIMP();
-        serviceIMP.UpdateStaff(a10);
-
-        req.getRequestDispatcher(req.getContextPath() + "/server/main/AaccountSelectServlet").forward(req,resp);
+        serviceIMP.UpdatePatient(a20);
+        req.getRequestDispatcher(req.getContextPath() + "/servlet/registration/PatientSelectServlet").forward(req,resp);
     }
 }

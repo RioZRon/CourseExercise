@@ -18,8 +18,9 @@ public class servicetest {
 
         ArrayList<A20> a20ArrayList = new ArrayList<>();
         service.serviceIMP serviceIMP = new serviceIMP();
-        A20 a20 = serviceIMP.FindPatient(21);
-        System.out.println(a20.toString());
+//        A20 a20 = serviceIMP.FindPatient(21);
+//        System.out.println(a20.toString());
+
 //        serviceIMP.DeleteStaff(1);
 //        ArrayList<A20> a20 = serviceIMP.FindPatients(null,"1");
 //        Iterator<A20> a20Iterator = a20.iterator();
