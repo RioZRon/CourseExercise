@@ -20,7 +20,6 @@ public class TurnPatientDetail extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("-----ceshi1-------");
         int a201 = Integer.valueOf(req.getParameter("a201"));
         serviceIMP serviceIMP = new serviceIMP();
         A20 a20 = serviceIMP.FindPatient(a201);

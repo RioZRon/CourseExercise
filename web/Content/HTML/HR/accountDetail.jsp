@@ -77,13 +77,13 @@
                 <script>
                     var state = document.getElementById("flag").value;
                     // alert(state);
-                    if(state = 1)
+                    if(state == 1)
                         document.getElementById("a105").options[1].selected = true;
-                    else if(state = 2)
+                    else if(state == 2)
                         document.getElementById("a105").options[2].selected = true;
-                    else if(state = 3)
+                    else if(state == 3)
                         document.getElementById("a105").options[3].selected = true;
-                    else if(state = 4)
+                    else if(state == 4)
                         document.getElementById("a105").options[4].selected = true;
                     else
                         document.getElementById("a105").options[5].selected = true;

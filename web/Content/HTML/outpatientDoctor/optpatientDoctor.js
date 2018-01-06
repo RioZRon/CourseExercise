@@ -13,13 +13,12 @@ var showrescriptionFlag = 1;
 function showrescription(){
     if(showrescriptionFlag == 1) {
         document.getElementById("showrescription").style.textShadow="0 0 1px gray";
-        document.getElementById("forrescription").innerHTML = "<label class='inner EnterContent-lable' for='name'>处方</label>" +
-            "<textarea class='maintextarea' style='height: 100px;' id='rescription' name='rescription'>维生素C咀嚼片 * 10; 吡嗪酰胺片 * 20; 云芝包内糖肽胶囊 * 20</textarea>";
+        document.getElementById("forrescription").style.display = "block";
         showrescriptionFlag = 0;
     }
     else{
         document.getElementById("showrescription").style.textShadow="";
-        document.getElementById("forrescription").innerHTML = "";
+        document.getElementById("forrescription").style.display = "none";
         showrescriptionFlag = 1;
     }
 }
@@ -28,13 +27,12 @@ var showoperationFlag = 1;
 function showoperation(){
     if(showoperationFlag == 1) {
         document.getElementById("showoperation").style.textShadow="0 0 1px gray";
-        document.getElementById("foroperation").innerHTML = "<label class='inner EnterContent-lable' for='name'>手术</label>" +
-            "<textarea class='maintextarea' style='height: 100px;' id='operation' name='operation'>扁桃体切除</textarea>";
+        document.getElementById("foroperation").style.display = "block";
         showoperationFlag = 0;
     }
     else{
         document.getElementById("showoperation").style.textShadow="";
-        document.getElementById("foroperation").innerHTML = "";
+        document.getElementById("foroperation").style.display = "none";
         showoperationFlag = 1;
     }
 }
@@ -43,13 +41,26 @@ var showbeinhosFlag = 1;
 function showbeinhos(){
     if(showbeinhosFlag == 1) {
         document.getElementById("showbeinhos").style.textShadow="0 0 1px gray";
-        document.getElementById("forbeinhos").innerHTML = "<label class='inner EnterContent-lable' for='name'>住院需求</label>" +
-            "<textarea class='maintextarea' style='height: 100px;' id='beinhos' name='beinhos'>普通病房 3天</textarea>";
+        document.getElementById("forbeinhos").style.display = "block";
         showbeinhosFlag = 0;
     }
     else{
         document.getElementById("showbeinhos").style.textShadow="";
-        document.getElementById("forbeinhos").innerHTML = "";
+        document.getElementById("forbeinhos").style.display = "none";
         showbeinhosFlag = 1;
     }
+}
+
+function inspectTabAdd(){
+    document.getElementById("inspectTable").innerHTML += " <tr>" +
+        "                        <th><input type='text' class='maininput' id='a21513' name='a2151'></th>" +
+        "                        <th><textarea class='maintextarea' id='a21523' name='a2152'></textarea></th>" +
+        "                    </tr>"
+}
+
+function inspectTabDel() {
+    //
+    var tab =document.getElementById("inspectTable");
+    if(tab.hasChildNodes())
+    tab.lastElementChild.hidden=true;
 }

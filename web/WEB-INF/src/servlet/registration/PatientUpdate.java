@@ -57,7 +57,7 @@ public class PatientUpdate extends HttpServlet{
         a20.setA2010(a2010);
         a20.setA2011(a2011);
         a20.setA2012(a2012);
-        System.out.println(a20.toString());
+//        System.out.println(a20.toString());
         serviceIMP serviceIMP= new serviceIMP();
         serviceIMP.UpdatePatient(a20);
         req.getRequestDispatcher(req.getContextPath() + "/servlet/registration/PatientSelectServlet").forward(req,resp);

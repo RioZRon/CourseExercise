@@ -8,6 +8,8 @@ import javax.management.relation.RoleNotFoundException;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class StringTools {
     public static String emptyToNull(String str){
@@ -42,5 +44,30 @@ public class StringTools {
             else
                 throw new RuntimeException("RoleNotFound");
         }
+
+    public static HashMap<String,String> A215StrToMap(String string){
+        if (string == null)
+            return  null;
+        HashMap<String, String> a215Map = new HashMap<>();
+        String[] str1 = string.split(";");
+        for (String string1 : str1) {
+            string1 = string1.trim();
+            String[] str2 = string1.split(":");
+            if (str2.length==2)
+            a215Map.put(str2[0], str2[1]);
+        }
+        return a215Map;
     }
+    public static String A215MapToStr(HashMap<String, String> map){
+        StringBuilder stringBuilder = new StringBuilder();
+        for(Map.Entry<String, String> entry:map.entrySet()){
+            stringBuilder.append(entry.getKey());
+            stringBuilder.append(":");
+            stringBuilder.append(entry.getValue());
+            stringBuilder.append(";");
+        }
+        return stringBuilder.toString();
+    }
+
+}
 

@@ -25,12 +25,18 @@ public class AfterSign extends HttpServlet {
         }catch (NoSuchAlgorithmException|UnsupportedEncodingException e){
             e.printStackTrace();
         }
+        System.out.println(passwordMd5);
         serviceIMP serviceIMP = new serviceIMP();
         A10 a10 = serviceIMP.SignIn(name, passwordMd5);
+//        ceshi3
+        System.out.println(a10.toString());
         req.getSession().setAttribute("a10", a10);
         // TODO: 2018/1/3 判断身份角色跳转页面
         if(a10.getA105() == 5)
             req.getRequestDispatcher(req.getContextPath() + "/Content/HTML/HR/signup.jsp").forward(req,resp);
+        else if(a10.getA105() == 2)
+            req.getRequestDispatcher(req.getContextPath() + "/servlet/outpatientDoctor/BeforPatientListServlet").forward(req,resp);
+
     }
 
     @Override

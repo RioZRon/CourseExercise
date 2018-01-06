@@ -88,7 +88,16 @@
                     </div>
                     <div class="EnterContent-group">
                         <label class="EnterContent-lable" for="a2010">建议分科</label>
-                        <input type="text" class="EnterContent-input longwidth" id="a2010" name="a2010" value="<%=a20.getA2010()%>">
+                        <select name="a2010" id="a2010" class="selectClass" style="margin-left: 3%">
+                            <option value="1" selected>内科</option>
+                            <option value="2">外科</option>
+                            <option value="3">儿科</option>
+                            <option value="4">妇科</option>
+                            <option value="5">耳鼻喉科</option>
+                            <option value="6">口腔科</option>
+                            <option value="7">皮肤科</option>
+                            <option value="8">中医科</option>
+                        </select>
                     </div>
                     <div class="EnterContent-group">
                         <label class="EnterContent-lable" for="a2011">特殊情况备注</label>
@@ -98,7 +107,27 @@
                         <label class="EnterContent-lable" for="a2012">挂号时间</label>
                         <input type="datetime-local" class="EnterContent-input longwidth" id="a2012" name="a2012" value="<%=a2012str%>">
                     </div>
-
+                    <input type="number" hidden id="flag" value="<%=a20.getA2010()%>">
+                    <script>
+                        var state = document.getElementById("flag").value;
+                        // alert(state);
+                        if(state == 1)
+                            document.getElementById("a2010").options[1].selected = true;
+                        else if(state == 2)
+                            document.getElementById("a2010").options[2].selected = true;
+                        else if(state == 3)
+                            document.getElementById("a2010").options[3].selected = true;
+                        else if(state == 4)
+                            document.getElementById("a2010").options[4].selected = true;
+                        else if(state == 5)
+                            document.getElementById("a2010").options[5].selected = true;
+                        else if(state == 6)
+                            document.getElementById("a2010").options[6].selected = true;
+                        else if(state == 7)
+                            document.getElementById("a2010").options[7].selected = true;
+                        else
+                            document.getElementById("a2010").options[8].selected = true;
+                    </script>
                     <input type="submit" value="缴费确认" class="mainformsubmit" >
                 </div>
             </form>

@@ -81,7 +81,17 @@
                     </div>
                     <div class="EnterContent-group">
                         <label class="EnterContent-lable" for="a2010">建议分科</label>
-                        <input type="text" class="EnterContent-input longwidth" id="a2010" name="a2010">
+                        <%--<input type="text" class="EnterContent-input longwidth" id="a2010" name="a2010">--%>
+                        <select name="a2010" id="a2010" class="selectClass" style="margin-left: 3%">
+                            <option value="1" selected>内科</option>
+                            <option value="2">外科</option>
+                            <option value="3">儿科</option>
+                            <option value="4">妇科</option>
+                            <option value="5">耳鼻喉科</option>
+                            <option value="6">口腔科</option>
+                            <option value="7">皮肤科</option>
+                            <option value="8">中医科</option>
+                        </select>
                     </div>
                     <div class="EnterContent-group">
                         <label class="EnterContent-lable" for="a2011">特殊情况备注</label>
