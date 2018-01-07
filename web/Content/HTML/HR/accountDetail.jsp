@@ -71,6 +71,7 @@
                         <option value="3">病房</option>
                         <option value="4">手术</option>
                         <option value="5">管理员</option>
+                        <option value="6">药房</option>
                     </select>
                 </div>
                 <input type="number" hidden id="flag" value="<%=a10.getA105()%>">
@@ -78,12 +79,14 @@
                     var state = document.getElementById("flag").value;
                     // alert(state);
                     if(state == 1)
-                        document.getElementById("a105").options[1].selected = true;
+                        document.getElementById("a105").options[0].selected = true;
                     else if(state == 2)
-                        document.getElementById("a105").options[2].selected = true;
+                        document.getElementById("a105").options[1].selected = true;
                     else if(state == 3)
-                        document.getElementById("a105").options[3].selected = true;
+                        document.getElementById("a105").options[2].selected = true;
                     else if(state == 4)
+                        document.getElementById("a105").options[3].selected = true;
+                    else if(state == 5)
                         document.getElementById("a105").options[4].selected = true;
                     else
                         document.getElementById("a105").options[5].selected = true;

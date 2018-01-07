@@ -33,9 +33,15 @@ public class AfterSign extends HttpServlet {
         req.getSession().setAttribute("a10", a10);
         // TODO: 2018/1/3 判断身份角色跳转页面
         if(a10.getA105() == 5)
-            req.getRequestDispatcher(req.getContextPath() + "/Content/HTML/HR/signup.jsp").forward(req,resp);
+            resp.sendRedirect(req.getContextPath() + "/Content/HTML/HR/signup.jsp");
+//            req.getRequestDispatcher(req.getContextPath() + "/Content/HTML/HR/signup.jsp").forward(req,resp);
         else if(a10.getA105() == 2)
-            req.getRequestDispatcher(req.getContextPath() + "/servlet/outpatientDoctor/BeforPatientListServlet").forward(req,resp);
+            resp.sendRedirect(req.getContextPath() +  "/servlet/outpatientDoctor/BeforPatientListServlet");
+//            req.getRequestDispatcher(req.getContextPath() + "/servlet/outpatientDoctor/BeforPatientListServlet").forward(req,resp);
+        else if(a10.getA105() == 6)
+            resp.sendRedirect(req.getContextPath() +  "/servlet/medicine/SelectAllAlertMedicineServlet");
+
+//            req.getRequestDispatcher(req.getContextPath() + "/servlet/medicine/SelectAllAlertMedicineServlet").forward(req,resp);
 
     }
 

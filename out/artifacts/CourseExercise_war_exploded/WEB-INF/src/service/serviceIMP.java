@@ -1,16 +1,25 @@
 package service;
 
 import bean.main.A10;
+import bean.medicine.A60;
+import bean.medicine.A62;
+import bean.medicine.RemainNum;
 import bean.outpatientdocter.A21;
 import bean.register.A20;
 import dao.daoIMP;
+import servlet.medicine.SelectAllAlertMedicine;
 import tools.JDBCPool;
 import tools.JDBCPoolTools;
+import tools.OtherTools;
+import tools.StringTools;
 
 import java.sql.Connection;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Map;
+import java.util.TreeMap;
 
-public class serviceIMP implements serviceForMain, serviceForHr, serviceForRegistration, serviceForOutPatientDocter{
+public class serviceIMP implements serviceForMain, serviceForHr, serviceForRegistration, serviceForOutPatientDocter, serviceForMedicine{
     /**
      * @param name
      * @param pass
@@ -157,7 +166,7 @@ public class serviceIMP implements serviceForMain, serviceForHr, serviceForRegis
     }
 
     /**
-     * @param a201
+     * @param a211
      * @Description: 根据挂号查询病历
      */
     @Override
@@ -188,5 +197,91 @@ public class serviceIMP implements serviceForMain, serviceForHr, serviceForRegis
         daoIMP daoIMP = new daoIMP();
         daoIMP.UpdateA21(connection, a21);
 
+    }
+
+    /**
+     * @Description: 更新A60表
+     **/
+    @Override
+    public ArrayList<A60> UpdateAndSelectAlertA60() {
+        Connection connection = JDBCPoolTools.getConnection();
+//        减少数据量 得到所有的id,name, 保质期, 数量, 警戒数量
+        ArrayList<A60> a60s = new ArrayList<>();
+        ArrayList<A60> result = new ArrayList<>();
+        daoIMP daoIMP = new daoIMP();
+        a60s = daoIMP.SelectAllA60(connection);
+        //更新首页的库存数量 写一个更新方法
+        for(A60 a60each : a60s){
+            OtherTools.RemainNumUpdate(a60each);
+            //更新对应的库存
+            daoIMP.UpdateA60Bya607(connection, a60each.getA601(),a60each.getA607());
+            //获取数量
+            RemainNum remainNum = StringTools.StringToRemainNum(a60each.getA607());
+            int sum = 0;
+            for (Map.Entry<Integer,Integer> entry: remainNum.getTreeMap().entrySet()){
+                sum+= entry.getValue();
+            }
+            if (sum  < a60each.getA608()){
+                result.add(a60each);
+            }
+        }
+        if(result.isEmpty())
+            return null;
+        return result;
+    }
+
+    /**
+     * @param a601
+     * @Description: 显示药品详情
+     */
+    @Override
+    public A60 SelectMedicinDetail(int a601) {
+        Connection connection = JDBCPoolTools.getConnection();
+        daoIMP daoIMP = new daoIMP();
+        A60 a60 = daoIMP.SelectA60ByA601(connection, a601);
+        return a60;
+    }
+
+    /**
+     * @param a62
+     * @Description: 添加入库流水
+     */
+    @Override
+    public void AddFlowIn(A62 a62) {
+        Connection connection = JDBCPoolTools.getConnection();
+        daoIMP daoIMP = new daoIMP();
+        daoIMP.A62insert(connection, a62);
+    }
+
+    /**
+     * @param a62
+     * @Description: 入库提交后修改对应的RemainNum
+     */
+    @Override
+    public void UpdateRemainNumByA62(A62 a62) {
+        Connection coonnection = JDBCPoolTools.getConnection();
+        daoIMP daoIMP = new daoIMP();
+        int id = a62.getA622();
+        int num  = a62.getA625();
+        Date date = a62.getA628();
+        A60 a60 = daoIMP.SelectA60ByA601(coonnection,id);
+        RemainNum remainNum = StringTools.StringToRemainNum(a60.getA607());
+        int minu = OtherTools.DifferentDaysByMillisecond(date,  remainNum.getDate());
+        //判断入库的是不是保质期最短的
+        //如果不是最短, 正常计算时间
+        int keynew = 0;
+        int valuenew = 0;
+        if(date.compareTo(remainNum.getDate()) >= 0){
+            keynew = OtherTools.GetMinKey(remainNum.getTreeMap()) + minu;
+        }else {
+            keynew  = OtherTools.GetMinKey(remainNum.getTreeMap()) - minu;
+            remainNum.setDate(date);
+        }
+        valuenew = num;
+        TreeMap<Integer,Integer> treeMapnew = remainNum.getTreeMap();
+        treeMapnew.put(keynew,valuenew);
+        remainNum.setTreeMap(treeMapnew);
+        String a607 = StringTools.RemainNumToString(remainNum);
+        daoIMP.Updatea607Bya601(coonnection, id, a607);
     }
 }

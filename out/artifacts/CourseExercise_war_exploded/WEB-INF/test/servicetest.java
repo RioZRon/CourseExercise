@@ -1,4 +1,5 @@
 import bean.main.A10;
+import bean.medicine.A60;
 import bean.outpatientdocter.A21;
 import bean.register.A20;
 import service.serviceIMP;
@@ -9,17 +10,19 @@ import java.util.Iterator;
 
 public class servicetest {
     public static void main(String[] args) {
-        String test = null;
-        try {
-            test = StringTools.EncoderByMd5("123456");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        String test = null;
+//        try {
+//            test = StringTools.EncoderByMd5("123456");
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
         service.serviceIMP serviceIMP = new serviceIMP();
-        A21 a21 = new A21(21, "1","1","1","1","1","1","1","1");
-        serviceIMP.UpdateMedicalrecord(a21);
-
-
+//        A21 a21 = new A21(21, "1","1","1","1","1","1","1","1");
+//        serviceIMP.UpdateMedicalrecord(a21);
+        ArrayList<A60> rs = serviceIMP.UpdateAndSelectAlertA60();
+        for(A60 a60 : rs){
+            System.out.println(a60.toString());
+        }
 
 //        ArrayList<A20> a20ArrayList = new ArrayList<>();
 //        a20ArrayList = serviceIMP.FindPatientsBya2010(2);

@@ -1,6 +1,7 @@
 package tools;
 
 
+import bean.medicine.RemainNum;
 import sun.misc.BASE64Encoder;
 
 import javax.management.relation.Role;
@@ -8,10 +9,12 @@ import javax.management.relation.RoleNotFoundException;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.HashMap;
-import java.util.Map;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class StringTools {
+    public static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
     public static String emptyToNull(String str){
         if (str.equals(""))
             return null;
@@ -69,5 +72,46 @@ public class StringTools {
         return stringBuilder.toString();
     }
 
+    public static RemainNum StringToRemainNum (String string){
+        RemainNum remainNum = null;
+        String[] str1 = string.split("\\|");
+//        System.out.println(str1[0].trim());
+        TreeMap<Integer, Integer> treeMap = new TreeMap<>();
+        String[] str2 = str1[1].split(",");
+        for(String string2 : str2){
+            string2 = string2.trim();
+            String[] str3 = string2.split(":");
+            if (str3.length==2)
+                try{
+                    treeMap.put(Integer.valueOf(str3[0].trim()),Integer.valueOf(str3[1].trim()));
+//                    System.out.println(treeMap);
+                }catch(NumberFormatException e){
+                    System.out.println("ReamainNumber´æ´¢·½Ê½³ö´í");
+                }
+        }
+        try {
+            Date date =simpleDateFormat.parse(str1[0].trim());
+//            System.out.println(date);
+            remainNum = new RemainNum(date, treeMap);
+        }catch(ParseException t){
+            t.getErrorOffset();
+        }catch(NullPointerException e){
+            e.printStackTrace();
+        }
+        return remainNum;
+    }
+    public static String RemainNumToString(RemainNum remainNum){
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append(simpleDateFormat.format(remainNum.getDate()));
+        stringBuffer.append("|");
+        for (Map.Entry<Integer,Integer> entry : remainNum.getTreeMap().entrySet())
+        {
+            stringBuffer.append(entry.getKey());
+            stringBuffer.append(":");
+            stringBuffer.append(entry.getValue());
+            stringBuffer.append(",");
+        }
+        return stringBuffer.toString();
+    }
 }
 

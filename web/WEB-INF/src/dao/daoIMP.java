@@ -1,6 +1,8 @@
 package dao;
 
 import bean.main.A10;
+import bean.medicine.A60;
+import bean.medicine.A62;
 import bean.outpatientdocter.A21;
 import bean.register.A20;
 import tools.JDBCPool;
@@ -10,7 +12,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class daoIMP implements daoForMain, daoForHr, daoForRegistration, daoForOutPatientDocter {
+public class daoIMP implements daoForMain, daoForHr, daoForRegistration, daoForOutPatientDocter, daoForMedicine {
     /**
      * @param connection
      * @param name
@@ -503,6 +505,148 @@ public class daoIMP implements daoForMain, daoForHr, daoForRegistration, daoForO
             preparedStatement.setString(8, a21.getA219());
             preparedStatement.setInt(9, a21.getA211());
             System.out.println(sql);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCPoolTools.release(connection, preparedStatement, resultSet);
+        }
+    }
+
+    /**
+     * @param connection
+     * @param a601
+     * @param a607
+     * @Description: 用a607更新A60
+     */
+    @Override
+    public void UpdateA60Bya607(Connection connection, int a601, String a607) {
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            String sql = "UPDATE A60 SET A607 = ? WHERE A601 = ?";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, a607);
+            preparedStatement.setInt(2, a601);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCPoolTools.release(connection, preparedStatement, resultSet);
+        }
+    }
+
+    /**
+     * @param connection
+     * @Description: 所有药瓶药品
+     */
+    @Override
+    public ArrayList<A60> SelectAllA60(Connection connection) {
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+        ArrayList<A60> a60ArrayList = new ArrayList<>();
+        try {
+            String sql = "SELECT A601,A602,A606,A607,A608 FROM A60";
+            preparedStatement = connection.prepareStatement(sql);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int rsa601 = resultSet.getInt("A601");
+                String rsa602 = resultSet.getString("a602");
+                int rsa606 = resultSet.getInt("A606");
+                String rsa607 = resultSet.getString("A607");
+                int rsa608 = resultSet.getInt("A608");
+                A60 a60 = new A60(rsa601, rsa602, rsa606, rsa607, rsa608);
+                a60ArrayList.add(a60);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCPoolTools.release(connection, preparedStatement, resultSet);
+        }
+        return a60ArrayList;
+    }
+
+    /**
+     * @param connection
+     * @param a601
+     * @Description: 根据A601 搜索A60
+     */
+    @Override
+    public A60 SelectA60ByA601(Connection connection, int a601) {
+        A60 a60 = null;
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            String sql = "SELECT * FROM A60 WHERE A601 = ?";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, a601);
+            resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                int rsa601 = resultSet.getInt("A601");
+                String rsa602 = resultSet.getString("a602");
+                int rsa603 = resultSet.getInt("A603");
+                String rsa604 = resultSet.getString("A604");
+                int rsa605 = resultSet.getInt("A605");
+                int rsa606 = resultSet.getInt("A606");
+                String rsa607 = resultSet.getString("A607");
+                int rsa608 = resultSet.getInt("A608");
+                String rsa609 = resultSet.getString("A609");
+                String rsa6010 = resultSet.getString("A6010");
+                a60 = new A60(rsa601,rsa605,rsa606,rsa608,rsa602,rsa603,rsa604,rsa607,rsa609,rsa6010);
+                System.out.println(a60.toString());
+                return a60;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCPoolTools.release(connection, preparedStatement, resultSet);
+        }
+     return null;
+    }
+
+    /**
+     * @param connection
+     * @param a62
+     * @Description: 添加A62流水表
+     */
+    @Override
+    public void A62insert(Connection connection, A62 a62) {
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            String sql = "insert into A62 values (A62_1.nextval, ?, ?, ?, ?,?,?,?)";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, a62.getA622());
+            preparedStatement.setString(2, a62.getA623());
+            preparedStatement.setDate(3, a62.getA624());
+            preparedStatement.setInt(4, a62.getA625());
+            preparedStatement.setString(5, a62.getA626());
+            preparedStatement.setInt(6, a62.getA627());
+            preparedStatement.setDate(7, a62.getA628());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCPoolTools.release(connection, preparedStatement, resultSet);
+        }
+    }
+
+    /**
+     * @param connection
+     * @param a601
+     * @param a607
+     * @Description: 修改A60的A607
+     */
+    @Override
+    public void Updatea607Bya601(Connection connection, int a601, String a607) {
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            String sql = "UPDATE A60 SET A607 = ? WHERE A601 = ?";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, a607);
+            preparedStatement.setInt(2,a601);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

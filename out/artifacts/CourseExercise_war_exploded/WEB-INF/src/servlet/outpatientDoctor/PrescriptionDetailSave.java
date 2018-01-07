@@ -79,6 +79,5 @@ public class PrescriptionDetailSave extends HttpServlet{
         serviceIMP.UpdatePatient(a20);
         serviceIMP.UpdateMedicalrecord(a21);
         req.getRequestDispatcher(req.getContextPath() + "/servlet/outpatientDoctor/BeforPatientListServlet").forward(req,resp);
-//        resp.sendRedirect(req.getContextPath() + "/Content/HTML/outpatientDoctor/patientDetail.jsp");
     }
 }

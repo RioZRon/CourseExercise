@@ -67,6 +67,7 @@
                         <option value="3">病房</option>
                         <option value="4">手术</option>
                         <option value="5">管理员</option>
+                        <option value="6">药房</option>
                     </select>
                 </div>
                 <input type="submit" value="保存" class="mainformsubmit" >
