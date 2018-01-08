@@ -1,10 +1,3 @@
-<%@ page import="java.sql.Date" %>
-<%@ page import="bean.main.A10" %>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="java.util.Iterator" %>
-<%@ page import="tools.StringTools" %>
-<%@ page import="bean.register.A20" %>
-<%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="bean.medicine.A60" %>
 <%@ page import="tools.OtherTools" %>
 <%@ page contentType="text/html; charset=UTF-8" language="java" errorPage="" %>
@@ -16,7 +9,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>搜索病人</title>
+    <title>药品详情</title>
     <link rel="shortcut icon" type="image/x-icon" href="<%=basePath%>/res/pic/icon/标签页图标.ico">
     <link type="text/css" rel="stylesheet" href="<%=basePath%>/Content/CSS/frame.css">
     <link type="text/css" rel="stylesheet" href="<%=basePath%>/Content/CSS/content.css">
@@ -36,8 +29,7 @@
                         <span class="floatingWin-bar">
                             <a style="color: #5d594d;" href="/about">主页</a>
                             <a style="color: #5d594d;" href="/episodes" class="selectPage">警戒药品</a>
-                            <a style="color: #5d594d;" href="<%=basePath%>/Content/HTML/medicine/keeperSelect.jsp">搜索药品</a>
-                            <a style="color: #5d594d;" href="<%=basePath%>/Content/HTML/medicine/keeperSelect.jsp">新药入库</a>
+                            <a style="color: #5d594d;" href="/episodes">搜索药品</a>
                             <a style="color: #5d594d;" href="/episodes">病人取药</a>
                             <a style="color: #5d594d;" href="/search">登出</a>
                         </span>
@@ -47,45 +39,78 @@
         </nav>
     </header>
     <main class="SearchContent">
-        <h1 class="maintitle">库存预警</h1>
-        <%
-            ArrayList<A60> a60ArrayList = (ArrayList<A60>)session.getAttribute("a60ArrayList");
-            Iterator<A60> a60Iterator = a60ArrayList.iterator();
-        %>
-        <table style="margin-top: 50px" class="confermation-table" border="1px solid">
-            <tr>
-                <th colspan="8" style="text-align: left; font-weight: 400; font-size:35px; padding-left: 20px">所有处于预警状态的药品</th>
-            </tr>
-            <tr>
-                <th width="15%">药品编号</th>
-                <th width="15%">药品名称</th>
-                <th>库存情况</th>
-                <th width="15%">警戒数量</th>
-                <th width="15%">进货数目</th>
-                <th width="7%">详情</th>
-                <th width="7%">进货</th>
-            </tr>
-            <%  while (a60Iterator.hasNext()){
-                A60 nextA60 = a60Iterator.next();
-            %>
-            <tr>
-                <form action="" method="post">
-                    <th><input type="number" class="maininput" id="a601" name="a601" value="<%=nextA60.getA601()%>" readonly></th>
-                    <th><input type="text" class="maininput" id="a602" name="a602" value="<%=nextA60.getA602()%>" readonly></th>
-                    <th><input type="text" class="maininput" id="a607" name="a607" value="<%=OtherTools.RemainNumToNumber(nextA60)%>" readonly></th>
-                    <th><input type="number" class="maininput" id="a608" name="a608" value="<%=nextA60.getA608()%>" readonly></th>
-                    <th><input type="number" class="maininput" id="innumber" name="innumber" value="0" ></th>
-                    <th><input type="image" class="linkPic" src="<%=basePath%>/res/pic/PNG/查询.png" alt="详细" onclick="form.action='/servlet/medicine/TurnToMedicineDetailServlet';form.submit()" ></th>
-                    <th><input type="image" class="linkPic" src="<%=basePath%>/res/pic/PNG/药品/提交.png" alt="详细" onclick="form.action='/servlet/medicine/CreateOldFlowInServlet';form.submit()" ></th>
-                </form>
-            </tr>
+        <h1 class="maintitle">药品入库</h1>
+
+        <form action="/servlet/medicine/DoNewFlowInServlet" method="post">
             <%
-                }
+                A60 a60 = (A60)session.getAttribute("a60");
             %>
+            <table style="margin-top: 30px" class="confermation-table" border="1px solid">
+                <tr>
+                    <th colspan="4" style="text-align: center; font-weight: 400; font-size:35px">新进药品</th>
+                </tr>
+                <tr>
+                    <th>药品名称<font color="red">*</font></th>
+                    <th><input type="text" class="maininput" id="a602" name="a602" value=""></th>
+                    <th>药品类型<font color="red">*</font></th>
+                    <th><select style="padding-left: 1%; margin-left: 1%; border: none" name="a605" id="a605" class="selectClass" >
+                        <option value="1" selected>中药材</option>
+                        <option value="2">中成药</option>
+                        <option value="3">中西成药</option>
+                        <option value="4">化学原料药及其制剂</option>
+                        <option value="5">抗生素</option>
+                        <option value="6">生化药品</option>
+                        <option value="7">放射性药品</option>
+                        <option value="8">疫苗</option>
+                        <option value="9">血液制品</option>
+                    </select></th>
+                </tr>
+                <tr>
+                    <th>进价<font color="red">*</font></th>
+                    <th><input type="number" id="a627" name="a627" class="maininput"></th>
+                    <th>定价<font color="red">*</font></th>
+                    <th><input type="number" id="a603" name="a603" class="maininput"></th>
+                </tr>
+                <tr>
+                    <th>入库数量<font color="red">*</font></th>
+                    <th><input type="number" id="a625" name="a625" class="maininput"></th>
+                    <th>产地</th>
+                    <th><input type="text" id="a626" name="a626" class="maininput"></th>
+                </tr>
+                <tr>
+                    <th>生产商</th>
+                    <th colspan="3"> <input type="text" id="a604" name="a604" class="maininput"></th>
+                </tr>
+                <tr>
+                    <th>保质期<font color="red">*</font></th>
+                    <th><input type="number" step="0.01" id="a606" name="a606" class="maininput"></th>
+                    <th>警戒数量</th>
+                    <th><input type="number" step="0.01" id="a608" name="a608" class="maininput"></th>
+                </tr>
+                    <th>放置位置</th>
+                    <th><input type="text" class="maininput" id="a609" name="a609"></th>
+                    <th>仓库位置</th>
+                    <th><input type="text" id="a6010" name="a6010" class="maininput"></th>
+                <tr>
+                    <th>入库日期</th>
+                    <th><input type="date" id="a624" name="a624" class="maininput"> </th>
+                    <script>
+                        document.getElementById('a624').valueAsDate = new Date();
+                    </script>
+                    <th>药品生产日期<font color="red">*</font></th>
+                    <th><input type="date" id="a628" name="a628" class="maininput" value=""></th>
+                    <script>
+                        document.getElementById('a624').valueAsDate = new Date();
+                        document.getElementById('a628').valueAsDate = new Date();
+                    </script>
+                </tr>
 
-        </table>
+            </table>
+            <input type="submit" value="保存" class="mainformsubmit" >
+        </form>
+
+
     </main>
-
     <div class="framefooterArea">
         <footer class="realFooterArea">
             <div class="footerHyperlinkList">

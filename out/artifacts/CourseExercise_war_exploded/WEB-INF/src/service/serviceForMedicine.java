@@ -36,4 +36,9 @@ public interface serviceForMedicine {
    * @Description: 更新药品基本信息
    **/
     void UpdateMedicine(A60 a60);
+
+    /**
+    * @Description: 添加药品基本信息
+    **/
+    int AddMedicineAndReturna601(A60 a60);
 }

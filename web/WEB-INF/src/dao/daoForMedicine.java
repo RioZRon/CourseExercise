@@ -42,4 +42,14 @@ public interface daoForMedicine {
      * @Description: 更新A60
      **/
     void UpdateA60(Connection connection, A60 a60);
+
+    /**
+    * @Description: 添加A60
+    **/
+    void A60insert(Connection connection, A60 a60);
+
+    /**
+    * @Description: 根据唯一名 查询编号
+    **/
+    int Selecta601Bya602(Connection connection, String a602);
 }

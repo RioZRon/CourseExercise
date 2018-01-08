@@ -10,6 +10,16 @@ public class A62 {
     public A62() {
     }
 
+    public A62(int a622, int a625, int a627, String a623, String a626, Date a624, Date a628) {
+        this.a622 = a622;
+        this.a625 = a625;
+        this.a627 = a627;
+        this.a623 = a623;
+        this.a626 = a626;
+        this.a624 = a624;
+        this.a628 = a628;
+    }
+
     public A62(int a621, int a622, int a625, int a627, String a623, String a626, Date a624, Date a628) {
         this.a621 = a621;
         this.a622 = a622;

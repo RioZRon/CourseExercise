@@ -315,4 +315,17 @@ public class serviceIMP implements serviceForMain, serviceForHr, serviceForRegis
         daoIMP daoIMP = new daoIMP();
         daoIMP.UpdateA60(connection, a60);
     }
+
+    /**
+     * @param a60
+     * @Description: 添加药品基本信息
+     */
+    @Override
+    public int AddMedicineAndReturna601(A60 a60) {
+        Connection connection = JDBCPoolTools.getConnection();
+        daoIMP daoIMP = new daoIMP();
+        daoIMP.A60insert(connection, a60);
+        int id = daoIMP.Selecta601Bya602(connection, a60.getA602());
+        return id;
+    }
 }

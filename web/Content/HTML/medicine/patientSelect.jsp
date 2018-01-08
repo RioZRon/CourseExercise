@@ -1,12 +1,4 @@
 <%@ page import="java.sql.Date" %>
-<%@ page import="bean.main.A10" %>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="java.util.Iterator" %>
-<%@ page import="tools.StringTools" %>
-<%@ page import="bean.register.A20" %>
-<%@ page import="java.text.SimpleDateFormat" %>
-<%@ page import="bean.medicine.A60" %>
-<%@ page import="tools.OtherTools" %>
 <%@ page contentType="text/html; charset=UTF-8" language="java" errorPage="" %>
 <%
     String path = request.getContextPath();
@@ -16,13 +8,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>搜索病人</title>
+    <title>挂号</title>
     <link rel="shortcut icon" type="image/x-icon" href="<%=basePath%>/res/pic/icon/标签页图标.ico">
     <link type="text/css" rel="stylesheet" href="<%=basePath%>/Content/CSS/frame.css">
     <link type="text/css" rel="stylesheet" href="<%=basePath%>/Content/CSS/content.css">
+    <script src="hr.js"></script>
 </head>
 <body>
-<div class="frameWidth" id="a11">
+<main class="frameWidth">
+    <!--headder-->
     <header class="remainForFloatingWin">
         <nav class="floatingWin">
             <div class="sitewrap">
@@ -34,11 +28,9 @@
                     </div>
                     <div class="navigation">
                         <span class="floatingWin-bar">
-                            <a style="color: #5d594d;" href="/about">主页</a>
-                            <a style="color: #5d594d;" href="/episodes" class="selectPage">警戒药品</a>
-                            <a style="color: #5d594d;" href="<%=basePath%>/Content/HTML/medicine/keeperSelect.jsp">搜索药品</a>
-                            <a style="color: #5d594d;" href="<%=basePath%>/Content/HTML/medicine/keeperSelect.jsp">新药入库</a>
-                            <a style="color: #5d594d;" href="/episodes">病人取药</a>
+                              <a style="color: #5d594d;" href="/about">主页</a>
+                            <a style="color: #5d594d;" href="<%=basePath%>/Content/HTML/registration/register.jsp">挂号</a>
+                            <a style="color: #5d594d;" href="<%=basePath%>/Content/HTML/HR/accountSelect.html" class="selectPage">搜索病人</a>
                             <a style="color: #5d594d;" href="/search">登出</a>
                         </span>
                     </div>
@@ -46,46 +38,27 @@
             </div>
         </nav>
     </header>
-    <main class="SearchContent">
-        <h1 class="maintitle">库存预警</h1>
-        <%
-            ArrayList<A60> a60ArrayList = (ArrayList<A60>)session.getAttribute("a60ArrayList");
-            Iterator<A60> a60Iterator = a60ArrayList.iterator();
-        %>
-        <table style="margin-top: 50px" class="confermation-table" border="1px solid">
-            <tr>
-                <th colspan="8" style="text-align: left; font-weight: 400; font-size:35px; padding-left: 20px">所有处于预警状态的药品</th>
-            </tr>
-            <tr>
-                <th width="15%">药品编号</th>
-                <th width="15%">药品名称</th>
-                <th>库存情况</th>
-                <th width="15%">警戒数量</th>
-                <th width="15%">进货数目</th>
-                <th width="7%">详情</th>
-                <th width="7%">进货</th>
-            </tr>
-            <%  while (a60Iterator.hasNext()){
-                A60 nextA60 = a60Iterator.next();
-            %>
-            <tr>
-                <form action="" method="post">
-                    <th><input type="number" class="maininput" id="a601" name="a601" value="<%=nextA60.getA601()%>" readonly></th>
-                    <th><input type="text" class="maininput" id="a602" name="a602" value="<%=nextA60.getA602()%>" readonly></th>
-                    <th><input type="text" class="maininput" id="a607" name="a607" value="<%=OtherTools.RemainNumToNumber(nextA60)%>" readonly></th>
-                    <th><input type="number" class="maininput" id="a608" name="a608" value="<%=nextA60.getA608()%>" readonly></th>
-                    <th><input type="number" class="maininput" id="innumber" name="innumber" value="0" ></th>
-                    <th><input type="image" class="linkPic" src="<%=basePath%>/res/pic/PNG/查询.png" alt="详细" onclick="form.action='/servlet/medicine/TurnToMedicineDetailServlet';form.submit()" ></th>
-                    <th><input type="image" class="linkPic" src="<%=basePath%>/res/pic/PNG/药品/提交.png" alt="详细" onclick="form.action='/servlet/medicine/CreateOldFlowInServlet';form.submit()" ></th>
-                </form>
-            </tr>
-            <%
-                }
-            %>
 
-        </table>
+    <!--main-->
+    <main class="SearchContent" style="margin-bottom: 100px">
+        <div class="centerSub">
+            <h1 class="maintitle">缴费搜索</h1>
+            <form action="/servlet/registration/PatientSelectDealWithNameIdServlet">
+                <label class="mainlable" for="name">姓名</label>
+                <div class="inputbod">
+                    <input type="text" class="maininput" id="name" name="name">
+                </div>
+                <label class="mainlable" for="id">挂号编号</label>
+                <div class="inputbod">
+                    <input type="text" class="maininput" id="id" name="id">
+                </div>
+                <input type="submit" value="搜索" class="mainsubmit" >
+            </form>
+        </div>
     </main>
 
+
+    <!--底部-->
     <div class="framefooterArea">
         <footer class="realFooterArea">
             <div class="footerHyperlinkList">
@@ -128,9 +101,9 @@
                 <div class="firstRow">
                     <div class="firstRow-inner">
                         <div class="footerHyperlinkListHead">界面接口</div>
-                        <a class="footerHyperlinkListLink" href="/about">主页</a>
-                        <a class="footerHyperlinkListLink" href="/Episodes">预约挂号</a>
-                        <a class="footerHyperlinkListLink" href="/Contact">登录</a>
+                        <a class="footerHyperlinkListLink" href="/about">挂号</a>
+                        <a class="footerHyperlinkListLink" href="/Episodes">收费</a>
+                        <a class="footerHyperlinkListLink" href="/Contact">登出</a>
                     </div>
                 </div>
             </div>
@@ -150,9 +123,9 @@
             </div>
             <div class="support">
                 <div class="SourceForkLink">
-                    <a class="buttonlink" href="https://github.com/RioZRon/CourseExercise">RioZRon</a>
+                    <a class="buttonlink" href="/https://github.com/RioZRon/CourseExercise">RioZRon</a>
                     <span>/</span>
-                    <a class="buttonlink" href="https://github.com/RioZRon/CourseExercise">Team</a>
+                    <a class="buttonlink" href="/https://github.com/RioZRon/CourseExercise">Team</a>
 
                 </div>
                 <div class="supportName">Made By D&T © 2017 Dec</div>
@@ -160,6 +133,6 @@
             </div>
         </footer>
     </div>
-</div>
+</main>
 </body>
 </html>

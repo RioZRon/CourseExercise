@@ -37,6 +37,7 @@
                             <a style="color: #5d594d;" href="/about">主页</a>
                             <a style="color: #5d594d;" href="/episodes" class="selectPage">警戒药品</a>
                             <a style="color: #5d594d;" href="<%=basePath%>/Content/HTML/medicine/keeperSelect.jsp">搜索药品</a>
+                            <a style="color: #5d594d;" href="<%=basePath%>/Content/HTML/medicine/keeperSelect.jsp">新药入库</a>
                             <a style="color: #5d594d;" href="/episodes">病人取药</a>
                             <a style="color: #5d594d;" href="/search">登出</a>
                         </span>

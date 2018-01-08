@@ -21,7 +21,6 @@ public class DoOldFlowIn extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        int a621 = ((A60)req.getSession().getAttribute("a60")).getA601();
         int a622 =  Integer.valueOf(req.getParameter("a622"));
         String a623 = req.getParameter("a623");
         int a627 = Integer.valueOf(req.getParameter("a627"));
@@ -29,7 +28,7 @@ public class DoOldFlowIn extends HttpServlet {
         String a626 = req.getParameter("a626");
         java.sql.Date a624 = java.sql.Date.valueOf(req.getParameter("a624"));
         java.sql.Date a628 = java.sql.Date.valueOf(req.getParameter("a628"));
-        A62 a62 = new A62(a621, a622, a625,a627, a623,a626, a624, a628);
+        A62 a62 = new A62(a622, a625,a627, a623,a626, a624, a628);
 //        System.out.println(a62.toString());
         serviceIMP serviceIMP= new serviceIMP();
         serviceIMP.AddFlowIn(a62);

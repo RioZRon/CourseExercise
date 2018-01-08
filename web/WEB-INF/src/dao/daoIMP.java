@@ -738,4 +738,60 @@ public class daoIMP implements daoForMain, daoForHr, daoForRegistration, daoForO
             JDBCPoolTools.release(connection, preparedStatement, resultSet);
         }
     }
+
+    /**
+     * @param connection
+     * @param a60
+     * @Description: 添加A60
+     */
+    @Override
+    public void A60insert(Connection connection, A60 a60) {
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            String sql = "insert into A60 values (A60_1.nextval, ?, ?, ?, ?,?,?,?,?,?)";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, a60.getA602());
+            preparedStatement.setInt(2, a60.getA603());
+            preparedStatement.setString(3, a60.getA604());
+            preparedStatement.setInt(4, a60.getA605());
+            preparedStatement.setInt(5, a60.getA606());
+            preparedStatement.setString(6, a60.getA607());
+            preparedStatement.setInt(7, a60.getA608());
+            preparedStatement.setString(8, a60.getA609());
+            preparedStatement.setString(9, a60.getA6010());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCPoolTools.release(connection, preparedStatement, resultSet);
+        }
+    }
+
+    /**
+     * @param connection
+     * @param a602
+     * @Description: 根据唯一名 查询编号
+     */
+    @Override
+    public int Selecta601Bya602(Connection connection, String a602) {
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+        int a601 = 0;
+        try {
+            String sql = "SELECT A601 FROM A60 WHERE A602 = ?";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, a602);
+            resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                a601 = resultSet.getInt("A601");
+            }
+            return a601;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCPoolTools.release(connection, preparedStatement, resultSet);
+        }
+        return a601;
+    }
 }

@@ -4,6 +4,18 @@ public class A60 {
     private int a601, a605, a606, a608, a603;
     private String a602, a604, a607, a609, a6010;
 
+    public A60(int a605, int a606, int a608, int a603, String a602, String a604, String a607, String a609, String a6010) {
+        this.a605 = a605;
+        this.a606 = a606;
+        this.a608 = a608;
+        this.a603 = a603;
+        this.a602 = a602;
+        this.a604 = a604;
+        this.a607 = a607;
+        this.a609 = a609;
+        this.a6010 = a6010;
+    }
+
     public A60(int a601, String a602, int a606, String a607, int a608) {
         this.a601 = a601;
         this.a602 = a602;

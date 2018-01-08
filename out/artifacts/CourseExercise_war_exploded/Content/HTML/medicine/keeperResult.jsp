@@ -51,7 +51,7 @@
                 <input type="text" class="result-input" id="name" name="name" value="${sessionScope.name}">
                 <label class="result-lable" for="id">挂号换号</label>
                 <input type="number" class="result-input" id="id" name="id" value="${sessionScope.id}">
-                <input type="submit" value="搜索" class="result-submit" >
+                <input type="submit" value="搜索" class="result-submit">
             </form>
 
             <hr style="margin: 80px 80px; opacity:0.5;">
