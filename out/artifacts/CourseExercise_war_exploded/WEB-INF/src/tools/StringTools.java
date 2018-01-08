@@ -113,5 +113,38 @@ public class StringTools {
         }
         return stringBuffer.toString();
     }
+
+    public static TreeMap<String, Integer> PrescriptionStringToMap(String string){
+        TreeMap<String, Integer> treeMap = new TreeMap<>();
+        String[] str1 = string.split(",");
+        for(String string1 : str1){
+            string1 = string1.trim();
+//            System.out.println(string1);
+            String[] str2 = string1.split("\\*");
+            if (str2.length==2)
+                try{
+                    treeMap.put(str2[0].trim(),Integer.valueOf(str2[1].trim()));
+//                    System.out.println(treeMap);
+                }catch(NumberFormatException e){
+                    System.out.println("ReamainNumber´æ´¢·½Ê½³ö´í");
+                }
+        }
+        return treeMap;
+    }
+
+    public static  String PrescriptionMapToString(TreeMap<String, Integer> treeMap){
+        boolean first = true;
+        StringBuffer stringBuffer = new StringBuffer();
+        for (Map.Entry<String, Integer> entry : treeMap.entrySet()){
+            if (!first){
+                stringBuffer.append(",");
+            }
+            stringBuffer.append(entry.getKey());
+            stringBuffer.append("*");
+            stringBuffer.append(entry.getValue());
+            first = false;
+        }
+        return stringBuffer.toString();
+    }
 }
 

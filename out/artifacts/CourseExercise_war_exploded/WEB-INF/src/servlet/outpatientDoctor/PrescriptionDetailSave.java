@@ -30,7 +30,7 @@ public class PrescriptionDetailSave extends HttpServlet{
         String a208 = StringTools.nullToEmpty(req.getParameter("a208"));
         String a209 = StringTools.nullToEmpty(req.getParameter("a209"));
         String a2011 = StringTools.nullToEmpty(req.getParameter("a2011"));
-        //因为是要求保存的 以前的修改复原
+        //因为是要求保存的 以前的修改复a2151原
         String a212 = req.getParameter("a212");
         String a213 = req.getParameter("a213");
         String a214 = req.getParameter("a214");
@@ -47,9 +47,14 @@ public class PrescriptionDetailSave extends HttpServlet{
             int len = keyLen;
             if (len > valLen)
                 len = valLen;
-            for (int i = 0; i < len; i++)
+            for (int i = 0; i < len; i++) {
+                if(a2151arraylist.get(i)==null || a2151arraylist.get(i).equals(""))
+                    if(a2152arraylist.get(i)==null || a2152arraylist.get(i).equals(""))
+                        continue;
                 rs.put(a2151arraylist.get(i), a2152arraylist.get(i));
+            }
             a215 = StringTools.A215MapToStr(rs);
+//            System.out.println(a215);
         }
 
         String a216 = req.getParameter("a216");

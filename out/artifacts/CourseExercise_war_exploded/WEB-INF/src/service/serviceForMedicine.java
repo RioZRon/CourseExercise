@@ -3,6 +3,7 @@ package service;
 import bean.main.A10;
 import bean.medicine.A60;
 import bean.medicine.A62;
+import bean.medicine.A63;
 
 import java.util.ArrayList;
 
@@ -23,10 +24,19 @@ public interface serviceForMedicine {
     void AddFlowIn(A62 a62);
 
     /**
+    * @Description:添加出库流水
+    **/
+    void AddFlowOut(A63 a63);
+
+
+    /**
     * @Description: 入库提交后修改对应的RemainNum
     **/
     void UpdateRemainNumByA62(A62 a62);
-
+    /**
+     * @Description: 出库提交后修改对应的RemainNum
+     **/
+    void UpdateRemainNumByA63(A63 a63);
     /**
      * @Description: 根据药品名和id模糊查询
      **/
@@ -41,4 +51,25 @@ public interface serviceForMedicine {
     * @Description: 添加药品基本信息
     **/
     int AddMedicineAndReturna601(A60 a60);
+
+    /**
+    * @Description: 根据id搜索A21表的A214
+    **/
+    String SelectMedicineNeeded(int a201);
+
+    /**
+    * @Description: 显示所有的对应药物
+    **/
+    ArrayList<A60> ShowAllNeededMedicine(String a217);
+
+    /**
+    * @Description: 搜索进价
+    **/
+    int SelectInprice(int a601);
+
+    /**
+    * @Description: 更新217处方
+    **/
+    void UpdatePrescrpe(int a201,String new217);
+
 }

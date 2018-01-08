@@ -21,6 +21,7 @@ public class SelectAllAlertMedicine extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         serviceIMP serviceIMP = new serviceIMP();
         ArrayList<A60> a60ArrayList = serviceIMP.UpdateAndSelectAlertA60();
         boolean keeperInFlag = true;

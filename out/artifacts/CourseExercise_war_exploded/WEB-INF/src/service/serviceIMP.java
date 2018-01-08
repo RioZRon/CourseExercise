@@ -3,6 +3,7 @@ package service;
 import bean.main.A10;
 import bean.medicine.A60;
 import bean.medicine.A62;
+import bean.medicine.A63;
 import bean.medicine.RemainNum;
 import bean.outpatientdocter.A21;
 import bean.register.A20;
@@ -13,11 +14,9 @@ import tools.JDBCPoolTools;
 import tools.OtherTools;
 import tools.StringTools;
 
+import javax.management.RuntimeErrorException;
 import java.sql.Connection;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class serviceIMP implements serviceForMain, serviceForHr, serviceForRegistration, serviceForOutPatientDocter, serviceForMedicine{
     /**
@@ -254,6 +253,17 @@ public class serviceIMP implements serviceForMain, serviceForHr, serviceForRegis
     }
 
     /**
+     * @param a63
+     * @Description:添加出库流水
+     */
+    @Override
+    public void AddFlowOut(A63 a63) {
+        Connection connection = JDBCPoolTools.getConnection();
+        daoIMP daoIMP = new daoIMP();
+        daoIMP.A63insert(connection, a63);
+    }
+
+    /**
      * @param a62
      * @Description: 入库提交后修改对应的RemainNum
      */
@@ -287,6 +297,50 @@ public class serviceIMP implements serviceForMain, serviceForHr, serviceForRegis
             treeMapnew.put(keynew, valuenew);
         }
         remainNum.setTreeMap(treeMapnew);
+        String a607 = StringTools.RemainNumToString(remainNum);
+        daoIMP.Updatea607Bya601(coonnection, id, a607);
+    }
+
+
+    /**
+     * @param a63
+     * @Description: 出库提交后修改对应的RemainNum
+     */
+    @Override
+    public void UpdateRemainNumByA63(A63 a63) {
+        Connection coonnection = JDBCPoolTools.getConnection();
+        daoIMP daoIMP = new daoIMP();
+        int num  = a63.getA635();
+        int id = a63.getA632();
+        A60 a60 = daoIMP.SelectA60ByA601(coonnection,id);
+        RemainNum remainNum = StringTools.StringToRemainNum(a60.getA607());
+        TreeMap<Integer,Integer> treeMap = remainNum.getTreeMap();
+        int oldestDay = OtherTools.GetMinKey(treeMap);
+        Date oldestDate = remainNum.getDate();
+
+        while (true) {
+            if ((num - oldestDay)<0){
+                treeMap.put(oldestDay, treeMap.get(oldestDay)-num);
+                break;
+            }
+            num -= oldestDay;
+            treeMap.remove(oldestDay);
+            //给时间更新
+            int cut = OtherTools.GetMinKey(treeMap) - oldestDay;
+            Calendar calendar = new GregorianCalendar();
+            calendar.setTime(oldestDate);
+            calendar.add(Calendar.DATE, cut);
+            oldestDate = calendar.getTime();
+
+            if (treeMap.isEmpty()) {
+                System.out.println("出库算法出错");
+                break;
+            }
+            oldestDay = OtherTools.GetMinKey(treeMap);
+        }
+        remainNum.setDate(oldestDate);
+        remainNum.setTreeMap(treeMap);
+
         String a607 = StringTools.RemainNumToString(remainNum);
         daoIMP.Updatea607Bya601(coonnection, id, a607);
     }
@@ -327,5 +381,74 @@ public class serviceIMP implements serviceForMain, serviceForHr, serviceForRegis
         daoIMP.A60insert(connection, a60);
         int id = daoIMP.Selecta601Bya602(connection, a60.getA602());
         return id;
+    }
+
+
+    /**
+     * @param a201
+     * @Description: 根据id搜索A21表的A214
+     */
+    @Override
+    public String SelectMedicineNeeded(int a201) {
+        Connection connection = JDBCPoolTools.getConnection();
+        daoIMP daoIMP = new daoIMP();
+        return daoIMP.Selecta217Bya211(connection, a201);
+    }
+
+    /**
+     * @param a217
+     * @Description: 显示所有的对应药物
+     */
+    @Override
+    public ArrayList<A60> ShowAllNeededMedicine(String a217) {
+        //先对a217进行处理
+        TreeMap<String, Integer> treeMap = StringTools.PrescriptionStringToMap(a217);
+        System.out.println(treeMap);
+        boolean first = true;
+        StringBuffer stringBuffer = new StringBuffer();
+        for (Map.Entry<String, Integer> entry : treeMap.entrySet()){
+            if (first) {
+                stringBuffer.append("'");
+                first = false;
+            }else{
+                stringBuffer.append(",'");
+            }
+            stringBuffer.append(entry.getKey());
+            stringBuffer.append("'");
+        }
+        String newa217 = stringBuffer.toString();
+//        System.out.println(newa217);
+        Connection connection = JDBCPoolTools.getConnection();
+        daoIMP daoIMP = new daoIMP();
+        ArrayList<A60> a60ArrayList = daoIMP.SelectA60sBya602(connection,newa217);
+        for (A60 a60 : a60ArrayList){
+            a60.setA608(treeMap.get(a60.getA602()));
+            System.out.println(a60.toString());
+        }
+        return a60ArrayList;
+    }
+
+    /**
+     * @param a601
+     * @Description: 搜索进价
+     */
+    @Override
+    public int SelectInprice(int a601) {
+        Connection connection = JDBCPoolTools.getConnection();
+        daoIMP daoIMP = new daoIMP();
+        int inprice = daoIMP.Selecta627Bya601(connection,a601);
+        return inprice;
+    }
+
+    /**
+     * @param a201
+     * @param new217
+     * @Description: 更新217处方
+     */
+    @Override
+    public void UpdatePrescrpe(int a201, String new217) {
+        Connection connection = JDBCPoolTools.getConnection();
+        daoIMP daoIMP = new daoIMP();
+        daoIMP.Updatea217Bya211(connection, a201, new217);
     }
 }

@@ -358,7 +358,7 @@ section, header, footer, div, nav {
 .maintextarea{
     margin-top: 6px;
     padding-left: 5%;
-    width: 95%;
+    width: 90%;
     font-size: 18px;
     font-weight: 200;
     border-style: none;
@@ -389,7 +389,6 @@ section, header, footer, div, nav {
     outline:none;
     cursor: pointer;
 }
-
 
 
 .flex-first{

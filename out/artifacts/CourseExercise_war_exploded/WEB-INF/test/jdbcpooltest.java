@@ -1,7 +1,9 @@
 import bean.medicine.A60;
 import dao.daoIMP;
+import service.serviceIMP;
 import tools.JDBCPool;
 import tools.JDBCPoolTools;
+import tools.StringTools;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -10,16 +12,15 @@ import java.util.List;
 
 public class jdbcpooltest {
     public static void main(String[] args) {
-        Connection connection =JDBCPoolTools.getConnection();
-        daoIMP daoIMP = new daoIMP();
-        ArrayList<A60> a60s = daoIMP.SelectAllA60(connection);
-//        Iterator<A60> iterator = a60s.iterator();
-//        while(iterator.hasNext()){
-//            System.out.println(iterator.next().toString());
-//        }
-        for (A60 a60 : a60s){
-            System.out.println(a60.toString());
-        }
+
+        serviceIMP serviceIMP = new serviceIMP();
+        String test = "栀子花金片*3 已取,  六味地黄丸*1, ceshi1*1";
+//        serviceIMP.ShowAllNeededMedicine(test);
+        String res = StringTools.PrescriptionMapToString(StringTools.PrescriptionStringToMap(test));
+        System.out.println(res);
+//
+//        int test2 = 22;
+//        System.out.println(serviceIMP.SelectInprice(test2));
 
     }
 }

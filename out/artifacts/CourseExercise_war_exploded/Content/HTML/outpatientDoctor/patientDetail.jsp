@@ -139,7 +139,7 @@
                     %>
                     <tr>
                         <th><input type="text" class="maininput" id="a21511" name="a2151" value="<%=entry.getKey()%>"></th>
-                        <th><textarea class="maintextarea" id="a21521" name="a2152"><%=entry.getValue()%>"</textarea></th>
+                        <th><textarea class="maintextarea" id="a21521" name="a2152"><%=entry.getValue()%></textarea></th>
                     </tr>
                     <%
                             }
