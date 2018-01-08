@@ -593,7 +593,7 @@ public class daoIMP implements daoForMain, daoForHr, daoForRegistration, daoForO
                 String rsa609 = resultSet.getString("A609");
                 String rsa6010 = resultSet.getString("A6010");
                 a60 = new A60(rsa601,rsa605,rsa606,rsa608,rsa602,rsa603,rsa604,rsa607,rsa609,rsa6010);
-                System.out.println(a60.toString());
+//                System.out.println(a60.toString());
                 return a60;
             }
 
@@ -647,6 +647,90 @@ public class daoIMP implements daoForMain, daoForHr, daoForRegistration, daoForO
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, a607);
             preparedStatement.setInt(2,a601);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCPoolTools.release(connection, preparedStatement, resultSet);
+        }
+    }
+
+    /**
+     * @param connection
+     * @param a602
+     * @param a601
+     * @Description: 根据601602模糊查询60表
+     */
+    @Override
+    public ArrayList<A60> SelectA60Bya601a602inDark(Connection connection, String a602, String a601) {
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+        ArrayList<A60> a60ArrayList = new ArrayList<>();
+        try {
+            if (a602 == null && a601 == null) {
+                String sql = "SELECT * FROM A60";
+                preparedStatement = connection.prepareStatement(sql);
+            } else if (a602 == null) {
+                String sql = "SELECT * FROM A60 WHERE A601 LIKE " + "'%" + a601 + "%'";
+                preparedStatement = connection.prepareStatement(sql);
+                System.out.println(sql);
+            } else if (a601 == null) {
+                String sql = "SELECT * FROM A60 WHERE A602 like " + "'%" + a602 + "%'";
+                preparedStatement = connection.prepareStatement(sql);
+                System.out.println(sql);
+            } else {
+                String sql = "SELECT * FROM A60 WHERE A602 LIKE " + "'%" + a602 + "%'" + " AND A601 LIKE " + "'%" + a601 + "%'";
+                preparedStatement = connection.prepareStatement(sql);
+                System.out.println(sql);
+            }
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int rsa601 = resultSet.getInt("A601");
+                String rsa602 = resultSet.getString("a602");
+                int rsa603 = resultSet.getInt("A603");
+                String rsa604 = resultSet.getString("A604");
+                int rsa605 = resultSet.getInt("A605");
+                int rsa606 = resultSet.getInt("A606");
+                String rsa607 = resultSet.getString("A607");
+                int rsa608 = resultSet.getInt("A608");
+                String rsa609 = resultSet.getString("A609");
+                String rsa6010 = resultSet.getString("A6010");
+                A60 a60 = new A60(rsa601,rsa605,rsa606,rsa608,rsa602,rsa603,rsa604,rsa607,rsa609,rsa6010);
+//                System.out.println(a60.toString());
+                a60ArrayList.add(a60);
+            }
+            return a60ArrayList;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCPoolTools.release(connection, preparedStatement, resultSet);
+        }
+        return null;
+    }
+
+    /**
+     * @param connection
+     * @param a60
+     * @Description: 更新A60
+     */
+    @Override
+    public void UpdateA60(Connection connection, A60 a60) {
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            String sql = "UPDATE A60 SET A602 = ?, A603 = ?, A604 = ?, A605 = ? , A606 = ?, A607 = ?, A608 = ?, A609 = ?  WHERE A601 = ?";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, a60.getA602());
+            preparedStatement.setInt(2, a60.getA603());
+            preparedStatement.setString(3, a60.getA604());
+            preparedStatement.setInt(4, a60.getA605());
+            preparedStatement.setInt(5, a60.getA606());
+            preparedStatement.setString(6, a60.getA607());
+            preparedStatement.setInt(7, a60.getA608());
+            preparedStatement.setString(8, a60.getA609());
+            preparedStatement.setString(9, a60.getA6010());
+            preparedStatement.setInt(9, a60.getA601());
+//            System.out.println(sql);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

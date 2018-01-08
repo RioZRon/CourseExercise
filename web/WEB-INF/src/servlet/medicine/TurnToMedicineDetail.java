@@ -25,7 +25,7 @@ public class TurnToMedicineDetail extends HttpServlet {
 //        System.out.println(a601);
         serviceIMP serviceIMP = new serviceIMP();
         A60 a60 = serviceIMP.SelectMedicinDetail(a601);
-        req.setAttribute("a60", a60);
+        req.getSession().setAttribute("a60", a60);
         req.getRequestDispatcher(req.getContextPath() + "/Content/HTML/medicine/medicineDetail.jsp").forward(req,resp);
     }
 }

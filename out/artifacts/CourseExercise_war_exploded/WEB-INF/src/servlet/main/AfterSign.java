@@ -29,7 +29,7 @@ public class AfterSign extends HttpServlet {
         serviceIMP serviceIMP = new serviceIMP();
         A10 a10 = serviceIMP.SignIn(name, passwordMd5);
 //        ceshi3
-        System.out.println(a10.toString());
+//        System.out.println(a10.toString());
         req.getSession().setAttribute("a10", a10);
         // TODO: 2018/1/3 判断身份角色跳转页面
         if(a10.getA105() == 5)

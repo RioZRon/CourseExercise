@@ -24,9 +24,13 @@ public class ToolTest {
 //            System.out.println(bao-tools.OtherTools.DifferentDaysByMillisecond(date1,date2));
 //        }
 
-        A60 testA60 = new A60(102,"栀子花金片",4,"2018-1-1|1:10,2:3,4:30", 10);
-        System.out.println(testA60.toString());
-        testA60 = OtherTools.RemainNumUpdate(testA60);
-        System.out.println(testA60.toString());
+//        A60 testA60 = new A60(102,"栀子花金片",4,"2018-1-1|1:10,2:3,4:30", 10);
+//        System.out.println(testA60.toString());
+//        testA60 = OtherTools.RemainNumUpdate(testA60);
+//        System.out.println(testA60.toString());
+
+        String test = "";
+        int a = Integer.valueOf(test);
+        System.out.println(a);
     }
 }

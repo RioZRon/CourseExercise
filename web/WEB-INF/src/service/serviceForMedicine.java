@@ -26,4 +26,14 @@ public interface serviceForMedicine {
     * @Description: 入库提交后修改对应的RemainNum
     **/
     void UpdateRemainNumByA62(A62 a62);
+
+    /**
+     * @Description: 根据药品名和id模糊查询
+     **/
+    ArrayList<A60> FindMedicines(String name, String id);
+
+   /**
+   * @Description: 更新药品基本信息
+   **/
+    void UpdateMedicine(A60 a60);
 }

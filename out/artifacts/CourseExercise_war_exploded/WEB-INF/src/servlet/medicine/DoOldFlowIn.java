@@ -30,11 +30,15 @@ public class DoOldFlowIn extends HttpServlet {
         java.sql.Date a624 = java.sql.Date.valueOf(req.getParameter("a624"));
         java.sql.Date a628 = java.sql.Date.valueOf(req.getParameter("a628"));
         A62 a62 = new A62(a621, a622, a625,a627, a623,a626, a624, a628);
-        System.out.println(a62.toString());
+//        System.out.println(a62.toString());
         serviceIMP serviceIMP= new serviceIMP();
         serviceIMP.AddFlowIn(a62);
         //还要修改对应的A607
         serviceIMP.UpdateRemainNumByA62(a62);
-        req.getRequestDispatcher(req.getContextPath() + "/servlet/medicine/SelectAllAlertMedicineServlet").forward(req,resp);
+        boolean keeperInFlag = (boolean)req.getSession().getAttribute("keeperInFlag");
+        if (keeperInFlag)
+            req.getRequestDispatcher(req.getContextPath() + "/servlet/medicine/SelectAllAlertMedicineServlet").forward(req,resp);
+        else
+            req.getRequestDispatcher(req.getContextPath() + "/servlet/medicine/KeeperSelectServlet").forward(req,resp);
     }
 }

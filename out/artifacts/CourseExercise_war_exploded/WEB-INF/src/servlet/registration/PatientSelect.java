@@ -32,7 +32,7 @@ public class PatientSelect extends HttpServlet {
         //将搜索条件和搜索结果存在sesstion
         session.setAttribute("a20ArrayList",a20ArrayList);
 
-        req.getRequestDispatcher(req.getContextPath()+"/Content/HTML/registration/patientResult.jsp").forward(req, resp);
+        req.getRequestDispatcher(req.getContextPath()+"/Content/HTML/registration/keeperResult.jsp").forward(req, resp);
     }
 
     @Override

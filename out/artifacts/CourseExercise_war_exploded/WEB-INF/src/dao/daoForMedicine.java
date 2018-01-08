@@ -32,4 +32,14 @@ public interface daoForMedicine {
     * @Description: 修改A60的A607
     **/
     void Updatea607Bya601(Connection connection, int A601, String A607);
+
+    /**
+    * @Description: 根据601602模糊查询60表
+    **/
+    ArrayList<A60> SelectA60Bya601a602inDark(Connection connection, String A602, String A601);
+
+    /**
+     * @Description: 更新A60
+     **/
+    void UpdateA60(Connection connection, A60 a60);
 }

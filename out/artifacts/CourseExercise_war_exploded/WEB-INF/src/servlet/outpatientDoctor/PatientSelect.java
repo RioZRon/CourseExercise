@@ -24,7 +24,7 @@ public class PatientSelect extends HttpServlet {
         a20ArrayList = serviceIMP.FindPatients(name, id);
         session.setAttribute("a20ArrayList",a20ArrayList);
 
-        req.getRequestDispatcher(req.getContextPath()+"/Content/HTML/outpatientDoctor/patientResult.jsp").forward(req, resp);
+        req.getRequestDispatcher(req.getContextPath()+"/Content/HTML/outpatientDoctor/keeperResult.jsp").forward(req, resp);
     }
 
     @Override

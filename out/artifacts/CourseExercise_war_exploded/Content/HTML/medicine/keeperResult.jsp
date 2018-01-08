@@ -1,6 +1,11 @@
+<%@ page import="java.sql.Date" %>
+<%@ page import="bean.main.A10" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.Iterator" %>
+<%@ page import="tools.StringTools" %>
+<%@ page import="bean.register.A20" %>
 <%@ page import="bean.medicine.A60" %>
 <%@ page import="tools.OtherTools" %>
-<%@ page import="tools.StringTools" %>
 <%@ page contentType="text/html; charset=UTF-8" language="java" errorPage="" %>
 <%
     String path = request.getContextPath();
@@ -10,7 +15,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>药品详情</title>
+    <title>搜索病人</title>
     <link rel="shortcut icon" type="image/x-icon" href="<%=basePath%>/res/pic/icon/标签页图标.ico">
     <link type="text/css" rel="stylesheet" href="<%=basePath%>/Content/CSS/frame.css">
     <link type="text/css" rel="stylesheet" href="<%=basePath%>/Content/CSS/content.css">
@@ -28,10 +33,9 @@
                     </div>
                     <div class="navigation">
                         <span class="floatingWin-bar">
-                            <a style="color: #5d594d;" href="/about">主页</a>
-                            <a style="color: #5d594d;" href="/episodes" class="selectPage">警戒药品</a>
-                            <a style="color: #5d594d;" href="/episodes">搜索药品</a>
-                            <a style="color: #5d594d;" href="/episodes">病人取药</a>
+                           <a style="color: #5d594d;" href="/about">主页</a>
+                            <a style="color: #5d594d;" href="<%=basePath%>/Content/HTML/registration/register.jsp">挂号</a>
+                            <a style="color: #5d594d;" href="<%=basePath%>/Content/HTML/HR/accountSelect.html" class="selectPage">搜索病人</a>
                             <a style="color: #5d594d;" href="/search">登出</a>
                         </span>
                     </div>
@@ -40,79 +44,60 @@
         </nav>
     </header>
     <main class="SearchContent">
-        <h1 class="maintitle">药品详情</h1>
-        <form action="/servlet/medicine/MedicineDetailSaveServlet" method="post">
-        <table style="margin-top: 50px" class="confermation-table" border="1px solid">
-            <%
-                A60 a60 = (A60)session.getAttribute("a60");
+        <div class="centerSub">
+            <h1 class="result-title">搜索账号</h1>
+            <form action="/servlet/medicine/KeeperSelectDealWithNameIdServlet">
+                <label class="result-lable" for="name">姓名</label>
+                <input type="text" class="result-input" id="name" name="name" value="${sessionScope.name}">
+                <label class="result-lable" for="id">挂号换号</label>
+                <input type="number" class="result-input" id="id" name="id" value="${sessionScope.id}">
+                <input type="submit" value="搜索" class="result-submit" >
+            </form>
+
+            <hr style="margin: 80px 80px; opacity:0.5;">
+            <%ArrayList<A60> a60ArrayList = (ArrayList<A60>)session.getAttribute("a60ArrayList");
+                Iterator<A60> a60Iterator = a60ArrayList.iterator();
             %>
-            <tr>
-                <th width="15%">药品编号</th>
-                <th width="35%"><input type="number" class="maininput" id="a601" name="a601" value="<%=a60.getA601()%>" readonly></th>
-                <th width="15%">药品名称</th>
-                <th width="35%"><input type="text" class="maininput" id="a602" name="a602" value="<%=a60.getA602()%>" ></th>
-            </tr>
-            <tr>
-                <th width="15%">药品价格</th>
-                <th width="35%"><input type="number" class="maininput" id="a603" name="a603" value="<%=a60.getA603()%>"></th>
-                <th width="15%">药品厂家</th>
-                <th width="35%"><input type="text" class="maininput" id="" name="a604" value="<%=a60.getA604()%>"></th>
-            </tr>
-            <tr>
-                <th width="15%">药品类型</th>
-                <th><select style="padding-left: 1%; margin-left: 1%; border: none" name="a605" id="a605" class="selectClass" >
-                    <option value="1">中药材</option>
-                    <option value="2">中成药</option>
-                    <option value="3">中西成药</option>
-                    <option value="4">化学原料药及其制剂</option>
-                    <option value="5">抗生素</option>
-                    <option value="6">生化药品</option>
-                    <option value="7">放射性药品</option>
-                    <option value="8">疫苗</option>
-                    <option value="9">血液制品</option>
-                </select></th>
-                <th>药品保质期</th>
-                <th><input type="number" id="a606" name="a606" class="maininput" value="<%=a60.getA606()%>"></th>
-            </tr>
-            <tr>
-                <th>警戒数量</th>
-                <th><input type="number" id="a608" name="a608" class="maininput" value="<%=a60.getA608()%>"></th>
-                <th>药品数量</th>
-                <th><input type="number" id="a607" name="a607" class="maininput" value="<%=OtherTools.RemainNumToNumber(a60)%>" readonly></th>
-            </tr>
-            <tr>
-                <th>放置位置</th>
-                <th><input type="text" id="a609" name="a609" class="maininput" value="<%=StringTools.nullToEmpty(a60.getA609())%>"></th>
-                <th>仓库位置</th>
-                <th><input type="text" id="a6010" name="a6010" class="maininput" value="<%=StringTools.nullToEmpty(a60.getA6010())%>"></th>
-            </tr>
-            <input type="number" hidden id="flag" value="<%=a60.getA605()%>">
-            <script>
-                var state = document.getElementById("flag").value;
-                if(state == 1)
-                    document.getElementById("a105").options[0].selected = true;
-                else if(state == 2)
-                    document.getElementById("a105").options[1].selected = true;
-                else if(state == 3)
-                    document.getElementById("a105").options[2].selected = true;
-                else if(state == 4)
-                    document.getElementById("a105").options[3].selected = true;
-                else if(state == 5)
-                    document.getElementById("a105").options[4].selected = true;
-                else if(state == 6)
-                    document.getElementById("a105").options[5].selected = true;
-                else if(state == 7)
-                    document.getElementById("a105").options[6].selected = true;
-                else if(state == 8)
-                    document.getElementById("a105").options[7].selected = true;
-                else
-                    document.getElementById("a105").options[8].selected = true;
-            </script>
-        </table>
-        <input type="submit" value="保存" class="mainformsubmit" >
-        </form>
-        <div style="margin-bottom: 150px"></div>
+
+            <table style="margin-top: 50px" class="confermation-table" border="1px solid">
+                <tr>
+                    <th colspan="7" style="text-align: left; font-weight: 400; font-size:35px; padding-left: 20px">搜索结果</th>
+                </tr>
+                <tr>
+                    <th>药品编号</th>
+                    <th>药品名称</th>
+                    <th>数量</th>
+                    <th>警戒数量</th>
+                    <th>进货数量</th>
+                    <th width="7%">详情</th>
+                    <th width="7%">进货</th>
+                </tr>
+                <%
+                    while(a60Iterator.hasNext()){
+                        A60 nextA60 = a60Iterator.next();
+                %>d
+                <tr>
+                    <form action="">
+                        <th><input type="number" class="maininput" id="a601" name="a601" value="<%=nextA60.getA601()%>" readonly></th>
+                        <th><input type="text" class="maininput" id="a602" name="a602" value="<%=nextA60.getA602()%>" readonly></th>
+                        <th><input type="number" class="maininput" id="a607" name="a607" value="<%=OtherTools.RemainNumToNumber(nextA60)%>" readonly></th>
+                        <th><input type="number" class="maininput" id="a608" name="a608" value="<%=nextA60.getA608()%>" readonly></th>
+                        <th><input type="number" class="maininput" id="innumber" name="innumber" value="0" ></th>
+                        <th><input type="image" class="linkPic" src="<%=basePath%>/res/pic/PNG/查询.png" alt="详细" onclick="form.action='/servlet/medicine/TurnToMedicineDetailServlet';form.submit()" ></th>
+                        <th><input type="image" class="linkPic" src="<%=basePath%>/res/pic/PNG/药品/提交.png" alt="详细" onclick="form.action='/servlet/medicine/CreateOldFlowInServlet';form.submit()" ></th>
+                    </form>
+                </tr>
+
+                <%
+                    }
+                %>
+
+            </table>
+
+        </div>
+        <div style="height: 100px"></div>
     </main>
+
     <div class="framefooterArea">
         <footer class="realFooterArea">
             <div class="footerHyperlinkList">

@@ -1,5 +1,6 @@
 <%@ page import="bean.medicine.A60" %>
 <%@ page import="tools.OtherTools" %>
+<%@ page import="tools.StringTools" %>
 <%@ page contentType="text/html; charset=UTF-8" language="java" errorPage="" %>
 <%
     String path = request.getContextPath();
@@ -40,9 +41,10 @@
     </header>
     <main class="SearchContent">
         <h1 class="maintitle">药品详情</h1>
+        <form action="/servlet/medicine/MedicineDetailSaveServlet" method="post">
         <table style="margin-top: 50px" class="confermation-table" border="1px solid">
             <%
-                A60 a60 = (A60)request.getAttribute("a60");
+                A60 a60 = (A60)session.getAttribute("a60");
             %>
             <tr>
                 <th width="15%">药品编号</th>
@@ -52,13 +54,13 @@
             </tr>
             <tr>
                 <th width="15%">药品价格</th>
-                <th width="35%"><input type="number" class="maininput" id="a603" name="a603" value="<%=a60.getA603()%>" autofocus></th>
+                <th width="35%"><input type="number" class="maininput" id="a603" name="a603" value="<%=a60.getA603()%>"></th>
                 <th width="15%">药品厂家</th>
-                <th width="35%"><input type="text" class="maininput" id="a604" name="a604" value="<%=a60.getA604()%>"></th>
+                <th width="35%"><input type="text" class="maininput" id="" name="a604" value="<%=a60.getA604()%>"></th>
             </tr>
             <tr>
                 <th width="15%">药品类型</th>
-                <th><select style="padding-left: 5%; border: none" name="a605" id="a605" class="selectClass" >
+                <th><select style="padding-left: 1%; margin-left: 1%; border: none" name="a605" id="a605" class="selectClass" >
                     <option value="1">中药材</option>
                     <option value="2">中成药</option>
                     <option value="3">中西成药</option>
@@ -76,13 +78,13 @@
                 <th>警戒数量</th>
                 <th><input type="number" id="a608" name="a608" class="maininput" value="<%=a60.getA608()%>"></th>
                 <th>药品数量</th>
-                <th><input type="number" id="a607" name="a607" class="maininput" value="<%=OtherTools.RemainNumToNumber(a60)%>"></th>
+                <th><input type="number" id="a607" name="a607" class="maininput" value="<%=OtherTools.RemainNumToNumber(a60)%>" readonly></th>
             </tr>
             <tr>
                 <th>放置位置</th>
-                <th><input type="text" id="a609" name="a609" class="maininput" value="<%=a60.getA609()%>"></th>
+                <th><input type="text" id="a609" name="a609" class="maininput" value="<%=StringTools.nullToEmpty(a60.getA609())%>"></th>
                 <th>仓库位置</th>
-                <th><input type="text" id="a6010" name="a6010" class="maininput" value="<%=a60.getA6010()%>"></th>
+                <th><input type="text" id="a6010" name="a6010" class="maininput" value="<%=StringTools.nullToEmpty(a60.getA6010())%>"></th>
             </tr>
             <input type="number" hidden id="flag" value="<%=a60.getA605()%>">
             <script>
@@ -108,6 +110,7 @@
             </script>
         </table>
         <input type="submit" value="保存" class="mainformsubmit" >
+        </form>
         <div style="margin-bottom: 150px"></div>
     </main>
     <div class="framefooterArea">

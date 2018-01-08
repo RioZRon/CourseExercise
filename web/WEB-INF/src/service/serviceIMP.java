@@ -277,11 +277,42 @@ public class serviceIMP implements serviceForMain, serviceForHr, serviceForRegis
             keynew  = OtherTools.GetMinKey(remainNum.getTreeMap()) - minu;
             remainNum.setDate(date);
         }
-        valuenew = num;
         TreeMap<Integer,Integer> treeMapnew = remainNum.getTreeMap();
-        treeMapnew.put(keynew,valuenew);
+        valuenew = num;
+        if (treeMapnew.containsKey(keynew)) {
+            int valueold = treeMapnew.get(keynew);
+            valuenew += valueold;
+            treeMapnew.put(keynew, valuenew);
+        }else {
+            treeMapnew.put(keynew, valuenew);
+        }
         remainNum.setTreeMap(treeMapnew);
         String a607 = StringTools.RemainNumToString(remainNum);
         daoIMP.Updatea607Bya601(coonnection, id, a607);
+    }
+
+    /**
+     * @param name
+     * @param id
+     * @Description: 根据药品名和id模糊查询
+     */
+    @Override
+    public ArrayList<A60> FindMedicines(String name, String id) {
+            Connection connection = JDBCPoolTools.getConnection();
+            daoIMP daoIMP = new daoIMP();
+            ArrayList<A60> a60ArrayList = new ArrayList<>();
+            a60ArrayList = daoIMP.SelectA60Bya601a602inDark(connection,name,id);
+            return a60ArrayList;
+        }
+
+    /**
+     * @param a60
+     * @Description: 更新药品基本信息
+     */
+    @Override
+    public void UpdateMedicine(A60 a60) {
+        Connection connection = JDBCPoolTools.getConnection();
+        daoIMP daoIMP = new daoIMP();
+        daoIMP.UpdateA60(connection, a60);
     }
 }
