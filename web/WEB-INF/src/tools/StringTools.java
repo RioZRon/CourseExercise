@@ -74,6 +74,9 @@ public class StringTools {
 
     public static RemainNum StringToRemainNum (String string){
         RemainNum remainNum = null;
+        if (string == null  || string.isEmpty()){
+            return null;
+        }
         String[] str1 = string.split("\\|");
 //        System.out.println(str1[0].trim());
         TreeMap<Integer, Integer> treeMap = new TreeMap<>();

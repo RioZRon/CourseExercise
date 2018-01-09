@@ -564,6 +564,7 @@ public class daoIMP implements daoForMain, daoForHr, daoForRegistration, daoForO
                 String rsa607 = resultSet.getString("A607");
                 int rsa608 = resultSet.getInt("A608");
                 A60 a60 = new A60(rsa601, rsa602, rsa606, rsa607, rsa608);
+                System.out.println(a60.toString());
                 a60ArrayList.add(a60);
             }
         } catch (SQLException e) {

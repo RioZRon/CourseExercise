@@ -51,10 +51,11 @@ public class OtherTools {
             int timeR = a60.getA606();
             int nowToFlag = DifferentDaysByMillisecond(new Date(), remainNum.getDate());
             int menu = timeR - nowToFlag;
+            int crew = remainO - menu;
             Iterator<Map.Entry<Integer, Integer>> iterator = treeMap.entrySet().iterator();
             while (iterator.hasNext()) {
                 Map.Entry<Integer, Integer> entry = iterator.next();
-                int key = entry.getKey() - menu;
+                int key = entry.getKey() - crew;
                 if (key > 0) {
                     treeMapNew.put(key, entry.getValue());
                 }
@@ -65,8 +66,9 @@ public class OtherTools {
                 return a60;
             }
             remainNum.setTreeMap(treeMapNew);
+            int gap = GetMinKey(treeMapNew) - (remainO-crew);
             //更换标志时间  先获取现在最小时间 减去之前最小时间现在应该剩下(如果为负数得到正数的天数)
-            int gap = GetMinKey(treeMapNew) - remainO + menu;
+//            int gap = GetMinKey(treeMapNew) - remainO + menu;
             Date dateO = remainNum.getDate();
             Calendar calendar = new GregorianCalendar();
             calendar.setTime(dateO);
@@ -81,6 +83,9 @@ public class OtherTools {
 
 
     public static int RemainNumToNumber(A60 a60) {
+        if (a60.getA607() == null){
+            return 0;
+        }
         RemainNum remainNum = StringTools.StringToRemainNum(a60.getA607());
         int sum = 0;
         for (

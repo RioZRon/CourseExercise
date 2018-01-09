@@ -29,7 +29,8 @@ public class DoOldFlowIn extends HttpServlet {
         java.sql.Date a624 = java.sql.Date.valueOf(req.getParameter("a624"));
         java.sql.Date a628 = java.sql.Date.valueOf(req.getParameter("a628"));
         A62 a62 = new A62(a622, a625,a627, a623,a626, a624, a628);
-//        System.out.println(a62.toString());
+        System.out.println("a62");
+        System.out.println(a62.toString());
         serviceIMP serviceIMP= new serviceIMP();
         serviceIMP.AddFlowIn(a62);
         //还要修改对应的A607

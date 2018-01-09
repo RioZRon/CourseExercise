@@ -132,7 +132,7 @@
                 </div>
                 <div class="firstRow">
                     <div class="firstRow-inner">
-                        <div class="footerHyperlinkListHead" onmouseover="beFocu(this)" onmouseout="beblue(this)">界面接口</div>
+                        <div class="footerHyperlinkListHead">界面接口</div>
                         <a class="footerHyperlinkListLink" href="<%=basePath%>/servlet/outpatientDoctor/BeforPatientListServlet" onmouseover="beFocu(this)" onmouseout="beblue(this)">候诊病人</a>
                         <a class="footerHyperlinkListLink" href="<%=basePath%>/Content/HTML/outpatientDoctor/patientSelect.jsp" onmouseover="beFocu(this)" onmouseout="beblue(this)">搜索病人</a>
                         <a class="footerHyperlinkListLink" href="/servlet/main/LogOutServlet" onmouseover="beFocu(this)" onmouseout="beblue(this)">登出</a>

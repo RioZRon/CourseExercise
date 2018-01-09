@@ -72,4 +72,9 @@ public interface serviceForMedicine {
     **/
     void UpdatePrescrpe(int a201,String new217);
 
+    /**
+    * @Description: ¸ù¾Ýa602ËÑË÷a601
+    **/
+    int SelectMedicinId(String a602);
+
 }

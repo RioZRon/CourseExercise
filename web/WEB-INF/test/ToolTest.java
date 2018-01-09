@@ -1,5 +1,7 @@
 import bean.medicine.A60;
+import bean.medicine.RemainNum;
 import tools.OtherTools;
+import tools.StringTools;
 
 public class ToolTest {
     public static void main(String[] args) {
@@ -28,9 +30,13 @@ public class ToolTest {
 //        System.out.println(testA60.toString());
 //        testA60 = OtherTools.RemainNumUpdate(testA60);
 //        System.out.println(testA60.toString());
-
-        String test = "";
-        int a = Integer.valueOf(test);
-        System.out.println(a);
+//
+//        String test = "";
+//        int a = Integer.valueOf(test);
+//        System.out.println(a);
+        String test = "2018-01-05|10:10,";
+        RemainNum  remainNum = StringTools.StringToRemainNum(test);
+        System.out.println(remainNum.getDate());
+        System.out.println(remainNum.getTreeMap());
     }
 }

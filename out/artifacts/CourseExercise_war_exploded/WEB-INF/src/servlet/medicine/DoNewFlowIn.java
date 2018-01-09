@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -61,6 +62,16 @@ public class DoNewFlowIn extends HttpServlet {
         A60 a60 = new A60(a605,a606,a608,a603,a602,a604,a607,a609,a6010);
 //        先添加a60
         serviceIMP serviceIMP = new serviceIMP();
+        //先判断是不是已经有的
+        int testa601 = serviceIMP.SelectMedicinId(a602);
+        if (testa601 != 0) {
+            PrintWriter out = resp.getWriter();
+            out.print("<script language='javascript'>alert('库中已有该类药品,请先搜索再添加');window.location.href='" + req.getContextPath() + "/Content/HTML/medicine/newInFlow.jsp'</script>");
+        }
+//
+
+
+
         int a601 = serviceIMP.AddMedicineAndReturna601(a60);
         //创建A62
         int a627 = Integer.valueOf(req.getParameter("a627"));
@@ -70,6 +81,7 @@ public class DoNewFlowIn extends HttpServlet {
         A62 a62 = new A62(a601, a625,a627,a623,a626,a624,a628);
         System.out.println(a62.toString());
         serviceIMP.AddFlowIn(a62);
+
         req.getRequestDispatcher(req.getContextPath() + "/Content/HTML/medicine/newInFlow.jsp").forward(req,resp);
     }
 }

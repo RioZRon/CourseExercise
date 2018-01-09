@@ -213,12 +213,18 @@ public class serviceIMP implements serviceForMain, serviceForHr, serviceForRegis
         daoIMP daoIMP = new daoIMP();
         a60s = daoIMP.SelectAllA60(connection);
         //更新首页的库存数量 写一个更新方法
+        System.out.println("-----ceshi2-------");
         for(A60 a60each : a60s){
-            OtherTools.RemainNumUpdate(a60each);
-            //更新对应的库存
+            a60each = OtherTools.RemainNumUpdate(a60each);
+            System.out.println(a60each);
             daoIMP.UpdateA60Bya607(connection, a60each.getA601(),a60each.getA607());
             //获取数量
+            if (a60each.getA607() == null) {
+                result.add(a60each);
+                continue;
+            }
             RemainNum remainNum = StringTools.StringToRemainNum(a60each.getA607());
+            System.out.println("a60each.getA607()):" + a60each.getA607());
             int sum = 0;
             for (Map.Entry<Integer,Integer> entry: remainNum.getTreeMap().entrySet()){
                 sum+= entry.getValue();
@@ -276,30 +282,42 @@ public class serviceIMP implements serviceForMain, serviceForHr, serviceForRegis
         daoIMP daoIMP = new daoIMP();
         int id = a62.getA622();
         int num  = a62.getA625();
-        Date date = a62.getA628();
+        java.sql.Date date = a62.getA628();
+        java.util.Date utilDate = new java.util.Date(date.getTime());
+
+        System.out.println(date);
+        System.out.println(utilDate);
+
         A60 a60 = daoIMP.SelectA60ByA601(coonnection,id);
         RemainNum remainNum = StringTools.StringToRemainNum(a60.getA607());
-        int minu = OtherTools.DifferentDaysByMillisecond(date,  remainNum.getDate());
-        //判断入库的是不是保质期最短的
-        //如果不是最短, 正常计算时间
-        int keynew = 0;
-        int valuenew = 0;
-        if(date.compareTo(remainNum.getDate()) >= 0){
-            keynew = OtherTools.GetMinKey(remainNum.getTreeMap()) + minu;
+        if (remainNum == null){
+            int a606 = a60.getA606();
+            TreeMap<Integer,Integer> treeMap = new TreeMap<>();
+            treeMap.put(a606,num);
+            remainNum = new RemainNum(utilDate, treeMap);
         }else {
-            keynew  = OtherTools.GetMinKey(remainNum.getTreeMap()) - minu;
-            remainNum.setDate(date);
+            int minu = OtherTools.DifferentDaysByMillisecond(date, remainNum.getDate());
+            //判断入库的是不是保质期最短的
+            //如果不是最短, 正常计算时间
+            int keynew = 0;
+            int valuenew = 0;
+            if (date.compareTo(remainNum.getDate()) >= 0) {
+                keynew = OtherTools.GetMinKey(remainNum.getTreeMap()) + minu;
+            } else {
+                keynew = OtherTools.GetMinKey(remainNum.getTreeMap()) - minu;
+                remainNum.setDate(date);
+            }
+            TreeMap<Integer, Integer> treeMapnew = remainNum.getTreeMap();
+            valuenew = num;
+            if (treeMapnew.containsKey(keynew)) {
+                int valueold = treeMapnew.get(keynew);
+                valuenew += valueold;
+                treeMapnew.put(keynew, valuenew);
+            } else {
+                treeMapnew.put(keynew, valuenew);
+            }
+            remainNum.setTreeMap(treeMapnew);
         }
-        TreeMap<Integer,Integer> treeMapnew = remainNum.getTreeMap();
-        valuenew = num;
-        if (treeMapnew.containsKey(keynew)) {
-            int valueold = treeMapnew.get(keynew);
-            valuenew += valueold;
-            treeMapnew.put(keynew, valuenew);
-        }else {
-            treeMapnew.put(keynew, valuenew);
-        }
-        remainNum.setTreeMap(treeMapnew);
         String a607 = StringTools.RemainNumToString(remainNum);
         daoIMP.Updatea607Bya601(coonnection, id, a607);
     }
@@ -465,7 +483,18 @@ public class serviceIMP implements serviceForMain, serviceForHr, serviceForRegis
     public void addBookingPatientBasicInformation(String name, String identityCard, String phoneNumber) {
         Connection connection = JDBCPoolTools.getConnection();
         daoIMP daoIMP = new daoIMP();
-        System.out.println("service测试" + name + identityCard +phoneNumber);
+//        System.out.println("service测试" + name + identityCard +phoneNumber);
         daoIMP.A20insertBya202a207a204(connection, name, identityCard,phoneNumber);
+    }
+
+    /**
+     * @param a602
+     * @Description: 根据a602搜索a601
+     */
+    @Override
+    public int SelectMedicinId(String a602) {
+        Connection connection = JDBCPoolTools.getConnection();
+        daoIMP daoIMP = new daoIMP();
+        return daoIMP.Selecta601Bya602(connection, a602);
     }
 }
