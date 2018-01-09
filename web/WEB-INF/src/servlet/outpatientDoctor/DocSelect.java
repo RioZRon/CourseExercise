@@ -12,8 +12,8 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@WebServlet(name = "PatientSelectServlet", urlPatterns = "/servlet/outpatientDoctor/PatientSelectServlet")
-public class PatientSelect extends HttpServlet {
+@WebServlet(name = "DocSelectServlet", urlPatterns = "/servlet/outpatientDoctor/DocSelectServlet")
+public class DocSelect extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
@@ -24,7 +24,7 @@ public class PatientSelect extends HttpServlet {
         a20ArrayList = serviceIMP.FindPatients(name, id);
         session.setAttribute("a20ArrayList",a20ArrayList);
 
-        req.getRequestDispatcher(req.getContextPath()+"/Content/HTML/outpatientDoctor/keeperResult.jsp").forward(req, resp);
+        req.getRequestDispatcher(req.getContextPath()+"/Content/HTML/outpatientDoctor/patientResult.jsp").forward(req, resp);
     }
 
     @Override

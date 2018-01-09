@@ -19,24 +19,26 @@
     <link type="text/css" rel="stylesheet" href="<%=basePath%>/Content/CSS/frame.css">
     <link type="text/css" rel="stylesheet" href="<%=basePath%>/Content/CSS/content.css">
     <script src="<%=basePath%>/Content/HTML/outpatientDoctor/optpatientDoctor.js"></script>
+    <script src="<%=basePath%>/Content/HTML/main/main.js"></script>
 </head>
 <body>
 <main class="frameWidth">
+    <!--headder-->
     <header class="remainForFloatingWin">
         <nav class="floatingWin">
             <div class="sitewrap">
                 <div class="container-fluid">
                     <div class="floatLeft">
-                        <a class="floatingWin-brand" href="frame.html" >
+                        <a class="floatingWin-brand" href="<%=basePath%>/Content/HTML/main/index.html" >
                             <img alt="logo" style="height: 2.5rem" src="<%=basePath%>/res/pic/PNG/商标.png">
                         </a>
                     </div>
                     <div class="navigation">
                         <span class="floatingWin-bar">
-                              <a style="color: #5d594d;" href="/about">主页</a>
-                            <a style="color: #5d594d;" href="<%=basePath%>/Content/HTML/registration/register.jsp" class="selectPage">待诊病人</a>
-                            <a style="color: #5d594d;" href="<%=basePath%>/Content/HTML/HR/accountSelect.html">搜索病人</a>
-                            <a style="color: #5d594d;" href="/search">登出</a>
+                            <a style="color: #5d594d;" href="<%=basePath%>/Content/HTML/main/index.html">主页</a>
+                            <a style="color: #5d594d;" href="<%=basePath%>/servlet/outpatientDoctor/BeforPatientListServlet">候诊病人</a>
+                            <a style="color: #5d594d;" href="<%=basePath%>/Content/HTML/outpatientDoctor/patientSelect.jsp"  class="selectPage">搜索病人</a>
+                            <a style="color: #5d594d;" href="/servlet/main/LogOutServlet">登出</a>
                         </span>
                     </div>
                 </div>
@@ -60,7 +62,7 @@
                     <div class="flex-first">
                         <div class="inner EnterContent-group">
                             <label class="inner EnterContent-lable" for="a202">姓名</label>
-                            <input type="text" class="inner EnterContent-input shortwidth" id="a202" name="a202" value="<%=a20.getA202()%>">
+                            <input type="text" class="inner EnterContent-input shortwidth" id="a202" name="a202" value="<%=StringTools.nullToEmpty(a20.getA202())%>">
                         </div>
                         <div class="inner EnterContent-group">
                             <label class="inner EnterContent-lable" for="a203">年龄</label>
@@ -68,25 +70,25 @@
                         </div>
                         <div class="inner EnterContent-group">
                             <label class="inner EnterContent-lable" for="a204">电话</label>
-                            <input type="text" class="inner EnterContent-input shortwidth" id="a204" name="a204" value="<%=a20.getA204()%>">
+                            <input type="text" class="inner EnterContent-input shortwidth" id="a204" name="a204" value="<%=StringTools.nullToEmpty(a20.getA204())%>">
                         </div>
                         <div class="inner EnterContent-group">
                             <label class="inner EnterContent-lable" for="a208" >常住住址</label>
-                            <input type="text" class="inner EnterContent-input longwidth" id="a208" name="a208"  value="<%=a20.getA208()%>" onkeyup="innerLongSize('a208')">
+                            <input type="text" class="inner EnterContent-input longwidth" id="a208" name="a208"  value="<%=StringTools.nullToEmpty(a20.getA208())%>" onkeyup="innerLongSize('a208')">
                             <script>
                                 innerLongSize("a208");
                             </script>
                         </div>
                         <div class="inner EnterContent-group">
                             <label class="inner EnterContent-lable" for="a209">初查</label>
-                            <input type="text" class="inner EnterContent-input longwidth"  id="a209" name="a209" value="<%=a20.getA209()%>" onkeyup="innerLongSize('a209')">
+                            <input type="text" class="inner EnterContent-input longwidth"  id="a209" name="a209" value="<%=StringTools.nullToEmpty(a20.getA209())%>" onkeyup="innerLongSize('a209')">
                             <script>
                                 innerLongSize("a209");
                             </script>
                         </div>
                         <div class="inner EnterContent-group">
                             <label class="inner EnterContent-lable" for="a2011">特殊情况备注</label>
-                            <input type="text" class="inner EnterContent-input longwidth" id="a2011" name="a2011" value="<%=a20.getA2011()%>" onkeyup="innerLongSize('a2011');">
+                            <input type="text" class="inner EnterContent-input longwidth" id="a2011" name="a2011" value="<%=StringTools.nullToEmpty(a20.getA2011())%>" onkeyup="innerLongSize('a2011');">
                             <script>
                                 innerLongSize("a2011");
                             </script>
@@ -122,7 +124,7 @@
 
                 <table style="margin-top: 50px" class="confermation-table" border="1px solid" id="inspectTable">
                     <tr>
-                        <th colspan="2" style="text-align: left; font-weight: 400; font-size:24px; padding-left: 20px"><%=a20.getA202()%>的检查结果
+                        <th colspan="2" style="text-align: left; font-weight: 400; font-size:24px; padding-left: 20px"><%=StringTools.nullToEmpty(a20.getA202())%>的检查结果
                             <input type="image" class="linkPic" style="width:15px" src="<%=basePath%>/res/pic/PNG/加.png" onclick="inspectTabAdd()">
                             <%--<input type="image" class="linkPic" style="width:15px" src="<%=basePath%>/res/pic/PNG/加.png" onclick="inspectTabDel()">--%>
                         </th>
@@ -192,18 +194,16 @@
     </div>
 
 
-    <!--底部-->
     <div class="framefooterArea">
         <footer class="realFooterArea">
             <div class="footerHyperlinkList">
                 <div class="firstRow">
                     <div class="firstRow-inner">
                         <div class="footerHyperlinkListHead">红十字医院</div>
-                        <a class="footerHyperlinkListLink" href="/about">主页</a>
-                        <a class="footerHyperlinkListLink" href="/Episodes">医院概览</a>
-                        <a class="footerHyperlinkListLink" href="/Contact">功能介绍</a>
-                        <a class="footerHyperlinkListLink" href="/Search">专家出诊</a>
-                        <a class="footerHyperlinkListLink" href="/Subscribe">友情链接</a>
+                        <a class="footerHyperlinkListLink" href="<%=basePath%>/Content/HTML/main/index.html" onmouseover="beFocu(this)" onmouseout="beblue(this)">主页</a>
+                        <a class="footerHyperlinkListLink" href="<%=basePath%>/Content/HTML/main/overview.html" onmouseover="beFocu(this)" onmouseout="beblue(this)">医院概览</a>
+                        <a class="footerHyperlinkListLink" href="<%=basePath%>/Content/HTML/main/functionList.html" onmouseover="beFocu(this)" onmouseout="beblue(this)">功能介绍</a>
+                        <a class="footerHyperlinkListLink" href="<%=basePath%>/Content/HTML/main/linkExchange.html" onmouseover="beFocu(this)" onmouseout="beblue(this)">友情链接</a>
                     </div>
                 </div>
                 <div class="SeccondRow">
@@ -213,31 +213,31 @@
                         <div class="footernavFordetalFuc-first">
                             <h3 class="classifyHead">按模块</h3>
                             <div class="classifyDetail">
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">病人管理</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">药品管理</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">住院管理</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">人事管理</a>
+                                <a href="<%=basePath%>/servlet/outpatientDoctor/BeforPatientListServlet" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">病人管理</a>
+                                <a href="/servlet/main/LogOutServlet" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">药品管理</a>
+                                <a href="/servlet/main/LogOutServlet" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">住院管理</a>
+                                <a href="/servlet/main/LogOutServlet" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">人事管理</a>
                             </div>
                         </div>
                         <div class="footernavFordetalFuc-seccond">
                             <h3 class="classifyHead">按角色</h3>
                             <div class="classifyDetail">
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">挂号</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">门诊</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">医药</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">住院</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">手术</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">财务</a>
+                                <a href="/servlet/main/LogOutServlet" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">挂号</a>
+                                <a href="<%=basePath%>/servlet/outpatientDoctor/BeforPatientListServlet" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">门诊</a>
+                                <a href="/servlet/main/LogOutServlet" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">医药</a>
+                                <a href="/servlet/main/LogOutServlet" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">HR</a>
+                                <a href="/servlet/main/LogOutServlet" class="footerHyperlinkListLink unimpLink">住院</a>
+                                <a href="/servlet/main/LogOutServlet" class="footerHyperlinkListLink unimpLink">手术</a>
                             </div>
                         </div>
                     </nav>
                 </div>
                 <div class="firstRow">
                     <div class="firstRow-inner">
-                        <div class="footerHyperlinkListHead">界面接口</div>
-                        <a class="footerHyperlinkListLink" href="/about">挂号</a>
-                        <a class="footerHyperlinkListLink" href="/Episodes">收费</a>
-                        <a class="footerHyperlinkListLink" href="/Contact">登出</a>
+                        <div class="footerHyperlinkListHead" onmouseover="beFocu(this)" onmouseout="beblue(this)">界面接口</div>
+                        <a class="footerHyperlinkListLink" href="<%=basePath%>/servlet/outpatientDoctor/BeforPatientListServlet" onmouseover="beFocu(this)" onmouseout="beblue(this)">候诊病人</a>
+                        <a class="footerHyperlinkListLink" href="<%=basePath%>/Content/HTML/outpatientDoctor/patientSelect.jsp" onmouseover="beFocu(this)" onmouseout="beblue(this)">搜索病人</a>
+                        <a class="footerHyperlinkListLink" href="/servlet/main/LogOutServlet" onmouseover="beFocu(this)" onmouseout="beblue(this)">登出</a>
                     </div>
                 </div>
             </div>
@@ -257,9 +257,9 @@
             </div>
             <div class="support">
                 <div class="SourceForkLink">
-                    <a class="buttonlink" href="/https://github.com/RioZRon/CourseExercise">RioZRon</a>
+                    <a class="buttonlink" href="https://github.com/RioZRon/CourseExercise">RioZRon</a>
                     <span>/</span>
-                    <a class="buttonlink" href="/https://github.com/RioZRon/CourseExercise">Team</a>
+                    <a class="buttonlink" href="https://github.com/RioZRon/CourseExercise">Team</a>
 
                 </div>
                 <div class="supportName">Made By D&T © 2017 Dec</div>

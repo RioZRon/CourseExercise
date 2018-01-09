@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 
@@ -28,6 +29,11 @@ public class AfterSign extends HttpServlet {
 //        System.out.println(passwordMd5);
         serviceIMP serviceIMP = new serviceIMP();
         A10 a10 = serviceIMP.SignIn(name, passwordMd5);
+        if (a10 == null){
+            PrintWriter out= resp.getWriter();
+            out.print("<script language='javascript'>alert('’À∫≈√‹¬Î¥ÌŒÛ«Î÷ÿ–¬µ«¬Ω');window.location.href='"+req.getContextPath()+"/Content/HTML/main/signin.html'</script>");
+//            resp.sendRedirect(req.getContextPath() +  "/Content/HTML/main/signin.html");
+        }
 //        ceshi3
 //        System.out.println(a10.toString());
         req.getSession().setAttribute("a10", a10);
@@ -44,7 +50,6 @@ public class AfterSign extends HttpServlet {
             resp.sendRedirect(req.getContextPath() +  "/servlet/medicine/SelectAllAlertMedicineServlet");
 
 //            req.getRequestDispatcher(req.getContextPath() + "/servlet/medicine/SelectAllAlertMedicineServlet").forward(req,resp);
-
     }
 
     @Override

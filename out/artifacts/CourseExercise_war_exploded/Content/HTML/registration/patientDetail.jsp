@@ -41,7 +41,7 @@
         </nav>
     </header>
 
-    <div class="centerSub">
+    <div>
         <h1 class="maintitle">病人挂号栏</h1>
         <fieldset>
             <legend>挂号</legend>

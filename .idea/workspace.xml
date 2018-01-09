@@ -6,41 +6,29 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce6358a6-3ca9-4e84-95de-c3f55aa999df" name="Default" comment="完成HR 模块 并且修改">
+    <list default="true" id="ce6358a6-3ca9-4e84-95de-c3f55aa999df" name="Default" comment="完成HR 模块 并且修改挂号搜索结果详情的居中问题">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/Content/HTML/HR/accountDetail.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/Content/HTML/HR/accountDetail.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/Content/HTML/HR/accountResult.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/Content/HTML/HR/accountResult.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/Content/HTML/HR/accountSelect.html" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/Content/HTML/HR/accountSelect.html" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/Content/HTML/HR/signup.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/Content/HTML/HR/signup.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/classes/dao/daoIMP.class" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/classes/dao/daoIMP.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/classes/service/serviceIMP.class" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/classes/service/serviceIMP.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/classes/servlet/main/AccountDelete.class" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/classes/servlet/main/AccountDelete.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/classes/servlet/main/AccountSelect.class" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/classes/servlet/main/AccountSelect.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/classes/servlet/main/AccountSelectDealWitha102103.class" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/classes/servlet/main/AccountSelectDealWitha102103.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/classes/tools/StringTools.class" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/classes/tools/StringTools.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/src/dao/daoIMP.java" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/src/dao/daoIMP.java" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/src/service/serviceIMP.java" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/src/service/serviceIMP.java" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/src/servlet/main/AccountDelete.java" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/src/servlet/main/AccountDelete.java" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/src/servlet/main/AccountSelect.java" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/src/servlet/main/AccountSelect.java" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/src/servlet/main/AccountSelectDealWitha102103.java" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/src/servlet/main/AccountSelectDealWitha102103.java" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/src/tools/StringTools.java" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/src/tools/StringTools.java" />
-      <change beforePath="$PROJECT_DIR$/web/Content/HTML/HR/accountDetail.jsp" afterPath="$PROJECT_DIR$/web/Content/HTML/HR/accountDetail.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/Content/HTML/HR/accountResult.jsp" afterPath="$PROJECT_DIR$/web/Content/HTML/HR/accountResult.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/Content/HTML/HR/accountSelect.html" afterPath="$PROJECT_DIR$/web/Content/HTML/HR/accountSelect.html" />
-      <change beforePath="$PROJECT_DIR$/web/Content/HTML/HR/signup.jsp" afterPath="$PROJECT_DIR$/web/Content/HTML/HR/signup.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/Content/HTML/registration/patientDetail.jsp" afterPath="$PROJECT_DIR$/web/Content/HTML/registration/patientDetail.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/out/production/CourseExercise/dao/daoIMP.class" afterPath="$PROJECT_DIR$/web/WEB-INF/out/production/CourseExercise/dao/daoIMP.class" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/out/production/CourseExercise/service/serviceIMP.class" afterPath="$PROJECT_DIR$/web/WEB-INF/out/production/CourseExercise/service/serviceIMP.class" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/out/production/CourseExercise/servlet/main/AccountDelete.class" afterPath="$PROJECT_DIR$/web/WEB-INF/out/production/CourseExercise/servlet/main/AccountDelete.class" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/out/production/CourseExercise/servlet/main/AccountSelect.class" afterPath="$PROJECT_DIR$/web/WEB-INF/out/production/CourseExercise/servlet/main/AccountSelect.class" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/out/production/CourseExercise/servlet/main/AccountSelectDealWitha102103.class" afterPath="$PROJECT_DIR$/web/WEB-INF/out/production/CourseExercise/servlet/main/AccountSelectDealWitha102103.class" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/out/production/CourseExercise/tools/StringTools.class" afterPath="$PROJECT_DIR$/web/WEB-INF/out/production/CourseExercise/tools/StringTools.class" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/src/dao/daoIMP.java" afterPath="$PROJECT_DIR$/web/WEB-INF/src/dao/daoIMP.java" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/src/service/serviceIMP.java" afterPath="$PROJECT_DIR$/web/WEB-INF/src/service/serviceIMP.java" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/src/servlet/main/AccountDelete.java" afterPath="$PROJECT_DIR$/web/WEB-INF/src/servlet/main/AccountDelete.java" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/src/servlet/main/AccountSelectDealWitha102103.java" afterPath="$PROJECT_DIR$/web/WEB-INF/src/servlet/main/AccountSelectDealWitha102103.java" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/src/servlet/main/accountSelect.java" afterPath="$PROJECT_DIR$/web/WEB-INF/src/servlet/main/accountSelect.java" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/src/tools/StringTools.java" afterPath="$PROJECT_DIR$/web/WEB-INF/src/tools/StringTools.java" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/Content/HTML/outpatientDoctor/patientDetail.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/Content/HTML/outpatientDoctor/patientDetail.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/Content/HTML/outpatientDoctor/patientList.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/Content/HTML/outpatientDoctor/patientList.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/Content/HTML/outpatientDoctor/patientResult.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/Content/HTML/outpatientDoctor/patientResult.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/Content/HTML/outpatientDoctor/patientSelect.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/Content/HTML/outpatientDoctor/patientSelect.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/Content/HTML/registration/patientDetail.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/Content/HTML/registration/patientDetail.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/classes/servlet/main/AfterSign.class" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/classes/servlet/main/AfterSign.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/classes/servlet/outpatientDoctor/PatientSelect.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/classes/servlet/outpatientDoctor/PatientSelectDealWithNameId.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/src/servlet/main/AfterSign.java" afterPath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/src/servlet/main/AfterSign.java" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/src/servlet/outpatientDoctor/PatientSelect.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/WEB-INF/src/servlet/outpatientDoctor/PatientSelectDealWithNameId.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/Content/HTML/outpatientDoctor/patientDetail.jsp" afterPath="$PROJECT_DIR$/web/Content/HTML/outpatientDoctor/patientDetail.jsp" />
+      <change beforePath="$PROJECT_DIR$/web/Content/HTML/outpatientDoctor/patientList.jsp" afterPath="$PROJECT_DIR$/web/Content/HTML/outpatientDoctor/patientList.jsp" />
+      <change beforePath="$PROJECT_DIR$/web/Content/HTML/outpatientDoctor/patientResult.jsp" afterPath="$PROJECT_DIR$/web/Content/HTML/outpatientDoctor/patientResult.jsp" />
+      <change beforePath="$PROJECT_DIR$/web/Content/HTML/outpatientDoctor/patientSelect.jsp" afterPath="$PROJECT_DIR$/web/Content/HTML/outpatientDoctor/patientSelect.jsp" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/out/production/CourseExercise/servlet/main/AfterSign.class" afterPath="$PROJECT_DIR$/web/WEB-INF/out/production/CourseExercise/servlet/main/AfterSign.class" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/out/production/CourseExercise/servlet/outpatientDoctor/PatientSelect.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/out/production/CourseExercise/servlet/outpatientDoctor/PatientSelectDealWithNameId.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/src/servlet/main/AfterSign.java" afterPath="$PROJECT_DIR$/web/WEB-INF/src/servlet/main/AfterSign.java" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/src/servlet/outpatientDoctor/PatientSelect.java" afterPath="$PROJECT_DIR$/web/WEB-INF/src/servlet/outpatientDoctor/DocSelect.java" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/src/servlet/outpatientDoctor/PatientSelectDealWithNameId.java" afterPath="$PROJECT_DIR$/web/WEB-INF/src/servlet/outpatientDoctor/DocSelectDealWithNameId.java" />
     </list>
     <ignored path="CourseExercise.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,179 +68,43 @@
       <file leaf-file-name="register.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/Content/HTML/registration/register.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1599">
-              <caret line="125" column="2" lean-forward="false" selection-start-line="125" selection-start-column="2" selection-end-line="125" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="patientDetail.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/Content/HTML/registration/patientDetail.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="47" column="14" lean-forward="true" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountSelect.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/src/servlet/main/AccountSelect.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="daoIMP.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/src/dao/daoIMP.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="91" column="39" lean-forward="false" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
-              <folding>
-                <element signature="docComment;method#SelectA10ByA103A104#0;class#daoIMP#0" expanded="false" />
-                <element signature="method#SelectA10ByA103A104#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#A10insert#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#SelectA10Bya102a103inDark#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#DeleteA10Bya101#0;class#daoIMP#0" expanded="false" />
-                <element signature="method#DeleteA10Bya101#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#SelectA10Bya103#0;class#daoIMP#0" expanded="false" />
-                <element signature="method#SelectA10Bya103#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#UpdateA10#0;class#daoIMP#0" expanded="false" />
-                <element signature="method#UpdateA10#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#A20insert#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#SelectA20Bya201#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#UpdateA20#0;class#daoIMP#0" expanded="false" />
-                <element signature="method#UpdateA20#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#Selecta133Bya131#0;class#daoIMP#0" expanded="false" />
-                <element signature="method#Selecta133Bya131#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#SelectA20Bya2010#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#SelectA21Bya211#0;class#daoIMP#0" expanded="false" />
-                <element signature="method#SelectA21Bya211#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#A21insertBya211#0;class#daoIMP#0" expanded="false" />
-                <element signature="method#A21insertBya211#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#UpdateA21#0;class#daoIMP#0" expanded="false" />
-                <element signature="method#UpdateA21#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#UpdateA60Bya607#0;class#daoIMP#0" expanded="false" />
-                <element signature="method#UpdateA60Bya607#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#SelectAllA60#0;class#daoIMP#0" expanded="false" />
-                <element signature="method#SelectAllA60#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#SelectA60ByA601#0;class#daoIMP#0" expanded="false" />
-                <element signature="method#SelectA60ByA601#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#A62insert#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#A63insert#0;class#daoIMP#0" expanded="false" />
-                <element signature="method#A63insert#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#Updatea607Bya601#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#SelectA60Bya601a602inDark#0;class#daoIMP#0" expanded="false" />
-                <element signature="method#SelectA60Bya601a602inDark#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#UpdateA60#0;class#daoIMP#0" expanded="false" />
-                <element signature="method#UpdateA60#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#A60insert#0;class#daoIMP#0" expanded="false" />
-                <element signature="method#A60insert#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#Selecta601Bya602#0;class#daoIMP#0" expanded="false" />
-                <element signature="method#Selecta601Bya602#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#Selecta217Bya211#0;class#daoIMP#0" expanded="false" />
-                <element signature="method#Selecta217Bya211#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#SelectA60sBya602#0;class#daoIMP#0" expanded="false" />
-                <element signature="method#SelectA60sBya602#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#Selecta627Bya601#0;class#daoIMP#0" expanded="false" />
-                <element signature="method#Selecta627Bya601#0;class#daoIMP#0" expanded="false" />
-                <element signature="docComment;method#Updatea217Bya211#0;class#daoIMP#0" expanded="false" />
-                <marker date="1515484791000" expanded="true" signature="1943:1993" ph="insert into A10... " />
-                <marker date="1515484791000" expanded="true" signature="3014:3031" ph="SELECT * FRO... A10" />
-                <marker date="1515484791000" expanded="true" signature="3214:3269" ph="SELECT * FRO... A10" />
-                <marker date="1515484791000" expanded="true" signature="3452:3507" ph="SELECT * FRO... A10" />
-                <marker date="1515484791000" expanded="true" signature="3672:3768" ph="SELECT * FRO... A10" />
-                <marker date="1515484791000" expanded="true" signature="7731:7795" ph="insert into A20... " />
-                <marker date="1515484791000" expanded="true" signature="9270:9287" ph="SELECT * FRO... A20" />
-                <marker date="1515484791000" expanded="true" signature="9270:9338" ph="SELECT * FRO... A20" />
-                <marker date="1515484791000" expanded="true" signature="9480:9535" ph="SELECT * FRO... A20" />
-                <marker date="1515484791000" expanded="true" signature="9480:9587" ph="SELECT * FRO... A20" />
-                <marker date="1515484791000" expanded="true" signature="9770:9825" ph="SELECT * FRO... A20" />
-                <marker date="1515484791000" expanded="true" signature="9770:9877" ph="SELECT * FRO... A20" />
-                <marker date="1515484791000" expanded="true" signature="10042:10138" ph="SELECT * FRO... A20" />
-                <marker date="1515484791000" expanded="true" signature="10042:10189" ph="SELECT * FRO... A20" />
-                <marker date="1515484791000" expanded="true" signature="12003:12035" ph="SELECT * FRO... A20" />
-                <marker date="1515484791000" expanded="true" signature="16235:16322" ph="SELECT * FRO... A20" />
-                <marker date="1515484791000" expanded="true" signature="24866:24922" ph="insert into A62... " />
-                <marker date="1515484791000" expanded="false" signature="26880:26918" ph="UPDATE A60... " />
-                <marker date="1515484791000" expanded="true" signature="36784:36822" ph="UPDATE A60... " />
-                <marker date="1515484791000" expanded="true" signature="37638:37702" ph="insert into A20... " />
-                <marker date="1515484791000" expanded="true" signature="37638:37718" ph="insert into A20... " />
-                <marker date="1515484791000" expanded="true" signature="37638:37719" ph="insert into A20... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="accountResult.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Content/HTML/HR/accountResult.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="81" column="163" lean-forward="false" selection-start-line="81" selection-start-column="163" selection-end-line="81" selection-end-column="163" />
-              <folding>
-                <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountDelete.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/src/servlet/main/AccountDelete.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="accountSelect.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Content/HTML/HR/accountSelect.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="signup.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Content/HTML/HR/signup.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="611">
-              <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StringTools.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/src/tools/StringTools.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="45" column="29" lean-forward="true" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="accountDetail.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Content/HTML/HR/accountDetail.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="41" column="13" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+            <state relative-caret-position="382">
+              <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
               <folding>
                 <element signature="n#header#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AfterSign.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/src/servlet/main/AfterSign.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="33" column="89" lean-forward="false" selection-start-line="33" selection-start-column="89" selection-end-line="33" selection-end-column="89" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="overview.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/Content/HTML/main/overview.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1616">
+              <caret line="101" column="76" lean-forward="false" selection-start-line="101" selection-start-column="76" selection-end-line="101" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bookingPage.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/Content/HTML/main/bookingPage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -274,7 +126,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>AddF</find>
       <find>AddFlo</find>
       <find>A63insert</find>
       <find>A62insert</find>
@@ -304,6 +155,7 @@
       <find>&lt;%=basePath%&gt;/Content/HTML</find>
       <find>FindStaffs</find>
       <find>RoleTraslate</find>
+      <find>&lt;%=a20.get</find>
     </findStrings>
     <replaceStrings>
       <replace>rea1</replace>
@@ -329,6 +181,7 @@
       <replace>&quot;&lt;%=basePath%&gt;/Content/HTML/main/signIn.html&quot;</replace>
       <replace>&quot; onmouseover=&quot;beFocu(this)&quot; onmouseout=&quot;beblue(this)&quot;</replace>
       <replace>..</replace>
+      <replace>&lt;%=StringTools.nullToEmpty(a20.get</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -347,12 +200,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/WEB-INF/src/service/serviceForMedicine.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/src/dao/daoForMedicine.java" />
-        <option value="$PROJECT_DIR$/web/Content/HTML/medicine/oldOutFlow.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/src/servlet/medicine/ShowAllNeededMedicineDealWith201217.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/src/servlet/medicine/ShowAllNeededMedicine.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/src/servlet/medicine/DoFlowOut.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/src/servlet/medicine/DoAllFlowOut.java" />
         <option value="$PROJECT_DIR$/web/Content/HTML/medicine/patientResult.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/src/servlet/medicine/PatientSelect.java" />
@@ -377,7 +224,6 @@
         <option value="$PROJECT_DIR$/web/Content/HTML/main/overview.html" />
         <option value="$PROJECT_DIR$/web/WEB-INF/src/servlet/main/LogOut.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/src/fliter/CharseterEncodingFilter.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/src/servlet/main/AfterSign.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/src/servlet/outpatientDoctor/PatientSelectDealWithNameId.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/src/servlet/registration/PatientSelectDealWithNameId.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/src/servlet/registration/registrationSelectDealWithNameId.java" />
@@ -398,6 +244,13 @@
         <option value="$PROJECT_DIR$/web/Content/HTML/HR/signup.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/src/servlet/main/AccountDelete.java" />
         <option value="$PROJECT_DIR$/web/Content/HTML/registration/patientDetail.jsp" />
+        <option value="$PROJECT_DIR$/web/Content/HTML/outpatientDoctor/patientList.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/src/servlet/outpatientDoctor/DocSelect.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/src/servlet/outpatientDoctor/DocSelectDealWithNameId.java" />
+        <option value="$PROJECT_DIR$/web/Content/HTML/outpatientDoctor/patientSelect.jsp" />
+        <option value="$PROJECT_DIR$/web/Content/HTML/outpatientDoctor/patientResult.jsp" />
+        <option value="$PROJECT_DIR$/web/Content/HTML/outpatientDoctor/patientDetail.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/src/servlet/main/AfterSign.java" />
       </list>
     </option>
   </component>
@@ -472,30 +325,6 @@
               <item name="CourseExercise" type="b2602c69:ProjectViewProjectNode" />
               <item name="CourseExercise" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="Content" type="462c0819:PsiDirectoryNode" />
-              <item name="HTML" type="462c0819:PsiDirectoryNode" />
-              <item name="HR" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CourseExercise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CourseExercise" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="Content" type="462c0819:PsiDirectoryNode" />
-              <item name="HTML" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CourseExercise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CourseExercise" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="Content" type="462c0819:PsiDirectoryNode" />
-              <item name="HTML" type="462c0819:PsiDirectoryNode" />
-              <item name="registration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CourseExercise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CourseExercise" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -504,6 +333,23 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CourseExercise" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourseExercise" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CourseExercise" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourseExercise" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CourseExercise" type="b2602c69:ProjectViewProjectNode" />
@@ -532,7 +378,7 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="RoleTraslate&#9;PSI&#9;JAVA://tools.StringTools#RoleTraslate&#10;accountResult&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/Content/HTML/HR/accountResult.jsp&#10;daoi&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/dao/daoIMP.java&#10;ser&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/service/serviceIMP.java&#10;AccountSelectDealWitha1&#9;PSI&#9;JAVA://servlet.main.AccountSelectDealWitha102103&#10;daoimp&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/dao/daoIMP.java&#10;serimp&#9;PSI&#9;JAVA://service.serviceIMP&#10;RegistrationSelec&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/registration/RegistrationSelectDealWithNameId.java&#10;sign&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/out/artifacts/CourseExercise_war_exploded/Content/HTML/main/signIn.html&#10;ind&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/Content/HTML/main/index.html&#10;maintitle&#9;null&#9;null&#10;daoim&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/dao/daoIMP.java&#10;serte&#9;PSI&#9;JAVA://java.awt.dnd.SerializationTester&#10;daof&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/dao/daoForMain.java&#10;after&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/main/AfterBooking.java&#10;Af&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/main/AfterBooking.java&#10;20&#9;PSI&#9;JAVA://bean.register.A20&#10;AfterBooking&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/main/AfterBooking.java&#10;dao&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/dao/daoIMP.java&#10;daoform&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/dao/daoForMain.java&#10;daoformain&#9;PSI&#9;JAVA://dao.daoForMain&#10;serform&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/service/serviceForMain.java&#10;serfor&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/service/serviceForMedicine.java&#10;overvi&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/Content/HTML/main/overview.html&#10;frame&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/Content/CSS/frame.css&#10;frontLinkContent-title&#9;null&#9;null&#10;PatientSelect&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/medicine/PatientSelect.java&#10;PatientSelectDealWithNameI&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/medicine/PatientSelectDealWithNameId.java&#10;PatientSelec&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/medicine/PatientSelect.java&#10;seri&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/service/serviceIMP.java&#10;ShowAllNeededMedicine&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/medicine/ShowAllNeededMedicine.java&#10;oldOutFlow&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/out/artifacts/CourseExercise_war_exploded/Content/HTML/medicine/oldOutFlow.jsp&#10;CreateFlowOu&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/medicine/CreateFlowOut.java&#10;String&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/tools/StringTools.java&#10;ShowAllNeededMedi&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/medicine/ShowAllNeededMedicine.java&#10;showAll&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/medicine/ShowAllNeededMedicine.java&#10;daofo&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/dao/daoForMedicine.java&#10;serf&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/service/serviceForMedicine.java&#10;daofor&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/dao/daoForMedicine.java&#10;PrescriptionStringToMap&#9;PSI&#9;JAVA://tools.StringTools#PrescriptionStringToMap&#10;servi&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/service/serviceForMedicine.java&#10;StringT&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/tools/StringTools.java&#10;da&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/dao/daoIMP.java&#10;62&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/bean/medicine/A62.java&#10;60&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/bean/medicine/A60.java&#10;DifferentDaysByMillisecond&#9;PSI&#9;JAVA://tools.OtherTools#DifferentDaysByMillisecond&#10;.css&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/Content/CSS/content.css&#10;frame.cs&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/Content/CSS/frame.css&#10;det&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/medicine/MedicineDetailSave.java&#10;ke&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/Content/HTML/medicine/keeper.jsp" />
+    <property name="SearchEverywhereHistoryKey" value="20&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/bean/register/A20.java&#10;PrescriptionDetail&#9;PSI&#9;JAVA://servlet.outpatientDoctor.PrescriptionDetailPrint&#10;RoleTraslate&#9;PSI&#9;JAVA://tools.StringTools#RoleTraslate&#10;accountResult&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/Content/HTML/HR/accountResult.jsp&#10;daoi&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/dao/daoIMP.java&#10;ser&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/service/serviceIMP.java&#10;AccountSelectDealWitha1&#9;PSI&#9;JAVA://servlet.main.AccountSelectDealWitha102103&#10;daoimp&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/dao/daoIMP.java&#10;serimp&#9;PSI&#9;JAVA://service.serviceIMP&#10;RegistrationSelec&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/registration/RegistrationSelectDealWithNameId.java&#10;sign&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/out/artifacts/CourseExercise_war_exploded/Content/HTML/main/signIn.html&#10;ind&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/Content/HTML/main/index.html&#10;maintitle&#9;null&#9;null&#10;daoim&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/dao/daoIMP.java&#10;serte&#9;PSI&#9;JAVA://java.awt.dnd.SerializationTester&#10;daof&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/dao/daoForMain.java&#10;after&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/main/AfterBooking.java&#10;Af&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/main/AfterBooking.java&#10;AfterBooking&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/main/AfterBooking.java&#10;dao&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/dao/daoIMP.java&#10;daoform&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/dao/daoForMain.java&#10;daoformain&#9;PSI&#9;JAVA://dao.daoForMain&#10;serform&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/service/serviceForMain.java&#10;serfor&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/service/serviceForMedicine.java&#10;overvi&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/Content/HTML/main/overview.html&#10;frame&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/Content/CSS/frame.css&#10;frontLinkContent-title&#9;null&#9;null&#10;PatientSelect&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/medicine/PatientSelect.java&#10;PatientSelectDealWithNameI&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/medicine/PatientSelectDealWithNameId.java&#10;PatientSelec&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/medicine/PatientSelect.java&#10;seri&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/service/serviceIMP.java&#10;ShowAllNeededMedicine&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/medicine/ShowAllNeededMedicine.java&#10;oldOutFlow&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/out/artifacts/CourseExercise_war_exploded/Content/HTML/medicine/oldOutFlow.jsp&#10;CreateFlowOu&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/medicine/CreateFlowOut.java&#10;String&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/tools/StringTools.java&#10;ShowAllNeededMedi&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/medicine/ShowAllNeededMedicine.java&#10;showAll&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/medicine/ShowAllNeededMedicine.java&#10;daofo&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/dao/daoForMedicine.java&#10;serf&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/service/serviceForMedicine.java&#10;daofor&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/dao/daoForMedicine.java&#10;PrescriptionStringToMap&#9;PSI&#9;JAVA://tools.StringTools#PrescriptionStringToMap&#10;servi&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/service/serviceForMedicine.java&#10;StringT&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/tools/StringTools.java&#10;da&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/dao/daoIMP.java&#10;62&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/bean/medicine/A62.java&#10;60&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/bean/medicine/A60.java&#10;DifferentDaysByMillisecond&#9;PSI&#9;JAVA://tools.OtherTools#DifferentDaysByMillisecond&#10;.css&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/Content/CSS/content.css&#10;frame.cs&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/Content/CSS/frame.css&#10;det&#9;FILE&#9;file:///Users/riosysm/Workspaces/InterlliJ/2017_12/CourseExercise/web/WEB-INF/src/servlet/medicine/MedicineDetailSave.java" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -568,7 +414,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.signup.jsp">
+  <component name="RunManager" selected="Tomcat Server.index.html">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -1264,8 +1110,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Tomcat Server.signup.jsp" />
-        <item index="1" class="java.lang.String" itemvalue="Tomcat Server.index.html" />
+        <item index="0" class="java.lang.String" itemvalue="Tomcat Server.index.html" />
+        <item index="1" class="java.lang.String" itemvalue="Tomcat Server.signup.jsp" />
         <item index="2" class="java.lang.String" itemvalue="Tomcat Server.patientSelect.jsp" />
         <item index="3" class="java.lang.String" itemvalue="Application.servicetest" />
       </list>
@@ -1296,7 +1142,7 @@
       <workItem from="1515287323764" duration="88618000" />
       <workItem from="1515466176404" duration="3342000" />
       <workItem from="1515470096098" duration="75000" />
-      <workItem from="1515470457912" duration="9485000" />
+      <workItem from="1515470457912" duration="12963000" />
     </task>
     <task id="LOCAL-00001" summary="完成主页面优化以及连接">
       <created>1515471786388</created>
@@ -1312,11 +1158,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515482181515</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="完成HR 模块 并且修改挂号搜索结果详情的居中问题">
+      <created>1515489089602</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1515489089602</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="310997000" />
+    <option name="totallyTimeSpent" value="314475000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1348,10 +1201,10 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21595599" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21595599" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2503439" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1987076" sideWeight="0.49452055" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1987076" sideWeight="0.49452055" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07614484" sideWeight="0.50547945" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32737276" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1418,14 +1271,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="完成主页面优化以及连接" />
     <MESSAGE value="完成挂号模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成挂号模块" />
+    <MESSAGE value="完成HR 模块 并且修改挂号搜索结果详情的居中问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成HR 模块 并且修改挂号搜索结果详情的居中问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="11" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1434,27 +1288,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/Content/HTML/main/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="54" lean-forward="false" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/CourseExercise_war_exploded/Content/CSS/content.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1654">
-          <caret line="50" column="6" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Content/CSS/frame.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="446" column="18" lean-forward="false" selection-start-line="446" selection-start-column="18" selection-end-line="446" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/src/servlet/registration/AfterRegister.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
@@ -1466,13 +1299,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="559">
           <caret line="72" column="22" lean-forward="false" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/src/bean/register/A20.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1570,14 +1396,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/Content/HTML/main/bookingPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
-          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/Content/HTML/main/linkExchange.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-14">
@@ -1621,14 +1439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/src/servlet/outpatientDoctor/PatientSelectDealWithNameId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/Content/HTML/main/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-319">
@@ -1651,14 +1461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="54" column="25" lean-forward="false" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/src/servlet/outpatientDoctor/PatientSelect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1702,38 +1504,6 @@
           <folding>
             <element signature="n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Content/HTML/outpatientDoctor/patientSelect.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Content/HTML/outpatientDoctor/patientList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Content/HTML/main/overview.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1616">
-          <caret line="101" column="76" lean-forward="false" selection-start-line="101" selection-start-column="76" selection-end-line="101" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/src/servlet/main/AfterSign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="39" column="34" lean-forward="false" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1939,18 +1709,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/Content/HTML/registration/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1599">
-          <caret line="125" column="2" lean-forward="false" selection-start-line="125" selection-start-column="2" selection-end-line="125" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/Content/HTML/registration/patientDetail.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="47" column="14" lean-forward="true" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/src/servlet/outpatientDoctor/PrescriptionDetailPrint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="83" column="107" lean-forward="false" selection-start-line="83" selection-start-column="107" selection-end-line="83" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Content/HTML/registration/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+          <folding>
+            <element signature="n#header#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Content/HTML/outpatientDoctor/patientSelect.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+          <folding>
+            <element signature="n#header#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/src/bean/register/A20.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Content/HTML/outpatientDoctor/patientList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          <folding>
+            <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/src/servlet/outpatientDoctor/DocSelectDealWithNameId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="12" column="123" lean-forward="false" selection-start-line="12" selection-start-column="123" selection-end-line="12" selection-end-column="123" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Content/HTML/outpatientDoctor/patientResult.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+          <folding>
+            <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/src/servlet/outpatientDoctor/DocSelect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Content/HTML/outpatientDoctor/patientDetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="65" column="30" lean-forward="true" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
+          <folding>
+            <element signature="n#header#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Content/HTML/main/bookingPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Content/HTML/main/overview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1616">
+          <caret line="101" column="76" lean-forward="false" selection-start-line="101" selection-start-column="76" selection-end-line="101" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/src/servlet/main/AfterSign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="33" column="89" lean-forward="false" selection-start-line="33" selection-start-column="89" selection-end-line="33" selection-end-column="89" />
           <folding />
         </state>
       </provider>
