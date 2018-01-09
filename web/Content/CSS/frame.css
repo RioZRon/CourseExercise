@@ -422,3 +422,28 @@ section, header, footer, div, nav {
 .showPassword{
     width: 40px;
 }
+
+.unimpLink{
+    color: #848e94;
+    cursor: auto;
+}
+
+.linkExchangeList{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300;
+    font-size: 24px;
+    width: 70%;
+    margin: 50px auto;
+    word-break: keep-all;
+
+}
+
+.linkExchangeList a{
+    margin: 0 10px;
+
+}
+.return{
+    margin-top: 150px;
+
+}

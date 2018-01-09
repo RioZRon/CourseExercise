@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>待诊病人</title>
+    <title>搜索病人</title>
     <link rel="shortcut icon" type="image/x-icon" href="../../../WEB-INF/res/pic/icon/标签页图标.ico">
-    <link type="text/css" rel="stylesheet" href="../../CSS/frame.css">
-    <link type="text/css" rel="stylesheet" href="../../CSS/content.css">
+    <link type="text/css" rel="stylesheet" href="../../../CSS/frame.css">
+    <link type="text/css" rel="stylesheet" href="../../../CSS/content.css">
+
 </head>
 <body>
-<main class="frameWidth">
-    <!--headder-->
+<div class="frameWidth" id="a11">
     <header class="remainForFloatingWin">
         <nav class="floatingWin">
             <div class="sitewrap">
@@ -31,36 +31,58 @@
             </div>
         </nav>
     </header>
+    <main class="SearchContent">
+        <div class="centerSub">
+            <h1 class="result-title">搜索病人</h1>
+            <form action="">
+                <label class="result-lable" for="name">姓名</label>
+                    <input type="text" class="result-input" id="name">
+                <label class="result-lable" for="identityCard">编号</label>
+                    <input type="text" class="result-input" id="identityCard">
+                <label class="result-lable" for="phoneNumber">电话</label>
+                    <input type="text" class="result-input" id="phoneNumber">
+                <input type="submit" value="搜索" class="result-submit" >
+            </form>
 
-    <!--main-->
-    <h1 class="maintitle">手术安排</h1>
-    <table style="margin-top: 50px" class="confermation-table" border="1px solid">
-        <tr>
-            <th colspan="5" style="text-align: left; font-weight: 400; font-size:35px; padding-left: 20px">外科手术医师</th>
-        </tr>
-        <tr>
-            <th width="15%">员工编号</th>
-            <th width="15%">医生姓名</th>
-            <th>一周内工作量</th>
-            <th>手术安排</th>
-        </tr>
-        <tr>
-            <th><input type="number" class="maininput" id="id" name="id" value="0001" readonly></th>
-            <th><input type="text" class="maininput" id="name" name="name" value="和润" readonly></th>
-            <th><input type="number" class="maininput" id="name" name="name" value="4" readonly></th>
-            <th><a href="out.html"><img style="margin-left: 10%; margin-top: 10px" height="25px" src="../../../WEB-INF/res/pic/PNG/查询.png" alt="详细"></a></th>
-        </tr>
-        <tr>
-            <th><input type="number" class="maininput" id="id" name="id" value="0002" readonly></th>
-            <th><input type="text" class="maininput" id="name" name="name" value="蕊儿" readonly></th>
-            <th><input type="text" class="maininput" id="name" name="name" value="5" readonly></th>
-            <th><a href="out.html"><img style="margin-left: 10%; margin-top: 10px" height="25px" src="../../../WEB-INF/res/pic/PNG/查询.png" alt="详细"></a></th>
-        </tr>
+            <hr style="margin: 80px 80px; opacity:0.5;">
 
+            <table style="margin-top: 50px" class="confermation-table" border="1px solid">
+                <tr>
+                    <th colspan="7" style="text-align: left; font-weight: 400; font-size:35px; padding-left: 20px">搜索结果</th>
+                </tr>
+                <tr>
+                    <th>挂号编号</th>
+                    <th>病人姓名</th>
+                    <th>分科</th>
+                    <th>手术名</th>
+                    <th width="7%">负责人</th>
+                    <th>去除手术</th>
+                    <th>修改负责人</th>
+                </tr>
+                <tr>
+                    <th><input type="number" class="maininput" id="id" name="id" value="0001" readonly></th>
+                    <th><input type="text" class="maininput" id="name" name="name" value="和润" readonly></th>
+                    <th><input type="text" class="maininput" id="name" name="name" value="内科" readonly></th>
+                    <th><input type="text" class="maininput" id="remark" name="remark" value="阑尾切除手术"readonly></th>
+                    <th><input type="text" class="maininput" id="name" name="name" value="和润" readonly></th>
+                    <th><a href="out.html"><img style="margin-left: 10%; margin-top: 10px" height="25px" src="../../../WEB-INF/res/pic/PNG/查询.png" alt="详细"></a></th>
+                    <th><a href="out.html"><img style="margin-left: 10%; margin-top: 10px" height="25px" src="../../../WEB-INF/res/pic/PNG/查询.png" alt="详细"></a></th>
+                </tr>
+                <tr>
+                    <th><input type="number" class="maininput" id="id" name="id" value="0001" readonly></th>
+                    <th><input type="text" class="maininput" id="name" name="name" value="和润" readonly></th>
+                    <th><input type="text" class="maininput" id="name" name="name" value="内科" readonly></th>
+                    <th><input type="text" class="maininput" id="remark" name="remark" value="阑尾切除手术"readonly></th>
+                    <th><input type="text" class="maininput" id="name" name="name" value="和润" readonly></th>
+                    <th><a href="out.html"><img style="margin-left: 10%; margin-top: 10px" height="25px" src="../../../WEB-INF/res/pic/PNG/查询.png" alt="详细"></a></th>
+                    <th><a href="out.html"><img style="margin-left: 10%; margin-top: 10px" height="25px" src="../../../WEB-INF/res/pic/PNG/查询.png" alt="详细"></a></th>
+                </tr>
+            </table>
 
-    </table>
-    <div style="margin-bottom: 150px"></div>
-    <!--底部-->
+        </div>
+        <div style="height: 100px"></div>
+    </main>
+
     <div class="framefooterArea">
         <footer class="realFooterArea">
             <div class="footerHyperlinkList">
@@ -135,6 +157,6 @@
             </div>
         </footer>
     </div>
-</main>
+</div>
 </body>
 </html>

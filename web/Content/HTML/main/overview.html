@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>OverView</title>
-    <link rel="shortcut icon" type="image/x-icon" href="../../../WEB-INF/res/pic/icon/标签页图标.ico">
+    <title>医院概览</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../../res/pic/icon/标签页图标.ico">
     <link type="text/css" rel="stylesheet" href="../../CSS/frame.css">
+    <link type="text/css" rel="stylesheet" href="../../CSS/content.css">
+    <script src="main.js"></script>
 </head>
 <body>
 <main class="frameWidth">
@@ -13,16 +15,16 @@
             <div class="sitewrap">
                 <div class="container-fluid">
                     <div class="floatLeft">
-                        <a class="floatingWin-brand" href="frame.html" >
-                            <img alt="logo" style="height: 2.5rem" src="../../../WEB-INF/res/pic/PNG/商标.png">
+                        <a class="floatingWin-brand" href="index.html" >
+                            <img alt="logo" style="height: 2.5rem" src="../../../res/pic/PNG/商标.png">
                         </a>
                     </div>
                     <div class="navigation">
                         <span class="floatingWin-bar">
-                            <a style="color: #5d594d;" href="/about">主页</a>
-                             <a style="color: #5d594d;" href="overview.html" class="selectPage">医院概况</a>
-                            <a style="color: #5d594d;" href="/episodes">预约挂号</a>
-                            <a style="color: #5d594d;" href="/search">登录</a>
+                            <a style="color: #5d594d;" href="index.html" class="selectPage">医院概览</a>
+                            <a style="color: #5d594d;" href="index.html" >主页</a>
+                            <a style="color: #5d594d;" href="bookingPage.html">预约挂号</a>
+                            <a style="color: #5d594d;" href="signIn.html">登录</a>
                         </span>
                     </div>
                 </div>
@@ -60,11 +62,10 @@
                 <div class="firstRow">
                     <div class="firstRow-inner">
                         <div class="footerHyperlinkListHead">红十字医院</div>
-                        <a class="footerHyperlinkListLink" href="/about">主页</a>
-                        <a class="footerHyperlinkListLink" href="/Episodes">医院概览</a>
-                        <a class="footerHyperlinkListLink" href="/Contact">功能介绍</a>
-                        <a class="footerHyperlinkListLink" href="/Search">专家出诊</a>
-                        <a class="footerHyperlinkListLink" href="/Subscribe">友情链接</a>
+                        <a class="footerHyperlinkListLink" href="index.html" onmouseover="beFocu(this)" onmouseout="beblue(this)">主页</a>
+                        <a class="footerHyperlinkListLink" href="overview.html" onmouseover="beFocu(this)" onmouseout="beblue(this)">医院概览</a>
+                        <a class="footerHyperlinkListLink" href="functionList.html" onmouseover="beFocu(this)" onmouseout="beblue(this)">功能介绍</a>
+                        <a class="footerHyperlinkListLink" href="linkExchange.html" onmouseover="beFocu(this)" onmouseout="beblue(this)">友情链接</a>
                     </div>
                 </div>
                 <div class="SeccondRow">
@@ -74,21 +75,21 @@
                         <div class="footernavFordetalFuc-first">
                             <h3 class="classifyHead">按模块</h3>
                             <div class="classifyDetail">
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">病人管理</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">药品管理</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">住院管理</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">人事管理</a>
+                                <a href="functionList.html" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">人事管理</a>
+                                <a href="functionList.html" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">病人管理</a>
+                                <a href="functionList.html" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">药物管理</a>
+                                <a href="functionList.html" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">任务分配</a>
                             </div>
                         </div>
                         <div class="footernavFordetalFuc-seccond">
                             <h3 class="classifyHead">按角色</h3>
                             <div class="classifyDetail">
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">挂号</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">门诊</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">医药</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">住院</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">手术</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">财务</a>
+                                <a href="functionList.html" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">挂号</a>
+                                <a href="functionList.html" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)" >门诊</a>
+                                <a href="functionList.html" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">医药</a>
+                                <a href="functionList.html" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">HR</a>
+                                <a href="functionList.html" class="footerHyperlinkListLink unimpLink">住院</a>
+                                <a href="functionList.html" class="footerHyperlinkListLink unimpLink">手术</a>
                             </div>
                         </div>
                     </nav>
@@ -96,24 +97,24 @@
                 <div class="firstRow">
                     <div class="firstRow-inner">
                         <div class="footerHyperlinkListHead">界面接口</div>
-                        <a class="footerHyperlinkListLink" href="/about">主页</a>
-                        <a class="footerHyperlinkListLink" href="/Episodes">预约挂号</a>
-                        <a class="footerHyperlinkListLink" href="/Contact">登录</a>
+                        <a class="footerHyperlinkListLink" href="index.html" onmouseover="beFocu(this)" onmouseout="beblue(this)">> 主页</a>
+                        <a class="footerHyperlinkListLink" href="bookingPage.html" onmouseover="beFocu(this)" onmouseout="beblue(this)">预约挂号</a>
+                        <a class="footerHyperlinkListLink" href="signIn.html"  onmouseover="beFocu(this)" onmouseout="beblue(this)">登录</a>
                     </div>
                 </div>
             </div>
             <div class="SocialMediaLink">
                 <a href="https://github.com/RioZRon/CourseExercise">
-                    <img src="../../../WEB-INF/res/pic/PNG/socialMedia/github-square.png" alt="github" class="socialmedialinkico">
+                    <img src="../../../res/pic/PNG/socialMedia/github-square.png" alt="github" class="socialmedialinkico">
                 </a>
                 <a href="https://github.com/RioZRon/CourseExercise">
-                    <img src="../../../WEB-INF/res/pic/PNG/socialMedia/微信.png" alt="wechat" class="socialmedialinkico">
+                    <img src="../../../res/pic/PNG/socialMedia/微信.png" alt="wechat" class="socialmedialinkico">
                 </a>
                 <a href="https://github.com/RioZRon/CourseExercise">
-                    <img src="../../../WEB-INF/res/pic/PNG/socialMedia/qq.png" alt="qq" class="socialmedialinkico" style="height: 1.6rem; margin-bottom: .08rem; margin-left: .2rem">
+                    <img src="../../../res/pic/PNG/socialMedia/qq.png" alt="qq" class="socialmedialinkico" style="height: 1.6rem; margin-bottom: .08rem; margin-left: .2rem">
                 </a>
                 <a href="Mailto:rioZron@outlook.com">
-                    <img src="../../../WEB-INF/res/pic/PNG/socialMedia/POP_Gmail.png" alt="mail" class="socialmedialinkico" style="height:1.75em; margin-bottom: .125rem; margin-left: .5rem">
+                    <img src="../../../res/pic/PNG/socialMedia/POP_Gmail.png" alt="mail" class="socialmedialinkico" style="height:1.75em; margin-bottom: .125rem; margin-left: .5rem">
                 </a>
             </div>
             <div class="support">

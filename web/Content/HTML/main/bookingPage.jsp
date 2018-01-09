@@ -1,29 +1,34 @@
+<%@ page import="java.sql.Date" %>
+<%@ page contentType="text/html; charset=UTF-8" language="java" errorPage="" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>预约</title>
-    <link rel="shortcut icon" type="image/x-icon" href="../../../res/pic/icon/标签页图标.ico">
-    <link type="text/css" rel="stylesheet" href="../../CSS/frame.css">
-    <link type="text/css" rel="stylesheet" href="../../CSS/content.css">
-    <script src="main.js"></script>
-
+    <title>挂号</title>
+    <link rel="shortcut icon" type="image/x-icon" href="<%=basePath%>/res/pic/icon/标签页图标.ico">
+    <link type="text/css" rel="stylesheet" href="<%=basePath%>/Content/CSS/frame.css">
+    <link type="text/css" rel="stylesheet" href="<%=basePath%>/Content/CSS/content.css">
 </head>
 <body>
-<div class="frameWidth" id="a11">
+<main class="frameWidth">
+    <!--headder-->
     <header class="remainForFloatingWin">
         <nav class="floatingWin">
             <div class="sitewrap">
                 <div class="container-fluid">
                     <div class="floatLeft">
-                        <a class="floatingWin-brand" href="index.html" >
-                            <img alt="logo" style="height: 2.5rem" src="../../../res/pic/PNG/商标.png">
+                        <a class="floatingWin-brand" href="frame.html" >
+                            <img alt="logo" style="height: 2.5rem" src="<%=basePath%>/res/pic/PNG/商标.png">
                         </a>
                     </div>
                     <div class="navigation">
                         <span class="floatingWin-bar">
-                            <a style="color: #5d594d;" href="index.html" >主页</a>
-                            <a style="color: #5d594d;" href="bookingPage.html"class="selectPage">预约挂号</a>
+                            <a style="color: #5d594d;" href="index.html" class="selectPage">主页</a>
+                            <a style="color: #5d594d;" href="bookingPage.jsp">预约挂号</a>
                             <a style="color: #5d594d;" href="signIn.html">登录</a>
                         </span>
                     </div>
@@ -51,6 +56,6 @@
             </form>
         </div>
     </main>
-</div>
+</main>
 </body>
 </html>
