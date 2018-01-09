@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>挂号</title>
+    <title>搜索病人</title>
     <link rel="shortcut icon" type="image/x-icon" href="<%=basePath%>/res/pic/icon/标签页图标.ico">
     <link type="text/css" rel="stylesheet" href="<%=basePath%>/Content/CSS/frame.css">
     <link type="text/css" rel="stylesheet" href="<%=basePath%>/Content/CSS/content.css">
@@ -43,7 +43,7 @@
     <!--main-->
     <main class="SearchContent" style="margin-bottom: 100px">
         <div class="centerSub">
-            <h1 class="maintitle">缴费搜索</h1>
+            <h1 class="maintitle">搜索</h1>
             <form action="/servlet/medicine/PatientSelectDealWithNameIdServlet">
                 <label class="mainlable" for="name">姓名</label>
                 <div class="inputbod">

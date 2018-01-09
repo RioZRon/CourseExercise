@@ -32,7 +32,7 @@
                             <a style="color: #5d594d;" href="<%=basePath%>/servlet/medicine/SelectAllAlertMedicineServlet" >警戒药品</a>
                             <a style="color: #5d594d;" href="<%=basePath%>/Content/HTML/medicine/keeperSelect.jsp">搜索药品</a>
                             <a style="color: #5d594d;" href="<%=basePath%>/Content/HTML/medicine/newInFlow.jsp" class="selectPage">新药入库</a>
-                            <a style="color: #5d594d;" href=""<%=basePath%>/Content/HTML/medicine/patientSelect.jsp">病人取药</a>
+                            <a style="color: #5d594d;" href="<%=basePath%>/Content/HTML/medicine/patientSelect.jsp">病人取药</a>
                             <a style="color: #5d594d;" href="/servlet/main/LogOutServlet">登出</a>
                         </span>
                     </div>

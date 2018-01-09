@@ -49,7 +49,7 @@
                 A60 a60 = (A60)session.getAttribute("a60");
             %>
             <tr>
-                <th colspan="3" style="text-align: left"><%=a60.getA602()%></th>
+                <th colspan="4" style="text-align: left"><%=a60.getA602()%></th>
             </tr>
             <tr>
                 <th width="15%">药品编号</th>

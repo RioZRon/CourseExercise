@@ -81,7 +81,6 @@
             </table>
             <input type="submit" value="保存" class="mainformsubmit" >
         </form>
-        <a href="newInFlow.html">新增库房没有的药品</a>
 
 
     </main>

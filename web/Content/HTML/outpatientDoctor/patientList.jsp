@@ -45,7 +45,7 @@
         </nav>
     </header>
     <main class="SearchContent">
-        <h1 class="maintitle">待诊病人</h1>
+        <h1 class="maintitle">候诊病人</h1>
         <%ArrayList<A20> a20ArrayList = (ArrayList<A20>)request.getAttribute("a20ArrayList");
             Iterator<A20> a20Iterator = a20ArrayList.iterator();
         %>

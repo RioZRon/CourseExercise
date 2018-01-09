@@ -45,10 +45,10 @@
         <main class="SearchContent">
             <div class="centerSub">
             <h1 class="result-title">搜索账号</h1>
-            <form action="/servlet/registration/PatientSelectDealWithNameIdServlet" method="post">
+            <form action="/servlet/registration/RegistrationSelectDealWithNameIdServlet" method="post">
                 <label class="result-lable" for="name">姓名</label>
                 <input type="text" class="result-input" id="name" name="name" value="${sessionScope.name}">
-                <label class="result-lable" for="id">挂号换号</label>
+                <label class="result-lable" for="id">挂号编号</label>
                 <input type="text" class="result-input" id="id" name="id" value="${sessionScope.id}">
                 <input type="submit" value="搜索" class="result-submit" >
             </form>
@@ -66,7 +66,7 @@
                     <th>挂号编号</th>
                     <th>姓名</th>
                     <th>电话</th>
-                    <th width="7%">修改信息</th>
+                    <th width="14%">修改信息</th>
                 </tr>
                 <%
                     while(a20Iterator.hasNext()){

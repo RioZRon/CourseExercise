@@ -56,7 +56,7 @@
             <form action="/servlet/medicine/PatientSelectDealWithNameIdServlet" method="post">
                 <label class="result-lable" for="name">姓名</label>
                 <input type="text" class="result-input" id="name" name="name" value="${sessionScope.name}">
-                <label class="result-lable" for="id">挂号换号</label>
+                <label class="result-lable" for="id">挂号编号</label>
                 <input type="text" class="result-input" id="id" name="id" value="${sessionScope.id}">
                 <input type="submit" value="搜索" class="result-submit" >
             </form>
@@ -67,10 +67,10 @@
                     <th colspan="6" style="text-align: left; font-weight: 400; font-size:35px; padding-left: 20px">搜索结果</th>
                 </tr>
                 <tr>
-                    <th>挂号编号</th>
-                    <th>姓名</th>
+                    <th width="14%">挂号编号</th>
+                    <th width="14%">姓名</th>
                     <th>电话</th>
-                    <th>医生处方</th>
+                    <th width="30%">医生处方</th>
                     <th width="7%">出库</th>
                     <th width="14%">全部出库</th>
                 </tr>

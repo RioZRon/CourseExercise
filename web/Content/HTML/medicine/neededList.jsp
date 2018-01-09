@@ -48,7 +48,7 @@
     </header>
     <main class="SearchContent">
         <div class="centerSub">
-            <h1 class="result-title"><%=session.getAttribute("a201")%>的处方</h1>
+            <h1 class="result-title">No. <%=session.getAttribute("a201")%>的处方</h1>
             <%
                 ArrayList<A60> a60ArrayList = (ArrayList<A60>)session.getAttribute("a60ArrayList");
                 Iterator<A60> a60Iterator = a60ArrayList.iterator();

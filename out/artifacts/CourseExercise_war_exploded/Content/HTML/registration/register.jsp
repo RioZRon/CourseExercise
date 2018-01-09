@@ -83,7 +83,7 @@
                     <div class="EnterContent-group">
                         <label class="EnterContent-lable" for="a2010">建议分科</label>
                         <%--<input type="text" class="EnterContent-input longwidth" id="a2010" name="a2010">--%>
-                        <select name="a2010" id="a2010" class="selectClass" style="margin-left: 3%">
+                        <select name="a2010" id="a2010" class="selectClass" style="margin-left: 3%;  width: 54%">
                             <option value="1" selected>内科</option>
                             <option value="2">外科</option>
                             <option value="3">儿科</option>

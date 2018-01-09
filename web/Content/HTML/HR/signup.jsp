@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>病人详情</title>
+    <title>账号注册</title>
     <link rel="shortcut icon" type="image/x-icon" href="<%=basePath%>/res/pic/icon/标签页图标.ico">
     <link type="text/css" rel="stylesheet" href="<%=basePath%>/Content/CSS/frame.css">
     <link type="text/css" rel="stylesheet" href="<%=basePath%>/Content/CSS/content.css">
@@ -39,7 +39,6 @@
             </div>
         </nav>
     </header>
-
     <!--main-->
     <div>
         <h1 class="maintitle">账号注册</h1>
@@ -62,7 +61,7 @@
                 <div class="inner EnterContent-group">
                     <label class="inner EnterContent-lable" for="a105">角色</label>
                     <br>
-                    <select name="a105" id="a105" class="selectClass">
+                    <select name="a105" id="a105" class="selectClass" style="width: 54%; margin-top: 5px">
                         <option value="1" selected>挂号</option>
                         <option value="2">门诊</option>
                         <option value="3">病房</option>

@@ -65,7 +65,7 @@
                 <div class="inner EnterContent-group">
                     <label class="inner EnterContent-lable" for="a105">角色</label>
                     <br>
-                    <select name="a105" id="a105" class="selectClass" >
+                    <select name="a105" id="a105" class="selectClass" style="width: 54%; margin-top: 5px"> >
                         <option value="1">挂号</option>
                         <option value="2">门诊</option>
                         <option value="3">病房</option>

@@ -48,17 +48,18 @@
     </header>
     <main class="SearchContent">
         <div class="centerSub">
-            <h1 class="result-title">搜索账号</h1>
+            <h1 class="result-title">搜索药品</h1>
             <form action="/servlet/medicine/KeeperSelectDealWithNameIdServlet">
-                <label class="result-lable" for="name">姓名</label>
+                <label class="result-lable" for="name">药品名称</label>
                 <input type="text" class="result-input" id="name" name="name" value="${sessionScope.name}">
-                <label class="result-lable" for="id">挂号换号</label>
+                <label class="result-lable" for="id">药品编号</label>
                 <input type="number" class="result-input" id="id" name="id" value="${sessionScope.id}">
                 <input type="submit" value="搜索" class="result-submit">
             </form>
 
             <hr style="margin: 80px 80px; opacity:0.5;">
-            <%ArrayList<A60> a60ArrayList = (ArrayList<A60>)session.getAttribute("a60ArrayList");
+            <%
+                ArrayList<A60> a60ArrayList = (ArrayList<A60>)session.getAttribute("a60ArrayList");
                 Iterator<A60> a60Iterator = a60ArrayList.iterator();
             %>
 
@@ -78,7 +79,7 @@
                 <%
                     while(a60Iterator.hasNext()){
                         A60 nextA60 = a60Iterator.next();
-                %>d
+                %>
                 <tr>
                     <form action="">
                         <th><input type="number" class="maininput" id="a601" name="a601" value="<%=nextA60.getA601()%>" readonly></th>

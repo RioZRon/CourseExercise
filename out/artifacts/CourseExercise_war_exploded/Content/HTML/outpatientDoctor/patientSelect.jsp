@@ -42,7 +42,7 @@
     <!--main-->
     <main class="SearchContent" style="margin-bottom: 100px">
         <div class="centerSub">
-            <h1 class="maintitle">缴费搜索</h1>
+            <h1 class="maintitle">病人搜索</h1>
             <form action="/servlet/outpatientDoctor/DocSelectDealWithNameIdServlet">
                 <label class="mainlable" for="name">姓名</label>
                 <div class="inputbod">
