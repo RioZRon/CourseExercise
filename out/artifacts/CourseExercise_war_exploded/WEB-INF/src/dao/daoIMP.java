@@ -246,18 +246,18 @@ public class daoIMP implements daoForMain, daoForHr, daoForRegistration, daoForO
         ArrayList<A20> a20ArrayList = new ArrayList<>();
         try {
             if (a202 == null && a201 == null) {
-                String sql = "SELECT * FROM A20";
+                String sql = "SELECT * FROM A20 WHERE(A2011<>'Done' or A2011 is null)ORDER BY A201";
                 preparedStatement = connection.prepareStatement(sql);
             } else if (a202 == null) {
-                String sql = "SELECT * FROM A20 WHERE A201 LIKE " + "'%" + a201 + "%'";
+                String sql = "SELECT * FROM A20 WHERE A201 LIKE " + "'%" + a201 + "%' AND (A2011<>'Done' or A2011 is null)  ORDER BY A201";
                 preparedStatement = connection.prepareStatement(sql);
                 System.out.println(sql);
             } else if (a201 == null) {
-                String sql = "SELECT * FROM A20 WHERE A202 like " + "'%" + a202 + "%'";
+                String sql = "SELECT * FROM A20 WHERE A202 like " + "'%" + a202 + "%' AND (A2011<>'Done' or A2011 is null)  ORDER BY A201";
                 preparedStatement = connection.prepareStatement(sql);
                 System.out.println(sql);
             } else {
-                String sql = "SELECT * FROM A20 WHERE A202 LIKE " + "'%" + a202 + "%'" + " AND A201 LIKE " + "'%" + a201 + "%'";
+                String sql = "SELECT * FROM A20 WHERE A202 LIKE " + "'%" + a202 + "%'" + " AND A201 LIKE " + "'%" + a201 + "%' AND (A2011<>'Done' or A2011 is null) ORDER BY A201";
                 preparedStatement = connection.prepareStatement(sql);
                 System.out.println(sql);
             }
@@ -275,7 +275,9 @@ public class daoIMP implements daoForMain, daoForHr, daoForRegistration, daoForO
                 int rsa2010 = resultSet.getInt("A2010");
                 String rsa2011 = resultSet.getString("A2011");
                 Timestamp rsa2012ts = resultSet.getTimestamp("A2012");
-                Date rsa2012 = new Date(rsa2012ts.getTime());
+                Date rsa2012 = null;
+                if (rsa2012ts != null)
+                    rsa2012 = new Date(rsa2012ts.getTime());
                 A20 a20 = new A20(rsa201, rsa203, rsa2010, rsa202, rsa204, rsa205, rsa206, rsa207, rsa208, rsa209, rsa2011, rsa2012);
                 a20ArrayList.add(a20);
             }
@@ -316,7 +318,9 @@ public class daoIMP implements daoForMain, daoForHr, daoForRegistration, daoForO
                 int rsa2010 = resultSet.getInt("A2010");
                 String rsa2011 = resultSet.getString("A2011");
                 Timestamp rsa2012ts = resultSet.getTimestamp("A2012");
-                Date rsa2012 = new Date(rsa2012ts.getTime());
+                Date rsa2012 = null;
+                if (rsa2012ts != null)
+                    rsa2012 = new Date(rsa2012ts.getTime());
                 A20 a20 = new A20(rsa201, rsa203, rsa2010, rsa202, rsa204, rsa205, rsa206, rsa207, rsa208, rsa209, rsa2011, rsa2012);
                 return a20;
             }

@@ -13,8 +13,8 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@WebServlet(name = "PatientSelectServlet", urlPatterns = "/servlet/registration/PatientSelectServlet")
-public class PatientSelect extends HttpServlet {
+@WebServlet(name = "RegistrationSelectServlet", urlPatterns = "/servlet/registration/RegistrationSelectServlet")
+public class RegistrationSelect extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
@@ -23,16 +23,10 @@ public class PatientSelect extends HttpServlet {
         ArrayList<A20> a20ArrayList = new ArrayList<>();
         serviceIMP serviceIMP = new serviceIMP();
         a20ArrayList = serviceIMP.FindPatients(name, id);
-//        //测试
-//        System.out.println("test");
-//        Iterator<A10>a10Iterator = a10ArrayList.iterator();
-//        while (a10Iterator.hasNext()){
-//           System.out.println(a10Iterator.next().toString());
-//        }
-        //将搜索条件和搜索结果存在sesstion
+
         session.setAttribute("a20ArrayList",a20ArrayList);
 
-        req.getRequestDispatcher(req.getContextPath()+"/Content/HTML/registration/keeperResult.jsp").forward(req, resp);
+        req.getRequestDispatcher(req.getContextPath()+"/Content/HTML/registration/patientResult.jsp").forward(req, resp);
     }
 
     @Override

@@ -155,8 +155,8 @@
                                 <a href="/servlet/main/LogOutServlet" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">门诊</a>
                                 <a href="/servlet/main/LogOutServlet" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">医药</a>
                                 <a href="/servlet/main/LogOutServlet" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">HR</a>
-                                <a href="/servlet/main/LogOutServlet" class="footerHyperlinkListLink unimpLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">住院</a>
-                                <a href="/servlet/main/LogOutServlet" class="footerHyperlinkListLink unimpLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">手术</a>
+                                <a href="/servlet/main/LogOutServlet" class="footerHyperlinkListLink unimpLink">住院</a>
+                                <a href="/servlet/main/LogOutServlet" class="footerHyperlinkListLink unimpLink">手术</a>
                             </div>
                         </div>
                     </nav>
