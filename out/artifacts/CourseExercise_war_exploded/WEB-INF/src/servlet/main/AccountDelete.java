@@ -21,6 +21,6 @@ public class AccountDelete extends HttpServlet{
         int a101 = Integer.valueOf(req.getParameter("rsa101"));
         serviceIMP serviceIMP = new serviceIMP();
         serviceIMP.DeleteStaff(a101);
-        req.getRequestDispatcher(req.getContextPath() + "/server/main/AaccountSelectServlet").forward(req,resp);
+        req.getRequestDispatcher(req.getContextPath() + "/servlet/main/AaccountSelectServlet").forward(req,resp);
     }
 }

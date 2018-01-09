@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-@WebServlet(name = "AaccountSelectServlet", urlPatterns = "/server/main/AaccountSelectServlet")
+@WebServlet(name = "AaccountSelectServlet", urlPatterns = "/servlet/main/AaccountSelectServlet")
 public class AccountSelect extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -24,6 +24,9 @@ public class AccountSelect extends HttpServlet {
         ArrayList<A10> a10ArrayList = new ArrayList<>();
         serviceIMP serviceIMP = new serviceIMP();
         a10ArrayList = serviceIMP.FindStaffs(a102,a103);
+        for (A10 a10:a10ArrayList){
+            System.out.println(a10);
+        }
 //        //测试
 //        System.out.println("test");
 //        Iterator<A10>a10Iterator = a10ArrayList.iterator();
@@ -32,6 +35,7 @@ public class AccountSelect extends HttpServlet {
 //        }
         //将搜索条件和搜索结果存在sesstion
         session.setAttribute("a10ArrayList",a10ArrayList);
+
 
         req.getRequestDispatcher(req.getContextPath()+"/Content/HTML/HR/accountResult.jsp").forward(req, resp);
     }

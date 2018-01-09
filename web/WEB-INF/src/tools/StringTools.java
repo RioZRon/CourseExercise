@@ -45,7 +45,7 @@ public class StringTools {
             else if(roleNum == 5)
                 return "管理员";
             else
-                throw new RuntimeException("RoleNotFound");
+                return "医药";
         }
 
     public static HashMap<String,String> A215StrToMap(String string){

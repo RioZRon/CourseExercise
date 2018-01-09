@@ -55,6 +55,9 @@ public class serviceIMP implements serviceForMain, serviceForHr, serviceForRegis
         Connection connection = JDBCPoolTools.getConnection();
         daoIMP daoIMP = new daoIMP();
         ArrayList<A10> a10ArrayList = daoIMP.SelectA10Bya102a103inDark(connection,name,username);
+//        for (A10 a10:a10ArrayList){
+//            System.out.println(a10);
+//        }
         return  a10ArrayList;
     }
 

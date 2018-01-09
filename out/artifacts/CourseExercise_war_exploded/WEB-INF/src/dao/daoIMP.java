@@ -89,6 +89,7 @@ public class daoIMP implements daoForMain, daoForHr, daoForRegistration, daoForO
             if (a102 == null && a103 == null) {
                 String sql = "SELECT * FROM A10";
                 preparedStatement = connection.prepareStatement(sql);
+                System.out.println(sql);
             } else if (a102 == null) {
                 String sql = "SELECT * FROM A10 WHERE A103 LIKE " + "'%" + a103 + "%'";
                 preparedStatement = connection.prepareStatement(sql);
