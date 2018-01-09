@@ -8,5 +8,10 @@ public interface serviceForMain {
     **/
     A10 SignIn(String name, String pass);
 
+    /**
+    * @Description: ԤԼ
+    **/
+    void addBookingPatientBasicInformation(String name, String identityCard,String phoneNumber);
+
 
 }

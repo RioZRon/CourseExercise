@@ -31,7 +31,7 @@ public class CharseterEncodingFilter implements Filter
         httpServletResponse.setCharacterEncoding("UTF-8");
         httpServletResponse.setContentType("text/html;charset=UTF-8");
 
-        System.out.println("Text");
+//        System.out.println("Text");
         filterChain.doFilter(httpServletRequest,httpServletResponse);
     }
 

@@ -53,9 +53,9 @@
     font-size: 47px;
     letter-spacing: -.5px;
     line-height: 48px;
-    hyphens: manual;
     color: #607980;
 }
+
 
 .frontLinkContent-summary{
     color: #414141;
@@ -101,11 +101,11 @@
     width: 100%
 }
 .horizontalGrid-headline {
-    hyphens: manual;
     margin-bottom: 30px;
     font-size: 44px;
     line-height: 75px;
 }
+
 .displayFlex{
     display: flex;
     flex-basis: 100%;

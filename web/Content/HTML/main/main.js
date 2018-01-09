@@ -4,13 +4,13 @@
 function turnblue(){
     document.getElementById("detail").style.color="#2a96db";
     document.getElementById("detailArr").style.marginLeft="7px";
-    document.getElementById("detailArr").src="../../../WEB-INF/res/pic/PNG/detailblue.png";
+    document.getElementById("detailArr").src="../../../res/pic/PNG/detailblue.png";
 }
 
 function turnback(){
     document.getElementById("detail").style.color="black";
     document.getElementById("detailArr").style.marginLeft="3px";
-    document.getElementById("detailArr").src="../../../WEB-INF/res/pic/PNG/detailB.png";
+    document.getElementById("detailArr").src="../../../res/pic/PNG/detailB.png";
 }
 
 function focusFirst(){
@@ -70,4 +70,12 @@ function showhide_password(){
         pwd.type="password";
 
     }
+}
+
+function beFocu(obj) {
+    obj.style.textShadow="1px 1px 1px #e8df7e";
+}
+
+function beblue(obj) {
+    obj.style.textShadow="none";
 }

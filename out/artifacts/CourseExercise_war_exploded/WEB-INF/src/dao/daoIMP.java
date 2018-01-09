@@ -937,4 +937,34 @@ public class daoIMP implements daoForMain, daoForHr, daoForRegistration, daoForO
             JDBCPoolTools.release(connection, preparedStatement, resultSet);
         }
     }
+
+    /**
+     * @param connection
+     * @param a202
+     * @param a207
+     * @param a204
+     * @Description:
+     */
+    @Override
+    public void A20insertBya202a207a204(Connection connection, String a202, String a207, String a204) {
+        System.out.println("dao≤‚ ‘" + a202+ a207 + a204);
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+        try {
+            String sql = "insert into A20(A201,A202,A207,A204,A2011) values (A20_1.nextval, ?, ?, ?, '‘§‘º')";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,a202);
+            preparedStatement.setString(2, a207);
+            preparedStatement.setString(3, a204);
+            preparedStatement.executeUpdate();
+//            String sql = "insert into A20(A201,A202,A207,A204) values (A20_1.nextval,'"+a202+"','"+a207+"','"+a204+"')";
+//            preparedStatement = connection.prepareStatement(sql);
+//            preparedStatement.executeUpdate();
+//            System.out.println(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCPoolTools.release(connection, preparedStatement, resultSet);
+        }
+    }
 }

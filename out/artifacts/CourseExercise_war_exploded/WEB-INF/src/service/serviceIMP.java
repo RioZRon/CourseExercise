@@ -451,4 +451,18 @@ public class serviceIMP implements serviceForMain, serviceForHr, serviceForRegis
         daoIMP daoIMP = new daoIMP();
         daoIMP.Updatea217Bya211(connection, a201, new217);
     }
+
+    /**
+     * @param name
+     * @param identityCard
+     * @param phoneNumber
+     * @Description: ‘§‘º
+     */
+    @Override
+    public void addBookingPatientBasicInformation(String name, String identityCard, String phoneNumber) {
+        Connection connection = JDBCPoolTools.getConnection();
+        daoIMP daoIMP = new daoIMP();
+        System.out.println("service≤‚ ‘" + name + identityCard +phoneNumber);
+        daoIMP.A20insertBya202a207a204(connection, name, identityCard,phoneNumber);
+    }
 }

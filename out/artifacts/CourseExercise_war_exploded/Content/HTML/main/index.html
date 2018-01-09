@@ -3,29 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>首页</title>
-    <link rel="shortcut icon" type="image/x-icon" href="../../../WEB-INF/res/pic/icon/标签页图标.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../res/pic/icon/标签页图标.ico">
     <link type="text/css" rel="stylesheet" href="../../CSS/frame.css">
     <link type="text/css" rel="stylesheet" href="../../CSS/content.css">
     <script src="main.js"></script>
-
 </head>
 <body>
 <div class="frameWidth" id="a11">
-    <!--headder-->
     <header class="remainForFloatingWin">
         <nav class="floatingWin">
             <div class="sitewrap">
                 <div class="container-fluid">
                     <div class="floatLeft">
-                        <a class="floatingWin-brand" href="frame.html" >
-                            <img alt="logo" style="height: 2.5rem" src="../../../WEB-INF/res/pic/PNG/商标.png">
+                        <a class="floatingWin-brand" href="index.html" >
+                            <img alt="logo" style="height: 2.5rem" src="../../../res/pic/PNG/商标.png">
                         </a>
                     </div>
                     <div class="navigation">
                         <span class="floatingWin-bar">
-                            <a style="color: #5d594d;" href="/about" class="selectPage">主页</a>
-                            <a style="color: #5d594d;" href="/episodes">预约挂号</a>
-                            <a style="color: #5d594d;" href="/search">登录</a>
+                            <a style="color: #5d594d;" href="./index.html" class="selectPage">主页</a>
+                            <a style="color: #5d594d;" href="./bookingPage.jsp">预约挂号</a>
+                            <a style="color: #5d594d;" href="signin.html">登录</a>
                         </span>
                     </div>
                 </div>
@@ -35,23 +33,21 @@
     <!--main-->
     <main class="mainContent">
         <section class="indexFrontPic">
-            <!--todo 2017-12-30 18:05:00 做一个链接到功能介绍页面-->
-            <a href="" class="indexFrontLinkFunc"  onmousemove="turnblue()" onmouseout="turnback()" >
-                <img id="linkpic" class="frontPic" src="../../../WEB-INF/res/pic/PNG/creature-1.png">
+            <a href="functionList.html" class="indexFrontLinkFunc"  onmousemove="turnblue()" onmouseout="turnback()" >
+                <img id="linkpic" class="frontPic" src="../../../res/pic/PNG/creature-1.png">
                 <div class="frontLinkContent">
                     <span class="h-c-eyebrow color-red">系统介绍</span>
                     <h2 class="frontLinkContent-title">红十医院管理系统为你量身打造的12个特性</h2>
                     <p class="frontLinkContent-summary">从人事管理到科室管理,从前台挂号医师门诊到手术台医药部,从医师到会计各个模块相互独立又相互关联</p>
                     <span class="frontLinkContent-detailLink">
-                        <span class="nowrap"id="detail">
+                        <span class="nowrap" id="detail">
                             Detail
-                            <img class="arrawright" src="../../../WEB-INF/res/pic/PNG/detailB.png" alt="more" id="detailArr">
+                            <img class="arrawright" src="../../../res/pic/PNG/detailB.png" alt="more" id="detailArr">
                         </span>
                     </span>
                 </div>
             </a>
         </section>
-        <!--todo 做剩下的链接 主页最好只存在链接-->
         <div class="rowPageLinks">
             <section class="horizontalGrid">
                 <div class="horizontalGrid-col">
@@ -59,21 +55,21 @@
                 </div>
 
                 <div class="displayFlex" style="height: 400px">
-                    <a href="" class="eachGrid" onmousemove="focusFirst()" onmouseout="blurFirst()">
+                    <a href="overview.html" class="eachGrid" onmousemove="focusFirst()" onmouseout="blurFirst()">
                         <div class="displayColumnFlex">
-                            <p class="h-c-eyebrow margin-bottom"id="overview">医院概览</p>
+                            <p class="h-c-eyebrow margin-bottom" id="overview">医院概览</p>
                             <h4 class="GridContent" id="overview-content">2017年已然过去,面向2018,我们带着崭新的面貌以及更友好的笑容去面对病人</h4>
-                            <img src="../../../WEB-INF/res/pic/PNG/医院概览.png" alt="医院概览" class="GridContentPic">
+                            <img src="../../../res/pic/PNG/医院概览.png" alt="医院概览" class="GridContentPic">
                         </div>
                     </a>
-                    <a href="" class="eachGrid"  onmousemove="focusSecond()"onmouseout="blurSecond()">
+                    <a href="overview.html" class="eachGrid"  onmousemove="focusSecond()" onmouseout="blurSecond()">
                         <div class="displayColumnFlex">
                             <p class="h-c-eyebrow margin-bottom" id="expert">专家介绍</p>
                             <h4 class="GridContent" id="expert-content">知识与实践经验丰富,且勤恳务实,为人正直,能用饱满的热情面对工作是我们最基本的标尺</h4>
-                            <img src="../../../WEB-INF/res/pic/PNG/doctor.jpg" alt="医院概览" class="GridContentPic">
+                            <img src="../../../res/pic/PNG/doctor.jpg" alt="医院概览" class="GridContentPic">
                         </div>
                     </a>
-                    <a href="" class="eachGrid" onmousemove="focusThird()"onmouseout="blurThird()">
+                    <a href="overview.html" class="eachGrid" onmousemove="focusThird()" onmouseout="blurThird()">
                         <div class="displayColumnFlex">
                             <p class="h-c-eyebrow margin-bottom" id="canlendar">出诊资讯</p>
                             <h4 class="GridContent" id="canlendar-content">未来一个月各个医生的出诊安排</h4>
@@ -83,10 +79,19 @@
                 </div>
             </section>
         </div>
-        <div style="height: 200px"></div>
+        <div style="margin-top: 50px; margin-bottom: 100px">
+            <div class="horizontalGrid-col">
+                <h2 style="font-size: 32px;font-weight: 300">新年总结</h2>
+            </div>
+            <p class="frontLinkContent-summary">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;进进过去的一年，我院在政府及卫生局的正确领导下，以邓小平理论和“三个代表”重要思想为指导，贯彻落实科学发展观，牢固树立以病人为中心的服务理念，紧紧围绕“坚持以人为本、提高服务质量，规范医疗行为、保证医疗安全，优化诊疗环境、加快建设发展，加强科学管理、提高两个效益，为群众提供安全、有效、方便、廉洁的医疗服务”的总体工作方针，深入开展了学习实践科学发展观活动、“医疗质量万里行”活动、医院平安建设先进单位创建活动、构建和谐医患关系活动、护理知识竞赛和业务技术操作比武活动、医疗质量评比活动、整顿医疗秩序等活动。科学管理、强化措施、狠抓落实、注重实效，促进了医院的各项工作，推动了医院工作的全面建设和发展。
+            </p>
+            <p class="frontLinkContent-summary">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2018年总体工作思路是：“强化内涵建设、提高管理水平，保证医疗安全、提高医疗质量，控制医药费用、提高服务效率，改善医疗环境、提高服务质量”。以“让患者放心、让社会满意”为目标，以“规范管理、强化内涵、提升服务、便民惠民”为重点，强化工作责任，完善制度和措施，不断创新管理机制，积极采取有效措施，统筹推进医院各项工作，促进医院工作持续、健康发展。
+            </p>
+        </div>
+
     </main>
-
-
     <!--底部-->
     <div class="framefooterArea">
         <footer class="realFooterArea">
@@ -94,11 +99,10 @@
                 <div class="firstRow">
                     <div class="firstRow-inner">
                         <div class="footerHyperlinkListHead">红十字医院</div>
-                        <a class="footerHyperlinkListLink" href="/about">主页</a>
-                        <a class="footerHyperlinkListLink" href="/Episodes">医院概览</a>
-                        <a class="footerHyperlinkListLink" href="/Contact">功能介绍</a>
-                        <a class="footerHyperlinkListLink" href="/Search">专家出诊</a>
-                        <a class="footerHyperlinkListLink" href="/Subscribe">友情链接</a>
+                        <a class="footerHyperlinkListLink" href="index.html" onmouseover="beFocu(this)" onmouseout="beblue(this)">主页</a>
+                        <a class="footerHyperlinkListLink" href="overview.html" onmouseover="beFocu(this)" onmouseout="beblue(this)">医院概览</a>
+                        <a class="footerHyperlinkListLink" href="functionList.html" onmouseover="beFocu(this)" onmouseout="beblue(this)">功能介绍</a>
+                        <a class="footerHyperlinkListLink" href="linkExchange.html" onmouseover="beFocu(this)" onmouseout="beblue(this)">友情链接</a>
                     </div>
                 </div>
                 <div class="SeccondRow">
@@ -108,21 +112,21 @@
                         <div class="footernavFordetalFuc-first">
                             <h3 class="classifyHead">按模块</h3>
                             <div class="classifyDetail">
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">病人管理</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">药品管理</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">住院管理</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">人事管理</a>
+                                <a href="functionList.html" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">人事管理</a>
+                                <a href="functionList.html" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">病人管理</a>
+                                <a href="functionList.html" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">药物管理</a>
+                                <a href="functionList.html" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">任务分配</a>
                             </div>
                         </div>
                         <div class="footernavFordetalFuc-seccond">
                             <h3 class="classifyHead">按角色</h3>
                             <div class="classifyDetail">
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">挂号</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">门诊</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">医药</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">住院</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">手术</a>
-                                <a href="/catalog/subject/web-development" class="footerHyperlinkListLink">财务</a>
+                                <a href="functionList.html" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">挂号</a>
+                                <a href="functionList.html" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)" >门诊</a>
+                                <a href="functionList.html" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">医药</a>
+                                <a href="functionList.html" class="footerHyperlinkListLink" onmouseover="beFocu(this)" onmouseout="beblue(this)">HR</a>
+                                <a href="functionList.html" class="footerHyperlinkListLink unimpLink">住院</a>
+                                <a href="functionList.html" class="footerHyperlinkListLink unimpLink">手术</a>
                             </div>
                         </div>
                     </nav>
@@ -130,24 +134,24 @@
                 <div class="firstRow">
                     <div class="firstRow-inner">
                         <div class="footerHyperlinkListHead">界面接口</div>
-                        <a class="footerHyperlinkListLink" href="/about">主页</a>
-                        <a class="footerHyperlinkListLink" href="/Episodes">预约挂号</a>
-                        <a class="footerHyperlinkListLink" href="/Contact">登录</a>
+                        <a class="footerHyperlinkListLink" href="index.html" onmouseover="beFocu(this)" onmouseout="beblue(this)">> 主页</a>
+                        <a class="footerHyperlinkListLink" href="bookingPage.jsp" onmouseover="beFocu(this)" onmouseout="beblue(this)">预约挂号</a>
+                        <a class="footerHyperlinkListLink" href="signin.html" onmouseover="beFocu(this)" onmouseout="beblue(this)">登录</a>
                     </div>
                 </div>
             </div>
             <div class="SocialMediaLink">
                 <a href="https://github.com/RioZRon/CourseExercise">
-                    <img src="../../../WEB-INF/res/pic/PNG/socialMedia/github-square.png" alt="github" class="socialmedialinkico">
+                    <img src="../../../res/pic/PNG/socialMedia/github-square.png" alt="github" class="socialmedialinkico">
                 </a>
                 <a href="https://github.com/RioZRon/CourseExercise">
-                    <img src="../../../WEB-INF/res/pic/PNG/socialMedia/微信.png" alt="wechat" class="socialmedialinkico">
+                    <img src="../../../res/pic/PNG/socialMedia/微信.png" alt="wechat" class="socialmedialinkico">
                 </a>
                 <a href="https://github.com/RioZRon/CourseExercise">
-                    <img src="../../../WEB-INF/res/pic/PNG/socialMedia/qq.png" alt="qq" class="socialmedialinkico" style="height: 1.6rem; margin-bottom: .08rem; margin-left: .2rem">
+                    <img src="../../../res/pic/PNG/socialMedia/qq.png" alt="qq" class="socialmedialinkico" style="height: 1.6rem; margin-bottom: .08rem; margin-left: .2rem">
                 </a>
                 <a href="Mailto:rioZron@outlook.com">
-                    <img src="../../../WEB-INF/res/pic/PNG/socialMedia/POP_Gmail.png" alt="mail" class="socialmedialinkico" style="height:1.75em; margin-bottom: .125rem; margin-left: .5rem">
+                    <img src="../../../res/pic/PNG/socialMedia/POP_Gmail.png" alt="mail" class="socialmedialinkico" style="height:1.75em; margin-bottom: .125rem; margin-left: .5rem">
                 </a>
             </div>
             <div class="support">

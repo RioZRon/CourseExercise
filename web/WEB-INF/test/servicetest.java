@@ -16,13 +16,18 @@ public class servicetest {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
+        String name = "×Ý½ðºê";
+        String identityCard= "50022219970126661X";
+        String phoneNumber = "15554240869";
+
         service.serviceIMP serviceIMP = new serviceIMP();
+        serviceIMP.addBookingPatientBasicInformation(name, identityCard, phoneNumber);
 //        A21 a21 = new A21(21, "1","1","1","1","1","1","1","1");
 //        serviceIMP.UpdateMedicalrecord(a21);
-        ArrayList<A60> rs = serviceIMP.UpdateAndSelectAlertA60();
-        for(A60 a60 : rs){
-            System.out.println(a60.toString());
-        }
+//        ArrayList<A60> rs = serviceIMP.UpdateAndSelectAlertA60();
+//        for(A60 a60 : rs){
+//            System.out.println(a60.toString());
+//        }
 
 //        ArrayList<A20> a20ArrayList = new ArrayList<>();
 //        a20ArrayList = serviceIMP.FindPatientsBya2010(2);
