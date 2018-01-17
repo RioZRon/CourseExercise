@@ -483,6 +483,7 @@ public class serviceIMP implements serviceForMain, serviceForHr, serviceForRegis
     public void addBookingPatientBasicInformation(String name, String identityCard, String phoneNumber) {
         Connection connection = JDBCPoolTools.getConnection();
         daoIMP daoIMP = new daoIMP();
+<<<<<<< HEAD
 //        System.out.println("service²âÊÔ" + name + identityCard +phoneNumber);
         daoIMP.A20insertBya202a207a204(connection, name, identityCard,phoneNumber);
     }
@@ -497,4 +498,9 @@ public class serviceIMP implements serviceForMain, serviceForHr, serviceForRegis
         daoIMP daoIMP = new daoIMP();
         return daoIMP.Selecta601Bya602(connection, a602);
     }
+=======
+        System.out.println("service²âÊÔ" + name + identityCard +phoneNumber);
+        daoIMP.A20insertBya202a207a204(connection, name, identityCard,phoneNumber);
+    }
+>>>>>>> dfde6936bb23f7bde5940d53bdc83ec738d4e34b
 }
